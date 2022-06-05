@@ -1,0 +1,7 @@
+n = int(input())
+n_bin = bin(n)
+n_oct = oct(n)
+n_hex = hex(n)
+print(n_bin)
+print(n_oct)
+print(n_hex)

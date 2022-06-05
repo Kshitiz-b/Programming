@@ -1,0 +1,5 @@
+file = open("test.txt", 'r')
+data = file.read()
+file1 = open("test1.txt", 'a')
+file1.write(data)
+file1.flush()
