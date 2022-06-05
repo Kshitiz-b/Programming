@@ -1,14 +1,10 @@
 #include <iostream>
 using namespace std;
 
-class whatever
-{
-    
-};
-
 int main()
 {
-    
+    cout << "My first github code\n";
+    cout << "Feeling Good !!" << endl;
     
     return 0;
 }
