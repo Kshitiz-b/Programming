@@ -7,8 +7,7 @@ template <class T>
 class master
 {
 public:
-    T *ptr;
-
+    
     T a, b;
     void read(T x, T y)
     {
