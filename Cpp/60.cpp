@@ -12,14 +12,12 @@ public:
         data = a;
     }
     void display();
-    
-
 };
 
 template <class T>
-void Kshitiz<T>:: display()
+void Kshitiz<T>::display()
 {
-    cout << data << endl;
+    cout << endl << data << endl;
 }
 
 void func(int a)
@@ -27,13 +25,13 @@ void func(int a)
     cout << "First func() " << a << endl;
 }
 
-template<class T>
+template <class T>
 void func(T a)
 {
     cout << "Template func() " << a << endl;
 }
 
-template<class T>
+template <class T>
 void func1(T a)
 {
     cout << "Template func1() " << a << endl;
@@ -41,7 +39,7 @@ void func1(T a)
 
 int main()
 {
-    
+
     func(4); // Exact match takes the highest priority
     func1(4);
 
