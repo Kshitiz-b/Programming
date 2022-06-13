@@ -1,6 +1,6 @@
-//NOT WORKING
+// NOT WORKING
 #include <iostream>
-#include <cstring>
+#include <string>
 using namespace std;
 
 int main()
@@ -8,23 +8,22 @@ int main()
     string word;
     int z_count = 0;
     int o_count = 0;
-    string letter_z;
-    string letter_o;
-
-    letter_z = "z";
-    letter_o = "o";
+    char letter_z = 'z';
+    char letter_o = 'o';
 
     cin >> word;
 
-    for (int i = 0; i < 10; i++)
+    for (auto &elem : word)
     {
-        if (word[i] == letter_z)
+        if (elem == letter_z)
         {
-            z_count = z_count + 1;
+            z_count += 1;
+            
         }
-        else if (word[i] == letter_o)
+        else if (elem == letter_o)
         {
-            o_count = o_count + 1;
+            o_count += 1;
+
         }
     }
 
