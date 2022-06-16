@@ -2,7 +2,7 @@
 STL(Standard Template Library)
 library of generic classes and functions
 components of STL
-1. Containers - object which sotres data
+1. Containers - object which stores data
 2. Algorithms - procedure to process data
 3. Iterators - object which points to an element of a container
 */ 
@@ -14,7 +14,7 @@ Cointainers -
 */
 /*
 Sequence Containers
-    1. Vector -> Randon Access = fast
+    1. Vector -> Random Access = fast
               -> Insertion/deletion in middle = Slow      
               -> Insertion at the end = fast
     
