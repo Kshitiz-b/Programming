@@ -51,8 +51,7 @@ public:
     {
         cout << "\ntitle " << title << endl;
         cout << "rating " << rating << " out of 5 stars" << endl;
-        cout << "No. of words is " << words << " words\n"
-             << endl;
+        cout << "No. of words is " << words << " words\n" << endl;
     }
 };
 
