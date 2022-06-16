@@ -37,7 +37,6 @@ public:
     string level;
     string level1;
     string level2;
-    
 
     void input3()
     {
@@ -48,12 +47,12 @@ public:
     void cgpa_inc()
     {
         level1 = "state";
-        level2 = "national"; 
+        level2 = "national";
         if (level == level1)
         {
             cgpa += 0.5;
         }
-        else if(level == level2)
+        else if (level == level2)
         {
             cgpa += 1;
         }

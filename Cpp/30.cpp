@@ -1,6 +1,5 @@
 // hybrid inheritance example
 #include <iostream>
-
 using namespace std;
 
 class Animals // indicates class A
@@ -16,12 +15,9 @@ public:
 };
 
 class Mammals : public Animals // indicates class B derived from class A
-
 {
-
 public:
     Mammals()
-
     {
 
         cout << "This is a mammal\n";
@@ -29,9 +25,7 @@ public:
 };
 
 class Herbivores // indicates class C
-
 {
-
 public:
     Herbivores()
 
