@@ -27,8 +27,8 @@ int main()
     // An entity ehich behaves differently in different scenarios
     // in C++ - entity - a function or an operator
     // two types of polymorphosis
-    // Function overloading 
-    // function behaves differently in different context 
+    // Function overloading
+    // function behaves differently in different context
 
     display(34.5, 23.45);
     display();

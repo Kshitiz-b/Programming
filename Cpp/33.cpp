@@ -22,7 +22,7 @@ public:
     void display(double a, double b)
     {
         cout << "This is a function with two double arguments\n";
-    }    
+    }
 };
 
 int main()
