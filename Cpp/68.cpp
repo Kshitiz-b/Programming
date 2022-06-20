@@ -1,22 +1,40 @@
+// NOT WORKING
 #include <iostream>
 using namespace std;
 
-void func(int x)
+void read(int y, int z)
 {
-    for (int i=0;i<x;i++)
+    int arr[y][z];
+
+    for (int i = 0; i < y; i++)
     {
-        printf("I understand Functions concept %d\n", i);
-        
+        for (int j = 0; j < z; j++)
+        {
+            printf("%d", arr[i][j]);
+        }
+        printf("\n");
     }
 }
 
 int main()
 {
-    int n;
-    printf("Enter n: ");
-    scanf("%d", &n);
 
-    func(n);
-    
+    int m, n;
+
+    printf("Enter m, n:\n");
+    scanf("%d %d", m, n);
+
+    int arr[m][n];
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    read(m, n);
+
     return 0;
 }
