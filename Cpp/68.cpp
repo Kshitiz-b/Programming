@@ -2,19 +2,6 @@
 #include <iostream>
 using namespace std;
 
-void read(int y, int z)
-{
-    int arr[y][z];
-
-    for (int i = 0; i < y; i++)
-    {
-        for (int j = 0; j < z; j++)
-        {
-            printf("%d", arr[i][j]);
-        }
-        printf("\n");
-    }
-}
 
 int main()
 {
@@ -34,7 +21,15 @@ int main()
         }
     }
 
-    read(m, n);
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            printf("%d", arr[i][j]);
+        }
+        printf("\n");
+    }
 
+    
     return 0;
 }
