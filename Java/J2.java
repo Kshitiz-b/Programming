@@ -6,6 +6,5 @@ public class J2 {
         float div = 15.0f/4.0f;
         long views = 10000000000000l;
         char gender = 'M';
-
     }
 }
