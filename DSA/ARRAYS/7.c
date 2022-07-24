@@ -1,5 +1,6 @@
-// Inserting in an array
+//  Deleting an element
 #include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -7,7 +8,7 @@ int main()
     printf("Enter the size of Array: ");
     scanf("%d", &size);
 
-    int A[size], i, n, T, X, temp, index;
+    int A[size], i, n, X, temp, index;
     printf("Enter the number of elements: ");
     scanf("%d", &n);
 
@@ -17,16 +18,14 @@ int main()
         scanf("%d", &A[i]);
     }
 
-    printf("Enter the target element: ");
-    scanf("%d", &T);
-
-    printf("Enter the element: ");
+    printf("Enter the Target element: ");
     scanf("%d", &X);
 
     for (i = 0; i < n; i++)
     {
-        if (A[i] == T)
+        if (A[i] == X)
         {
+            printf("Element is present\n");
             temp = 1;
             index = i;
             break;
@@ -39,22 +38,26 @@ int main()
 
     if (temp == 1)
     {
-        for (i = n; i > index; i--)
+        for (i = index-1; i < n - 1; i++)
         {
-            A[i] = A[i - 1];
+            A[i] = A[i + 1];
         }
-        A[index] = X;
-        n++;
+        n--;
+        printf("%d is deleted\n", X);
     }
+
     else if (temp == 0)
     {
         printf("Target Element not found\n");
     }
 
+    
     for (i = 0; i < n; i++)
     {
         printf("%d ", A[i]);
     }
+
+    
 
     return 0;
 }
