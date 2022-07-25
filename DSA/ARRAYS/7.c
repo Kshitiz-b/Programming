@@ -38,7 +38,7 @@ int main()
 
     if (temp == 1)
     {
-        for (i = index-1; i < n - 1; i++)
+        for (i = index - 1; i < n - 1; i++)
         {
             A[i] = A[i + 1];
         }
@@ -51,13 +51,10 @@ int main()
         printf("Target Element not found\n");
     }
 
-    
     for (i = 0; i < n; i++)
     {
         printf("%d ", A[i]);
     }
-
-    
 
     return 0;
 }
