@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,12 +7,12 @@ int main()
     scanf("%d", &size);
 
     int A[size];
-    int n, T, i, X;
+    int n, T, i, X, index;
     int temp;
 
     scanf("%d", &n);
 
-    for (i = 1; i <= n; i++)
+    for (i = 0; i < n; i++)
     {
         scanf("%d", &A[i]);
     }
@@ -21,19 +20,19 @@ int main()
     scanf("%d", &T);
     scanf("%d", &X);
 
-    if (n >= size)
+    if (n > size)
     {
         printf("Array is Full\n");
     }
 
     else
     {
-        for (i = 1; i <= n; i++)
+        for (i = 0; i < n; i++)
         {
-            if (i == T)
+            if (A[i] == T)
             {
                 temp = 1;
-
+                index = i;
                 break;
             }
             else
@@ -41,27 +40,25 @@ int main()
                 temp = 0;
             }
         }
+    }
 
-        if (temp == 1)
+    if (temp == 1)
+    {
+        for (i = n; i > index; i--)
         {
-            n++;
-            for (i = n; i > T; i--)
-            {
-                A[i] = A[i - 1];
-            }
-            A[T] = X;
-            
-
-            for (i = 1; i <= n; i++)
-            {
-                printf("%d ", A[i]);
-            }
+            A[i] = A[i - 1];
         }
+        A[index] = X;
+        n++;
+    }
+    else if (temp == 0)
+    {
+        printf("Target Element Not Found\n");
+    }
 
-        else if (temp == 0)
-        {
-            printf("Position Not Found\n");
-        }
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", A[i]);
     }
 
     return 0;

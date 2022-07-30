@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -50,7 +49,6 @@ int main()
                 A[i] = A[i - 1];
             }
             A[T] = X;
-            
 
             for (i = 1; i <= n; i++)
             {
