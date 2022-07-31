@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vlogic1
+Z1 I323o^XF7VAXggEZn8QOS`3
+Z2 VT_;UHXD@0EHi30^JCZgk<0
+Z3 dD:\OneDrive\Documents\Programming\Model Sim
+Z4 w1659175364
+Z5 8D:/OneDrive/Documents/Programming/Model Sim/logic2.v
+Z6 FD:/OneDrive/Documents/Programming/Model Sim/logic2.v
+L0 1
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 !s100 6[O958<]KA73cY4nRBRle3
+Z10 !s108 1659175365.590000
+Z11 !s107 D:/OneDrive/Documents/Programming/Model Sim/logic2.v|
+Z12 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/logic2.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vlogic2
+Z13 IOFi;O0C4Q8eoHAFMVF[ah0
+Z14 V9TMEU<E:EWY_=E3A4S5=J2
+R3
+Z15 w1659175372
+R5
+R6
+L0 1
+R7
+r1
+31
+R12
+R8
+Z16 !s100 ;mcc6]J7Le24:[PH_l_zm1
+Z17 !s108 1659175373.557000
+R11
+!i10b 1
+!s85 0
+!s101 -O0
+vlogic3
+Z18 I3ZhmRIN[``U=I6EWC@iYJ2
+Z19 V36]G^hUb5LUg_j7G4i9Ri1
+R3
+Z20 w1659175394
+Z21 8D:/OneDrive/Documents/Programming/Model Sim/logic3.v
+Z22 FD:/OneDrive/Documents/Programming/Model Sim/logic3.v
+L0 1
+R7
+r1
+31
+R8
+Z23 !s100 nOzDY7mZL6^ViPFDjdT[:1
+Z24 !s108 1659175395.646000
+Z25 !s107 D:/OneDrive/Documents/Programming/Model Sim/logic3.v|
+Z26 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/logic3.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vlogic4
+!i10b 1
+Z27 !s100 lVNF]9PlMA_j]CzUYeRe[1
+Z28 IFFzjC[ReGCHjGaC?SCKG=2
+Z29 VQTMa80S?7?_DQ5XLS9G:g2
+R3
+w1659175423
+Z30 8D:/OneDrive/Documents/Programming/Model Sim/logic4.v
+Z31 FD:/OneDrive/Documents/Programming/Model Sim/logic4.v
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1659175424.748000
+!s107 D:/OneDrive/Documents/Programming/Model Sim/logic4.v|
+Z32 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/logic4.v|
+!s101 -O0
+R8

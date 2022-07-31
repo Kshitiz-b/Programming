@@ -1,0 +1,29 @@
+{D:/OneDrive/Documents/Programming/Model Sim/logic2.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic2.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module logic2
+
+Top level modules:
+	logic2
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic3.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic3.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module logic3
+
+Top level modules:
+	logic3
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic4.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic4.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module logic4
+
+Top level modules:
+	logic4
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic1.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module logic1
+
+Top level modules:
+	logic1
+
+} {} {}}
