@@ -1,4 +1,4 @@
-// Reversing a linked list using Recursive display
+// Recursive display of a linked list
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -47,15 +47,6 @@ void RDidplay(struct Node *p)
     }
 }
 
-void RevRDisplay(struct Node *p)
-{
-    if (p!=NULL)
-    {
-        RevRDisplay(p->next);
-        printf("%d ", p->data);
-    }
-}
-
 int main()
 {
     int A[] = {3, 5, 7, 10, 15};
@@ -63,8 +54,6 @@ int main()
     create(A, 5);
 
     RDidplay(first);
-    printf("\n");
-    RevRDisplay(first);     // The linked list is reversed :)
 
     return 0;
 }
