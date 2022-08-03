@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch P2",
+      "request": "launch",
+      "mainClass": "P2",
+      "projectName": "Programming_1d328f90"
+    },
+    {
+      "type": "java",
       "name": "Launch J10",
       "request": "launch",
       "mainClass": "J10",

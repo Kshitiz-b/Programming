@@ -1,3 +1,4 @@
+/*
 class Point {
     int x;
     int y;
@@ -10,3 +11,4 @@ public class J5 {
         System.out.println(p1.y);
     }
 }
+*/

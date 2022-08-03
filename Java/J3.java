@@ -1,4 +1,5 @@
 // Non Primitive Data Type
+/* 
 class Point {
     int x;
     int y;
@@ -18,3 +19,4 @@ class J3 {
         
     }
 }
+*/
