@@ -21,7 +21,7 @@ public class menuDriven {
 		System.out.printf("Enter an Integer: ");
 		n = scan.nextInt();
 
-		int i, origNum, remainder, result = 0;
+		int origNum, remainder, result = 0;
 		origNum = n;
 		while (origNum != 0) {
 			remainder = origNum % 10;
