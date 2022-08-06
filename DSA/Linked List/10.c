@@ -1,3 +1,4 @@
+// inserting in a linked list
 // Display a linked list
 #include <stdio.h>
 #include <stdlib.h>
@@ -36,33 +37,42 @@ void display(struct Node *p)
         printf("%d ", p->data);
         p = p->next;
     }
+    printf("\n");
 }
 
-struct Node * LSearch(struct Node *p, int key)
+void Insert(struct Node *p, int T, int X)
 {
-    while (p!=NULL)
+    struct Node *t;
+
+    t = (struct Node *)malloc(sizeof(struct Node));
+    t->data = X;
+
+    if(T==0)
     {
-        if(key==p->data)
-            return p;
-        p=p->next;
+        t->next=first;
+        first=t;
     }
-    return NULL;
+    else
+    {
+        for(int i=0;i<T-1;i++)
+        {
+            p=p->next;
+        }
+        t->next=p->next;
+        p->next=t;
+    }
+
 }
 
 int main()
 {
-    struct Node *temp;
     int A[] = {3, 5, 7, 10, 15};
 
     create(A, 5);
 
     display(first);
-
-    temp = LSearch(first, 15);
-    if(temp)
-        printf("\nKey is found: %d", temp->data);
-    else
-        printf("\nKey is not found\n");
+    Insert(first, 0, 10);
+    display(first);
 
     return 0;
 }

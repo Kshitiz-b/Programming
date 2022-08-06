@@ -1,4 +1,3 @@
-// Display a linked list
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -31,38 +30,36 @@ void create(int A[], int n)
 
 void display(struct Node *p)
 {
+    if (p != NULL)
+    {
+        printf("List->");
+    }
     while (p != NULL)
     {
-        printf("%d ", p->data);
+        printf("%d->", p->data);
         p = p->next;
     }
-}
-
-struct Node * LSearch(struct Node *p, int key)
-{
-    while (p!=NULL)
+    if (p == NULL)
     {
-        if(key==p->data)
-            return p;
-        p=p->next;
+        printf("NULL");
     }
-    return NULL;
 }
 
 int main()
 {
-    struct Node *temp;
-    int A[] = {3, 5, 7, 10, 15};
+    int n, i;
+    scanf("%d", &n);
+    int A[n];
 
-    create(A, 5);
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &A[i]);
+    }
+
+    create(A, n);
 
     display(first);
-
-    temp = LSearch(first, 15);
-    if(temp)
-        printf("\nKey is found: %d", temp->data);
-    else
-        printf("\nKey is not found\n");
+    printf("\n");
 
     return 0;
 }
