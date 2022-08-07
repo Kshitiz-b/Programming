@@ -1,4 +1,4 @@
-// Deleting first element in a linked list
+// Searching in a linked list
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -47,53 +47,70 @@ void display(struct Node *p)
     }
 }
 
-int DeleteFirst(struct Node *p, int index)
+struct Node * LSearch(struct Node *p, int T)
 {
-    struct Node *q = NULL;
-    int x = -1, i;
-
-    if (index == 1)
+    while (p!=NULL)
     {
-        q = first;
-        x = first->data;
-        first = first->next;
-        free(q);
-        return x;
+        if(T==p->data)
+            return p;
+        p=p->next;
+    }
+    return NULL;
+}
 
+
+void Insert(struct Node *p, struct Node *index, int X)
+{
+    struct Node *t;
+
+    t = (struct Node *)malloc(sizeof(struct Node));
+    t->data = X;
+
+    if (T == 1)
+    {
+        t->next = first;
+        first = t;
+        return;
     }
     else
     {
-        for (i = 0; i < index; i++)
+        for (int i = 0; i < T - 2 ; i++)
         {
-            q = p;
             p = p->next;
         }
-        q->next = p->next;
-        x = p->data;
-        free(p);
-        return x;
+        t->next = p->next;
+        p->next = t;
     }
 }
 
 int main()
 {
-    int n, i;
+    int n, i, T, X;
+    struct Node *temp;
+    struct Node *index;
     scanf("%d", &n);
-    int A[n], index = 1;
+    int A[n];
 
     for (i = 0; i < n; i++)
     {
         scanf("%d", &A[i]);
     }
 
+    scanf("%d", &T);
+    scanf("%d", &X);
+    
     create(A, n);
 
     display(first);
     printf("\n");
 
-    DeleteFirst(first, index);
-    printf("After Deletion\n");
-    display(first);
+    temp = LSearch(first, T);
+    if(temp)
+        index = temp;
+        Insert(first, index, X);
+        printf("\nKey is found: %d", temp->data);
+    else
+        printf("\nKey is not found\n");
 
     return 0;
 }

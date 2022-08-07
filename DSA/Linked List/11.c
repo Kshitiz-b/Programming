@@ -1,4 +1,4 @@
-// Display a linked list
+// Deleting an element on a given index in a linked list
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -46,21 +46,57 @@ void display(struct Node *p)
     }
 }
 
+int Delete(struct Node *p, int index)
+{
+    struct Node *q=NULL;
+    int x = -1, i;
+
+    if (index == 1)
+    {
+        q = first;
+        x = first->data;
+        first = first->next;
+        free(q);
+        return x;
+    }
+    else
+    {
+        for (i = 0; i < index; i++)
+        {
+            q = p;
+            p = p->next;
+        }
+        q->next = p->next;
+        x = p->data;
+        free(p);
+        return x;
+    }
+}
+
 int main()
 {
     int n, i;
     scanf("%d", &n);
-    int A[n];
+    int A[n], index;
 
     for (i = 0; i < n; i++)
     {
         scanf("%d", &A[i]);
     }
 
+    scanf("%d", &index);
+
     create(A, n);
 
     display(first);
     printf("\n");
 
+    if (index < 1 || index > n)
+    {
+        printf("NO");
+    }
+    else
+        Delete(first, index);
+        display(first);
     return 0;
 }

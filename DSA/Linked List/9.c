@@ -1,4 +1,4 @@
-// Display a linked list
+// Searching in a Linked list
 #include <stdio.h>
 #include <stdlib.h>
 

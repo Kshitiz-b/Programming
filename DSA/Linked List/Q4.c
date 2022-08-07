@@ -31,17 +31,18 @@ void create(int A[], int n)
 
 void display(struct Node *p)
 {
-    if (p != NULL)
-    {
-        printf("List->");
-    }
-    while (p != NULL)
-    {
-        printf("%d->", p->data);
-        p = p->next;
-    }
     if (p == NULL)
     {
+        printf("List is empty\n");
+    }
+    else
+    {
+        printf("List->");
+        while (p != NULL)
+        {
+            printf("%d->", p->data);
+            p = p->next;
+        }
         printf("NULL");
     }
 }
