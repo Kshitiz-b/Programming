@@ -47,47 +47,25 @@ void display(struct Node *p)
     }
 }
 
-void Insert(struct Node *p, int T, int X)
+void Insert(struct Node *l, int T, int X)
 {
-    struct Node *t;
-    struct Node *index;
-    int temp;
+    struct Node *temp;
+    temp = (struct Node *)malloc(sizeof(struct Node));
+    temp->data = X;
 
-    t = (struct Node *)malloc(sizeof(struct Node));
-    index = (struct Node *)malloc(sizeof(struct Node));
-    t->data = X;
+    for (l = first; l->next != NULL && l->data != T; l = l->next);
 
-    while (p->next != NULL)
+    if (l->data != T)
     {
-        if (T == p->data)
-        {
-            index->next = p->next;
-            temp = 1;
-            break;
-        }
-        else
-            temp = 0;
+        printf("Target Element is Not Found\n");
+        
     }
-
-    if (temp == 1)
+    else
     {
-        if (index->next == 0)
-        {
-            t->next = first;
-            first = t;
-        }
-        else
-        {
-            while (p->next != NULL)
-            {
-                p = p->next;
-            }
-            t->next = p->next;
-            p->next = t;
-        }
+        temp->next = l->next;
+        l->next = temp;
+        display(first);
     }
-    else 
-        printf("Target Element Not Found\n");
 }
 
 int main()
@@ -112,9 +90,8 @@ int main()
     display(first);
     printf("\n");
 
-    Insert(first, T, X);
     printf("After Insertion\n");
-    display(first);
+    Insert(first, T, X);
 
     return 0;
 }

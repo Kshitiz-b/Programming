@@ -31,17 +31,18 @@ void create(int A[], int n)
 
 void display(struct Node *p)
 {
-    if (p != NULL)
-    {
-        printf("List->");
-    }
-    while (p != NULL)
-    {
-        printf("%d->", p->data);
-        p = p->next;
-    }
     if (p == NULL)
     {
+        printf("List is empty\n");
+    }
+    else
+    {
+        printf("List->");
+        while (p != NULL)
+        {
+            printf("%d->", p->data);
+            p = p->next;
+        }
         printf("NULL");
     }
 }
@@ -60,7 +61,7 @@ void Insert(struct Node *p, int T, int X)
     }
     else
     {
-        for (int i = 0; i < T - 1 ; i++)
+        for (int i = 0; i < T - 1; i++)
         {
             p = p->next;
         }
