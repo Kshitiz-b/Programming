@@ -1,4 +1,4 @@
-// Add Before a target element
+// Add After
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -47,7 +47,7 @@ void Display()
     }
 }
 
-void AddBefore(int T, int X)
+void AddAfter(int T, int X)
 {
     struct Node *l;
     struct Node *temp;
@@ -56,33 +56,42 @@ void AddBefore(int T, int X)
     {
         printf("List is Empty\n");
     }
+
     else
     {
         for (l = list; l->data != T && l->next != NULL; l = l->next)
             ;
         if (l->data == T)
         {
-            if (l->next != NULL && l->prev == NULL)
+            if (l->prev != NULL && l->next == NULL)
             {
                 temp = (struct Node *)malloc(sizeof(struct Node));
                 temp->data = X;
-                temp->prev = NULL;
-                temp->next = list;
-                list->prev = temp;
-                list = temp;
+                temp->next = NULL;
+                temp->prev = l;
+                l->next = temp;
             }
+
+            else if (l->prev == NULL && l->next == NULL)
+            {
+                temp = (struct Node *)malloc(sizeof(struct Node));
+                temp->data = X;
+                temp->next = NULL;
+                temp->prev = l;
+                l->next = temp;
+                
+            }
+
             else
             {
                 temp = (struct Node *)malloc(sizeof(struct Node));
                 temp->data = X;
-                temp->prev = l->prev;
-                temp->prev->next = temp;
-                temp->next = l;
-                l->prev = temp;
-
-                if (l == list)
-                    list = temp;
+                temp->next = l->next;
+                temp->prev = l;
+                l->next = temp;
+                temp->next->prev = temp;
             }
+
             Display();
         }
         else
@@ -106,7 +115,7 @@ int main()
 
     create(A, n);
     Display();
-    AddBefore(T, X);
+    AddAfter(T, X);
 
     return 0;
 }
