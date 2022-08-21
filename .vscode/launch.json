@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ArrayDuplicate",
+      "request": "launch",
+      "mainClass": "ArrayDuplicate",
+      "projectName": "Programming_1d328f90"
+    },
+    {
+      "type": "java",
       "name": "Launch menuDriven",
       "request": "launch",
       "mainClass": "menuDriven",
