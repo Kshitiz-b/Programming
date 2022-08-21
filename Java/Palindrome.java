@@ -18,10 +18,10 @@ public class Palindrome
 	public static void main(String[] args)
 	{
 		String str, revStr="";
-		Scanner scan = new Scanner(System.in);
-		System.out.printf("Enter a String: ");
-		str = scan.next();
-
+		try (Scanner scan = new Scanner(System.in)) {
+			System.out.printf("Enter a String: ");
+			str = scan.next();
+		}
 		find(str, revStr);
 	}
 }

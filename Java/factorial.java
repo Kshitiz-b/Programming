@@ -20,11 +20,11 @@ public class factorial
 
 	public static void main(String[] args)
 	{
-		int n, i;
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter a number: ");
-		n = scan.nextInt();
-		
+		int n;
+		try (Scanner scan = new Scanner(System.in)) {
+			System.out.println("Enter a number: ");
+			n = scan.nextInt();
+		}
 		find(n);
 	}
 }

@@ -3,7 +3,7 @@ public class Armstrong
 {
 	static void find(int n)
 	{
-		int i, origNum, remainder,  result=0;
+		int origNum, remainder,  result=0;
 		origNum=n;
 		while(origNum!=0)
 		{
@@ -20,10 +20,10 @@ public class Armstrong
 	public static void main(String[] args)
 	{
 		int n;
-		Scanner scan = new Scanner(System.in);
-		System.out.printf("Enter an Integer: ");
-		n = scan.nextInt();
-		
+		try (Scanner scan = new Scanner(System.in)) {
+			System.out.printf("Enter an Integer: ");
+			n = scan.nextInt();
+		}
 		find(n);
 	}
 }
