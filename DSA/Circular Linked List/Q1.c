@@ -52,23 +52,39 @@ void DeleteNext(int T)
 
     if (list != NULL)
     {
-        for (p = l = list; l->next != list && l->data != T; p = l, l = l->next);
+        for (p = l = list; l->next != list && l->data != T; p = l, l = l->next)
+            ;
         if (l == p)
         {
-            for (l = list;l->next != list;l = l->next);
+            for (l = list; l->next != list; l = l->next)
+                ;
+
             if (list == l)
-                list = NULL;
-            else
+                printf("Target Element is Not Found\n");
+
+            else if (l->next == list)
             {
-                list = list->next;
-                l->next = list;
+
+                l = list->next->next;
+                p->next = l;
+                Display();
             }
-            free(p);
         }
         else
         {
-            p->next = l->next;
-            free(l);
+            if (l->next != list)
+            {
+                p = l->next;
+                l->next = p->next;
+                Display();
+            }
+            else
+            {
+
+                list = list->next;
+                l->next = list;
+                Display();
+            }
         }
     }
     else
@@ -91,7 +107,6 @@ int main()
     create(A, n);
     Display();
     DeleteNext(T);
-    Display();
 
     return 0;
 }
