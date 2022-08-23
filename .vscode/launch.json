@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch arrS",
+      "request": "launch",
+      "mainClass": "arrS",
+      "projectName": "Programming_1d328f90"
+    },
+    {
+      "type": "java",
+      "name": "Launch arrSum",
+      "request": "launch",
+      "mainClass": "arrSum",
+      "projectName": "Programming_1d328f90"
+    },
+    {
+      "type": "java",
       "name": "Launch ArrayDuplicate",
       "request": "launch",
       "mainClass": "ArrayDuplicate",
