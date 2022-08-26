@@ -5,6 +5,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	logic2
 
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/full_add_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/full_add_tb.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module full_add_tb
+
+Top level modules:
+	full_add_tb
+
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic3.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic3.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module logic3
@@ -12,12 +19,69 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	logic3
 
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MUX4to1
+
+Top level modules:
+	MUX4to1
+
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic4.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic4.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module logic4
 
 Top level modules:
 	logic4
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1A_F.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1A_F.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module task1AF
+
+Top level modules:
+	task1AF
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module task1BFo
+
+Top level modules:
+	task1BFo
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module task1BF
+
+Top level modules:
+	task1BF
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/full_add_BL.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/full_add_BL.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module full_add_BL
+
+Top level modules:
+	full_add_BL
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module task1AFo
+
+Top level modules:
+	task1AFo
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/full_sub.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/full_sub.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module full_sub
+
+Top level modules:
+	full_sub
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task2A.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task2A.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module full_add
+-- Compiling module half_add
+
+Top level modules:
+	full_add
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic1.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
