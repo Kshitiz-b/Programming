@@ -12,6 +12,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	full_add_tb
 
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module full_sub_tb
+
+Top level modules:
+	full_sub_tb
+
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic3.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic3.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module logic3
@@ -68,12 +75,26 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	task1AFo
 
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task2Bb_min.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task2Bb_min.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module minterm
+
+Top level modules:
+	minterm
+
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/full_sub.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/full_sub.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module full_sub
 
 Top level modules:
 	full_sub
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task2Bb_max.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task2Bb_max.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module maxterm
+
+Top level modules:
+	maxterm
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task2A.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task2A.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
