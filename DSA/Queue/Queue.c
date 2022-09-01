@@ -5,8 +5,8 @@ int rear = -1;
 
 void Enqueue(int A[], int n, int X)
 {
-    if (rear == n)
-        printf("Queue is Full");
+    if (rear == n-1)
+        printf("Queue is Full\n");
     else if (front == -1 && rear == -1)
     {
         front++;
@@ -20,6 +20,17 @@ void Enqueue(int A[], int n, int X)
     }
 }
 
+void Front(int A[])
+{
+    if (front == -1 || front > rear)
+        printf("\nQueue is Empty\n");
+    else
+    {
+        printf("\nThe Element at front is: %d\n", A[front]);
+    }
+
+}
+
 void Dequeue(int A[])
 {
 
@@ -27,7 +38,7 @@ void Dequeue(int A[])
         printf("Queue is Empty\n");
     else
     {
-        printf("\n%d is Deleted\n", A[rear]);
+        printf("\n%d is Deleted\n", A[front]);
         front++;
         Display(A);
     }
@@ -61,8 +72,10 @@ int main()
 
         Enqueue(A, n, X);
     }
+    Enqueue(A, n, 45);
     Display(A);
     Dequeue(A);
+    Front(A);
 
     return 0;
 }
