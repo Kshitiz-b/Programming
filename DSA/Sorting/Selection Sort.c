@@ -8,7 +8,7 @@ void swap(int *n1, int *n2)
     *n2 = temp;
 }
 
-void InsertionSort(int A[], int n)
+void SelectionSort(int A[], int n)
 {
     int i, j;
 
@@ -46,7 +46,7 @@ int main()
         scanf("%d", &A[i]);
     }
 
-    InsertionSort(A, n);
+    SelectionSort(A, n);
     printf("The Sorted Array is:\n");
     Display(A, n);
 

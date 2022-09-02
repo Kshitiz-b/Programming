@@ -61,7 +61,7 @@ int main()
     }
 
     lb = 0;
-    ub = n-1;
+    ub = n - 1;
 
     QuickSort(A, n, lb, ub);
     printf("The Sorted Array is:\n");
