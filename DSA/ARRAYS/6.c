@@ -1,4 +1,4 @@
-// Inserting in an array
+// Inserting an element before a target element
 #include <stdio.h>
 
 int main()

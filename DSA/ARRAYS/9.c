@@ -1,4 +1,4 @@
-
+// adding an element before target index
 #include <stdio.h>
 #include <stdlib.h>
 
