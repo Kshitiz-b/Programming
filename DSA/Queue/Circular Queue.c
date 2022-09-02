@@ -1,4 +1,4 @@
-// Implementation of queue using Array
+// Implementation of circular queue using Array
 #include <stdio.h>
 int front = -1;
 int rear = -1;
