@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Holiday",
+      "request": "launch",
+      "mainClass": "Holiday",
+      "projectName": "Programming_1d328f90"
+    },
+    {
+      "type": "java",
       "name": "Launch strFunc",
       "request": "launch",
       "mainClass": "strFunc",
