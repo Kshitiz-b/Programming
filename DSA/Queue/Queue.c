@@ -5,7 +5,7 @@ int rear = -1;
 
 void Enqueue(int A[], int n, int X)
 {
-    if (rear == n-1)
+    if (rear == n - 1)
         printf("Queue is Full\n");
     else if (front == -1 && rear == -1)
     {
@@ -28,7 +28,6 @@ void Front(int A[])
     {
         printf("\nThe Element at front is: %d\n", A[front]);
     }
-
 }
 
 void Dequeue(int A[])

@@ -1,159 +1,170 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "java",
-      "name": "Launch Holiday",
-      "request": "launch",
-      "mainClass": "Holiday",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch strFunc",
-      "request": "launch",
-      "mainClass": "strFunc",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch arrS",
-      "request": "launch",
-      "mainClass": "arrS",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch arrSum",
-      "request": "launch",
-      "mainClass": "arrSum",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch ArrayDuplicate",
-      "request": "launch",
-      "mainClass": "ArrayDuplicate",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch menuDriven",
-      "request": "launch",
-      "mainClass": "menuDriven",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch P2",
-      "request": "launch",
-      "mainClass": "P2",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch J10",
-      "request": "launch",
-      "mainClass": "J10",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch J9",
-      "request": "launch",
-      "mainClass": "J9",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch J8",
-      "request": "launch",
-      "mainClass": "J8",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch J7",
-      "request": "launch",
-      "mainClass": "J7",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch J6",
-      "request": "launch",
-      "mainClass": "J6",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch J5",
-      "request": "launch",
-      "mainClass": "J5",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch J4",
-      "request": "launch",
-      "mainClass": "J4",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch J3",
-      "request": "launch",
-      "mainClass": "J3",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch J2",
-      "request": "launch",
-      "mainClass": "J2",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch J1",
-      "request": "launch",
-      "mainClass": "J1",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch print",
-      "request": "launch",
-      "mainClass": "print",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "type": "java",
-      "name": "Launch test",
-      "request": "launch",
-      "mainClass": "test",
-      "projectName": "Programming_1d328f90"
-    },
-    {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
-      "request": "launch",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "d:/OneDrive/Documents/Programming/Cpp",
-      "environment": [],
-      "program": "d:/OneDrive/Documents/Programming/Cpp/build/Debug/outDebug",
-      "internalConsoleOptions": "openOnSessionStart",
-      "MIMode": "gdb",
-      "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
-      "console": "integratedTerminal",
-      "setupCommands": [
+    "version": "0.2.0",
+    "configurations": [
         {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
+            "type": "java",
+            "name": "Launch Holiday",
+            "request": "launch",
+            "mainClass": "Holiday",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch strFunc",
+            "request": "launch",
+            "mainClass": "strFunc",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch arrS",
+            "request": "launch",
+            "mainClass": "arrS",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch arrSum",
+            "request": "launch",
+            "mainClass": "arrSum",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArrayDuplicate",
+            "request": "launch",
+            "mainClass": "ArrayDuplicate",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch menuDriven",
+            "request": "launch",
+            "mainClass": "menuDriven",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch P2",
+            "request": "launch",
+            "mainClass": "P2",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch J10",
+            "request": "launch",
+            "mainClass": "J10",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch J9",
+            "request": "launch",
+            "mainClass": "J9",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch J8",
+            "request": "launch",
+            "mainClass": "J8",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch J7",
+            "request": "launch",
+            "mainClass": "J7",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch J6",
+            "request": "launch",
+            "mainClass": "J6",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch J5",
+            "request": "launch",
+            "mainClass": "J5",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch J4",
+            "request": "launch",
+            "mainClass": "J4",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch J3",
+            "request": "launch",
+            "mainClass": "J3",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch J2",
+            "request": "launch",
+            "mainClass": "J2",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch J1",
+            "request": "launch",
+            "mainClass": "J1",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch print",
+            "request": "launch",
+            "mainClass": "print",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "name": "C/C++ Runner: Debug Session",
+            "type": "cppdbg",
+            "request": "launch",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "d:/OneDrive/Documents/Programming/Cpp",
+            "environment": [],
+            "program": "d:/OneDrive/Documents/Programming/Cpp/build/Debug/outDebug",
+            "internalConsoleOptions": "openOnSessionStart",
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
+            "console": "integratedTerminal",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "(Windows) Launch",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "enter program name, for example ${workspaceFolder}/a.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "console": "externalTerminal"
         }
-      ]
-    }
-  ]
+    ]
 }
