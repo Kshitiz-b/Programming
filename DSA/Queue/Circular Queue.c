@@ -2,8 +2,10 @@
 #include <stdio.h>
 int front = -1;
 int rear = -1;
+int n=5;
+int A[];
 
-void Enqueue(int A[], int n, int X)
+void Enqueue(int X)
 {
     if (((rear + 1) % n) == front)
         printf("Queue is Full\n");
@@ -20,7 +22,7 @@ void Enqueue(int A[], int n, int X)
     }
 }
 
-void Dequeue(int A[], int n)
+void Dequeue()
 {
 
     if (front == -1)
@@ -29,27 +31,27 @@ void Dequeue(int A[], int n)
     {
         printf("%d is Deleted\n", A[front]);
         front = rear = -1;
-        Display(A, n);
     }
     else
     {
         printf("%d is Deleted\n", A[front]);
         front = (front + 1) % n;
-        Display(A, n);
     }
 }
 
-void Display(int A[], int n)
+void Display()
 {
     if (front == -1)
         printf("Queue is Empty\n");
     if (rear >= front)
     {
+        printf("Circular Queue:");
         for (int i = front; i <= rear; i++)
             printf("%d ", A[i]);
     }
     else
     {
+        printf("Circular Queue:");
         for (int i = front; i < n; i++)
             printf("%d ", A[i]);
 
@@ -62,22 +64,26 @@ void Display(int A[], int n)
 
 int main()
 {
-    int n;
-    printf("Enter the size of Queue: ");
-    scanf("%d", &n);
-    int A[n];
+    int choice, X;
 
-    Enqueue(A, n, 15);
-    Enqueue(A, n, 45);
-    Enqueue(A, n, 25);
-    Enqueue(A, n, 10);
-    Enqueue(A, n, 40);
-    Display(A, n);
-    Dequeue(A, n);
-    Enqueue(A, n, 5);
-    Display(A, n);
-    Enqueue(A, n, 1);
-    Dequeue(A, n);
+    do
+    {
+        scanf("%d", &choice);
+        switch (choice)
+        {
+        case 1:
+            scanf("%d", &X);
+            Enqueue(X);
+            break;
+        case 2:
+            Dequeue();
+            break;
+        case 3:
+            Display();
+            break;
+        }
+    } while (choice != 4);
+
 
     return 0;
 }
