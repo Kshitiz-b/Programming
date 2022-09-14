@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Raju",
+            "request": "launch",
+            "mainClass": "Raju",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch Student",
+            "request": "launch",
+            "mainClass": "Student",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
             "name": "Launch Holiday",
             "request": "launch",
             "mainClass": "Holiday",
