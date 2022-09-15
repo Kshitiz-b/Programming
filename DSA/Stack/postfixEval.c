@@ -1,79 +1,83 @@
 #include <stdio.h>
-#include <conio.h>
-#include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
-#include <math.h>
-const int max = 20;
-int stack[20], top = 0, x1, x2;
 
-void fun_push(int n)
+struct s
 {
-    if (top >= max)
-        printf("\nStack is full\n");
-    else
-    {
-        top++;
-        stack[top] = n;
-    }
-    
-}
-void fun_pop()
+    int stack[100];
+    int sp;
+} st;
+
+void init()
 {
-    x2 = stack[top];
-    top--;
-    x1 = stack[top];
- 
+    st.sp = -1;
 }
 
-void fun_eval(char c, int x1, int x2)
+void push(int ele)
 {
-    int x;
-    switch (c)
+    st.stack[++st.sp] = ele;
+}
+
+int pop()
+{
+    return st.stack[st.sp--];
+}
+
+int doOperation(int op1, int op2, char ch)
+{
+    switch (ch)
     {
     case '+':
-        x = x1 + x2;
-        break;
+        return op1 + op2;
     case '-':
-        x = x1 - x2;
-        break;
+        return op1 - op2;
     case '*':
-        x = x1 * x2;
-        break;
+        return op1 * op2;
     case '/':
-        x = x1 / x2;
-        break;
-    case '^':
-        x = pow(x1, x2);
-
+        return op1 / op2;
+    case '%':
+        return op1 & op2;
     }
-    stack[top] = x;
+    return -1;
+}
+
+void evaluate(char s[])
+{
+    char ch;
+    int op1;
+    int op2;
+    int ch_count = 0, op_count = 0;
+    for (int i = 0; s[i] != '\0'; i++)
+    {
+        ch = s[i];
+
+        if ((ch >= '0') && (ch <= '9'))
+        {
+            push(ch - 48);
+            ch_count++;
+        }
+        else
+        {
+            op_count++;
+            op2 = pop();
+            op1 = pop();
+
+            int result = doOperation(op1, op2, ch);
+            push(result);
+        }
+    }
+
+    if (ch_count == op_count)
+        printf("Not Valid Postfix Expression");
+    else
+        printf("%d", st.stack[st.sp]);
 }
 
 int main()
 {
-    char c, ch[2], arr[25];
-    int i, len, t;
-    scanf("%s", arr);
-    len = strlen(arr);
-    for (i = 0; i < len; i++)
-    {
-        if (isdigit(arr[i]))
-        {
-            ch[0] = arr[i];
-            ch[1] = '\0';
-            t = atoi(ch);
-            fun_push(t);
-        }
-        else
-        {
-            c = arr[i];
-            fun_pop();
-            fun_eval(c, x1, x2);
-        }
-    }
-    printf("%d", stack[1]);
-    getch();
-
+    init();
+    char s[100];
+    // printf("\n Enter the postfix Expression: ");
+    scanf("%s", s);
+    evaluate(s);
     return 0;
 }

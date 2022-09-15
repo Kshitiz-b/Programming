@@ -1,52 +1,46 @@
 #include <stdio.h>
-#include <stdlib.h>
+//#include <conio.h>
 #include <string.h>
-
-char stack[50];
+#define MAX 20
+char str[MAX], stack[MAX];
 int top = -1;
-
-void push(char ch)
+void push(char c)
 {
-    stack[++top] = ch;
+    stack[++top] = c;
 }
-
 char pop()
 {
     return stack[top--];
 }
-
-void convert(char exp[])
+void post_in()
 {
-    int l, i, j = 0;
-    char tmp[20];
-    strrev(exp);
-    l = strlen(exp);
-    for (i = 0; i < 50; i++)
+    int i, n;
+    char a, b, op;
+    printf("Enter the postfix expression\n");
+    char str[10];
+    scanf("%s", str);
+    n = strlen(str);
+    for (i = 0; i < MAX; i++)
+        stack[i] = NULL;
+    // printf("Infix expression is:\t");
+    printf("(%c", str[0]);
+    for (i = 1; i < n; i++)
     {
-        stack[i] = '\0';
-    }
-    
-    for (i = 0; i < l; i++)
-    {
-        if (exp[i] == '+' || exp[i] == '-' || exp[i] == '*' || exp[i] == '/')
-            push(exp[i]);
+        if (str[i] == '+' || str[i] == '-' || str[i] == '*' || str[i] == '/')
+        {
+            b = pop();
+            // a=pop();
+            op = str[i];
+            printf("%c%c)", op, b);
+        }
         else
         {
-            tmp[j++] = exp[i];
-            tmp[j++] = pop();
+            push(str[i]);
         }
     }
-    tmp[j] = exp[top--];
-    strrev(tmp);
-    puts(tmp);
+    // printf("%c",str[top--]);
 }
-
-int main()
+void main()
 {
-    char exp[50];
-
-    
-    gets(exp);
-    convert(exp);
-    return 0;
+    post_in();
 }
