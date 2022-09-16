@@ -3,390 +3,467 @@ K3
 13
 cModel Technology
 Z0 dC:\altera\13.0sp1
-vfull_add
-Z1 !s100 5IfJAgU>eCU9EI;]R_FkJ3
-Z2 IQRSSGb[AhZE88098@67Ej0
-Z3 VP0d:9M^9Ln3;`WNTH2A=B0
+vdecoder24_behaviour
+Z1 !s100 <iWja[f7l9`HHe4bcTXP21
+Z2 I@Vn2ooBez>M0;WdVBB6_03
+Z3 VJD:_Nd9eFXM@2OfR^5cS:2
 Z4 dD:\OneDrive\Documents\Programming\Model Sim
-Z5 w1661528512
-Z6 8D:/OneDrive/Documents/Programming/Model Sim/task2A.v
-Z7 FD:/OneDrive/Documents/Programming/Model Sim/task2A.v
+Z5 w1663304833
+Z6 8D:/OneDrive/Documents/Programming/Model Sim/decoder.v
+Z7 FD:/OneDrive/Documents/Programming/Model Sim/decoder.v
 L0 1
 Z8 OV;L;10.1d;51
 r1
 31
-Z9 !s108 1662702340.537000
-Z10 !s107 D:/OneDrive/Documents/Programming/Model Sim/task2A.v|
-Z11 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/task2A.v|
-Z12 o-work work -O0
+Z9 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/decoder.v|
+Z10 o-work work -O0
+Z11 !s108 1663306660.764000
+Z12 !s107 D:/OneDrive/Documents/Programming/Model Sim/decoder.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vDemultiplexer
+Z13 !s100 hSXGC=deBDIWnYj7ebzPc0
+Z14 IY3K8iZ;`l33VX?bm]^L5I3
+Z15 Vo]CQ73h6>Xngo=DReTM<K0
+R4
+Z16 w1663304987
+Z17 8D:/OneDrive/Documents/Programming/Model Sim/fullSubDe-Mux.v
+Z18 FD:/OneDrive/Documents/Programming/Model Sim/fullSubDe-Mux.v
+L0 2
+R8
+r1
+31
+Z19 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/fullSubDe-Mux.v|
+R10
+Z20 n@demultiplexer
+!i10b 1
+!s85 0
+Z21 !s108 1663306660.972000
+Z22 !s107 D:/OneDrive/Documents/Programming/Model Sim/fullSubDe-Mux.v|
+!s101 -O0
+vfull_add
+Z23 !s100 5IfJAgU>eCU9EI;]R_FkJ3
+Z24 IQRSSGb[AhZE88098@67Ej0
+Z25 VP0d:9M^9Ln3;`WNTH2A=B0
+R4
+Z26 w1661528512
+Z27 8D:/OneDrive/Documents/Programming/Model Sim/task2A.v
+Z28 FD:/OneDrive/Documents/Programming/Model Sim/task2A.v
+L0 1
+R8
+r1
+31
+Z29 !s108 1663306657.904000
+Z30 !s107 D:/OneDrive/Documents/Programming/Model Sim/task2A.v|
+Z31 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/task2A.v|
+R10
 !i10b 1
 !s85 0
 !s101 -O0
 vfull_add_BL
-Z13 !s100 `G0[aM__AVIRO5Q^z@H`Y1
-Z14 IMg>mO7n`SPR]oOmG@bZIV1
-Z15 VBf?fm7Q`Q2VRmA7zPlAOH0
+Z32 !s100 `G0[aM__AVIRO5Q^z@H`Y1
+Z33 IMg>mO7n`SPR]oOmG@bZIV1
+Z34 VBf?fm7Q`Q2VRmA7zPlAOH0
 R4
-Z16 w1661530193
-Z17 8D:/OneDrive/Documents/Programming/Model Sim/full_add_BL.v
-Z18 FD:/OneDrive/Documents/Programming/Model Sim/full_add_BL.v
+Z35 w1661530193
+Z36 8D:/OneDrive/Documents/Programming/Model Sim/full_add_BL.v
+Z37 FD:/OneDrive/Documents/Programming/Model Sim/full_add_BL.v
 L0 2
 R8
 r1
 31
-Z19 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/full_add_BL.v|
-R12
-Z20 nfull_add_@b@l
-Z21 !s108 1662702341.021000
-Z22 !s107 D:/OneDrive/Documents/Programming/Model Sim/full_add_BL.v|
+Z38 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/full_add_BL.v|
+R10
+Z39 nfull_add_@b@l
+Z40 !s108 1663306658.625000
+Z41 !s107 D:/OneDrive/Documents/Programming/Model Sim/full_add_BL.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vfull_add_tb
-Z23 !s100 c9K44]<ff@Fk_JgBi[3100
-Z24 IF4`@bAW^nnJ3g=03nPWZX1
-Z25 Vo99AAnID7RSG:PaEkG7d43
+Z42 !s100 c9K44]<ff@Fk_JgBi[3100
+Z43 IF4`@bAW^nnJ3g=03nPWZX1
+Z44 Vo99AAnID7RSG:PaEkG7d43
 R4
-Z26 w1661529619
-Z27 8D:/OneDrive/Documents/Programming/Model Sim/full_add_tb.v
-Z28 FD:/OneDrive/Documents/Programming/Model Sim/full_add_tb.v
+Z45 w1661529619
+Z46 8D:/OneDrive/Documents/Programming/Model Sim/full_add_tb.v
+Z47 FD:/OneDrive/Documents/Programming/Model Sim/full_add_tb.v
 L0 1
 R8
 r1
 31
-Z29 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/full_add_tb.v|
-R12
-Z30 !s108 1662702340.825000
-Z31 !s107 D:/OneDrive/Documents/Programming/Model Sim/full_add_tb.v|
+Z48 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/full_add_tb.v|
+R10
+Z49 !s108 1663306658.388000
+Z50 !s107 D:/OneDrive/Documents/Programming/Model Sim/full_add_tb.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vfull_sub
-Z32 !s100 67mD6mzE48^J`Bg3>6@VV1
-Z33 I57XeZL3AABz9PNXzP`B=h1
-Z34 VQ84R?l02aiJbz2^98S;m13
+Z51 !s100 67mD6mzE48^J`Bg3>6@VV1
+Z52 I57XeZL3AABz9PNXzP`B=h1
+Z53 VQ84R?l02aiJbz2^98S;m13
 R4
-Z35 w1661534154
-Z36 8D:/OneDrive/Documents/Programming/Model Sim/full_sub.v
-Z37 FD:/OneDrive/Documents/Programming/Model Sim/full_sub.v
+Z54 w1661534154
+Z55 8D:/OneDrive/Documents/Programming/Model Sim/full_sub.v
+Z56 FD:/OneDrive/Documents/Programming/Model Sim/full_sub.v
 L0 1
 R8
 r1
 31
-Z38 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/full_sub.v|
-R12
-Z39 !s108 1662702341.205000
-Z40 !s107 D:/OneDrive/Documents/Programming/Model Sim/full_sub.v|
+Z57 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/full_sub.v|
+R10
+Z58 !s108 1663306658.837000
+Z59 !s107 D:/OneDrive/Documents/Programming/Model Sim/full_sub.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vfull_sub_tb
-Z41 !s100 d37h8J92H3EOfSa9li<O[0
-Z42 IeLHn?SFCXXISbbg<4CbJ03
-Z43 V8`2cDPA^:lOFS=NoPC4H?0
+Z60 !s100 d37h8J92H3EOfSa9li<O[0
+Z61 IeLHn?SFCXXISbbg<4CbJ03
+Z62 V8`2cDPA^:lOFS=NoPC4H?0
 R4
-Z44 w1661537124
-Z45 8D:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v
-Z46 FD:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v
+Z63 w1661537124
+Z64 8D:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v
+Z65 FD:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v
 L0 1
 R8
 r1
 31
-Z47 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v|
-R12
-Z48 !s108 1662702341.401000
-Z49 !s107 D:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v|
+Z66 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v|
+R10
+Z67 !s108 1663306659.077000
+Z68 !s107 D:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v|
 !i10b 1
 !s85 0
 !s101 -O0
-vhalf_add
-Z50 !s100 K:HJaTW<fKSWImAASZjSV0
-Z51 Ido]:zd9ED]C^cW3LcIPBV0
-Z52 VJBBM=6h?X?UdTEd6;X=Ck1
+vfulladder
+!i10b 1
+Z69 !s100 GmS=S`zL@=3GBM`e;3bjE3
+Z70 I3zdlAMiQoNP2@RgYD<oTH1
+Z71 V_3I9EL`d=g8U4ePe><oHE3
 R4
-R5
-R6
-R7
+Z72 w1663306133
+Z73 8D:/OneDrive/Documents/Programming/Model Sim/RippleCarryAdder.v
+Z74 FD:/OneDrive/Documents/Programming/Model Sim/RippleCarryAdder.v
+L0 1
+R8
+r1
+!s85 0
+31
+Z75 !s108 1663306661.160000
+Z76 !s107 D:/OneDrive/Documents/Programming/Model Sim/RippleCarryAdder.v|
+Z77 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/RippleCarryAdder.v|
+!s101 -O0
+R10
+vhalf_add
+Z78 !s100 K:HJaTW<fKSWImAASZjSV0
+Z79 Ido]:zd9ED]C^cW3LcIPBV0
+Z80 VJBBM=6h?X?UdTEd6;X=Ck1
+R4
+R26
+R27
+R28
 L0 11
 R8
 r1
 31
-R9
+R29
+R30
+R31
 R10
-R11
-R12
 !i10b 1
 !s85 0
 !s101 -O0
 vlogic1
-Z53 !s100 _k9i`AkQoL<D?PDb3>5he1
-Z54 I6geA01XeozodAJ@RbD4Na3
-Z55 VT_;UHXD@0EHi30^JCZgk<0
+Z81 !s100 _k9i`AkQoL<D?PDb3>5he1
+Z82 I6geA01XeozodAJ@RbD4Na3
+Z83 VT_;UHXD@0EHi30^JCZgk<0
 R4
-Z56 w1659175335
-Z57 8D:/OneDrive/Documents/Programming/Model Sim/logic1.v
-Z58 FD:/OneDrive/Documents/Programming/Model Sim/logic1.v
+Z84 w1659175335
+Z85 8D:/OneDrive/Documents/Programming/Model Sim/logic1.v
+Z86 FD:/OneDrive/Documents/Programming/Model Sim/logic1.v
 L0 1
 R8
 r1
 31
-Z59 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/logic1.v|
-R12
-Z60 !s108 1662702338.082000
-Z61 !s107 D:/OneDrive/Documents/Programming/Model Sim/logic1.v|
+Z87 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/logic1.v|
+R10
+Z88 !s108 1663306627.634000
+Z89 !s107 D:/OneDrive/Documents/Programming/Model Sim/logic1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vlogic2
-Z62 !s100 ;mcc6]J7Le24:[PH_l_zm1
-Z63 IOFi;O0C4Q8eoHAFMVF[ah0
-Z64 V9TMEU<E:EWY_=E3A4S5=J2
+Z90 !s100 ;mcc6]J7Le24:[PH_l_zm1
+Z91 IOFi;O0C4Q8eoHAFMVF[ah0
+Z92 V9TMEU<E:EWY_=E3A4S5=J2
 R4
-Z65 w1659175372
-Z66 8D:/OneDrive/Documents/Programming/Model Sim/logic2.v
-Z67 FD:/OneDrive/Documents/Programming/Model Sim/logic2.v
+Z93 w1659175372
+Z94 8D:/OneDrive/Documents/Programming/Model Sim/logic2.v
+Z95 FD:/OneDrive/Documents/Programming/Model Sim/logic2.v
 L0 1
 R8
 r1
 31
-Z68 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/logic2.v|
-R12
-Z69 !s108 1662702338.528000
-Z70 !s107 D:/OneDrive/Documents/Programming/Model Sim/logic2.v|
+Z96 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/logic2.v|
+R10
+Z97 !s108 1663306628.222000
+Z98 !s107 D:/OneDrive/Documents/Programming/Model Sim/logic2.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vlogic3
-Z71 !s100 nOzDY7mZL6^ViPFDjdT[:1
-Z72 I3ZhmRIN[``U=I6EWC@iYJ2
-Z73 V36]G^hUb5LUg_j7G4i9Ri1
+Z99 !s100 nOzDY7mZL6^ViPFDjdT[:1
+Z100 I3ZhmRIN[``U=I6EWC@iYJ2
+Z101 V36]G^hUb5LUg_j7G4i9Ri1
 R4
-Z74 w1659175394
-Z75 8D:/OneDrive/Documents/Programming/Model Sim/logic3.v
-Z76 FD:/OneDrive/Documents/Programming/Model Sim/logic3.v
+Z102 w1659175394
+Z103 8D:/OneDrive/Documents/Programming/Model Sim/logic3.v
+Z104 FD:/OneDrive/Documents/Programming/Model Sim/logic3.v
 L0 1
 R8
 r1
 31
-Z77 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/logic3.v|
-R12
-Z78 !s108 1662702338.912000
-Z79 !s107 D:/OneDrive/Documents/Programming/Model Sim/logic3.v|
+Z105 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/logic3.v|
+R10
+Z106 !s108 1663306628.432000
+Z107 !s107 D:/OneDrive/Documents/Programming/Model Sim/logic3.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vlogic4
-Z80 !s100 lVNF]9PlMA_j]CzUYeRe[1
-Z81 IFFzjC[ReGCHjGaC?SCKG=2
-Z82 VQTMa80S?7?_DQ5XLS9G:g2
+Z108 !s100 lVNF]9PlMA_j]CzUYeRe[1
+Z109 IFFzjC[ReGCHjGaC?SCKG=2
+Z110 VQTMa80S?7?_DQ5XLS9G:g2
 R4
-Z83 w1659175423
-Z84 8D:/OneDrive/Documents/Programming/Model Sim/logic4.v
-Z85 FD:/OneDrive/Documents/Programming/Model Sim/logic4.v
+Z111 w1659175423
+Z112 8D:/OneDrive/Documents/Programming/Model Sim/logic4.v
+Z113 FD:/OneDrive/Documents/Programming/Model Sim/logic4.v
 L0 1
 R8
 r1
 31
-Z86 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/logic4.v|
-R12
-Z87 !s108 1662702339.160000
-Z88 !s107 D:/OneDrive/Documents/Programming/Model Sim/logic4.v|
+Z114 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/logic4.v|
+R10
+Z115 !s108 1663306628.644000
+Z116 !s107 D:/OneDrive/Documents/Programming/Model Sim/logic4.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmaxterm
-Z89 !s100 M0[B5=;^GB@^zO^^DGkBX3
-Z90 If3OfXPD0<A=hECzDzFR]a3
-Z91 V@39iX71QZeAPTTh>GTa`j0
+Z117 !s100 M0[B5=;^GB@^zO^^DGkBX3
+Z118 If3OfXPD0<A=hECzDzFR]a3
+Z119 V@39iX71QZeAPTTh>GTa`j0
 R4
-Z92 w1661582358
-Z93 8D:/OneDrive/Documents/Programming/Model Sim/task2Bb_max.v
-Z94 FD:/OneDrive/Documents/Programming/Model Sim/task2Bb_max.v
+Z120 w1661582358
+Z121 8D:/OneDrive/Documents/Programming/Model Sim/task2Bb_max.v
+Z122 FD:/OneDrive/Documents/Programming/Model Sim/task2Bb_max.v
 L0 1
 R8
 r1
 31
-Z95 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/task2Bb_max.v|
-R12
-Z96 !s108 1662702341.988000
-Z97 !s107 D:/OneDrive/Documents/Programming/Model Sim/task2Bb_max.v|
+Z123 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/task2Bb_max.v|
+R10
+Z124 !s108 1663306659.285000
+Z125 !s107 D:/OneDrive/Documents/Programming/Model Sim/task2Bb_max.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vminterm
-Z98 !s100 Se`0LQC[N6NIQcfRmc6SN3
-Z99 IbA@hTA@HI7fi6i2lIf=G<1
-Z100 V617aMj;9:NneQf=^mAfF31
+Z126 !s100 Se`0LQC[N6NIQcfRmc6SN3
+Z127 IbA@hTA@HI7fi6i2lIf=G<1
+Z128 V617aMj;9:NneQf=^mAfF31
 R4
-Z101 w1661582356
-Z102 8D:/OneDrive/Documents/Programming/Model Sim/task2Bb_min.v
-Z103 FD:/OneDrive/Documents/Programming/Model Sim/task2Bb_min.v
+Z129 w1661582356
+Z130 8D:/OneDrive/Documents/Programming/Model Sim/task2Bb_min.v
+Z131 FD:/OneDrive/Documents/Programming/Model Sim/task2Bb_min.v
 L0 1
 R8
 r1
 31
-Z104 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/task2Bb_min.v|
-R12
-Z105 !s108 1662702342.192000
-Z106 !s107 D:/OneDrive/Documents/Programming/Model Sim/task2Bb_min.v|
+Z132 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/task2Bb_min.v|
+R10
+Z133 !s108 1663306659.482000
+Z134 !s107 D:/OneDrive/Documents/Programming/Model Sim/task2Bb_min.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmus4_1
-Z107 !s100 e4M13[OcTRD3@YDkKNFC^1
-Z108 Iz?a>HkAB<>W[V]Y4[D9AW0
-Z109 V8`;2?Mj;oY3DF[o222gBC2
+Z135 !s100 e4M13[OcTRD3@YDkKNFC^1
+Z136 Iz?a>HkAB<>W[V]Y4[D9AW0
+Z137 V8`;2?Mj;oY3DF[o222gBC2
 R4
-Z110 w1662701607
-Z111 8D:/OneDrive/Documents/Programming/Model Sim/mux4_1.v
-Z112 FD:/OneDrive/Documents/Programming/Model Sim/mux4_1.v
+Z138 w1662701607
+Z139 8D:/OneDrive/Documents/Programming/Model Sim/mux4_1.v
+Z140 FD:/OneDrive/Documents/Programming/Model Sim/mux4_1.v
 L0 2
 R8
 r1
 31
-Z113 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/mux4_1.v|
-R12
-Z114 !s108 1662702342.384000
-Z115 !s107 D:/OneDrive/Documents/Programming/Model Sim/mux4_1.v|
+Z141 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/mux4_1.v|
+R10
+Z142 !s108 1663306659.718000
+Z143 !s107 D:/OneDrive/Documents/Programming/Model Sim/mux4_1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMUX4_1
-Z116 IQ=9T<QDeD?eUFM]`FE`X^0
-Z117 VRLnhPjbnMAMKklLH9840@0
+Z144 !s100 eWP:S5mh6[6996E<lJ=TE2
+Z145 IQ=9T<QDeD?eUFM]`FE`X^0
+Z146 VRLnhPjbnMAMKklLH9840@0
 R4
-Z118 w1662702334
-Z119 8D:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v
-Z120 FD:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v
+Z147 w1662702334
+Z148 8D:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v
+Z149 FD:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v
 L0 2
 R8
 r1
 31
-Z121 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v|
-R12
-Z122 n@m@u@x4_1
+Z150 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v|
+R10
+Z151 n@m@u@x4_1
+Z152 !s108 1663306659.967000
+Z153 !s107 D:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v|
 !i10b 1
-Z123 !s100 eWP:S5mh6[6996E<lJ=TE2
 !s85 0
-Z124 !s108 1662702342.564000
-Z125 !s107 D:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v|
 !s101 -O0
 vmux4_1_cs
-!i10b 1
-Z126 !s100 Y[jb^7jm@1[0jPddMT8B63
-Z127 IaPBe;W>D:D8MCRNm79F482
-Z128 V8zmHRZ7cdIi1kgV[EbW@?0
+Z154 !s100 Y[jb^7jm@1[0jPddMT8B63
+Z155 IaPBe;W>D:D8MCRNm79F482
+Z156 V8zmHRZ7cdIi1kgV[EbW@?0
 R4
-Z129 w1662702238
-Z130 8D:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v
-Z131 FD:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v
+Z157 w1662702238
+Z158 8D:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v
+Z159 FD:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v
 L0 2
 R8
 r1
-!s85 0
 31
-!s108 1662702342.760000
-!s107 D:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v|
-Z132 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v|
-!s101 -O0
-R12
-vMUX4to1
-Z133 !s100 Pej8E4CPWbM2Jn1V2kZIa3
-Z134 I<Qamc?P<_J:SWR>?`>k583
-Z135 VEcYo5fOaMkghkB9SNMa3T0
-R4
-Z136 w1662700507
-Z137 8D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v
-Z138 FD:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v
-L0 1
-R8
-r1
-31
-Z139 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v|
-R12
-Z140 n@m@u@x4to1
-Z141 !s108 1662702340.329000
-Z142 !s107 D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v|
+Z160 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v|
+R10
+Z161 !s108 1663306660.195000
+Z162 !s107 D:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v|
 !i10b 1
 !s85 0
 !s101 -O0
-vtask1AF
-Z143 !s100 F6kSiAQmef^:=;mKc>KCO1
-Z144 I7V:9jhS?6UKjYO5Zal05o2
-Z145 V1dYFMO_Imf@GEbO8R[?F32
+vMUX4to1
+Z163 !s100 Pej8E4CPWbM2Jn1V2kZIa3
+Z164 I<Qamc?P<_J:SWR>?`>k583
+Z165 VEcYo5fOaMkghkB9SNMa3T0
 R4
-Z146 w1661453289
-Z147 8D:/OneDrive/Documents/Programming/Model Sim/task1A_F.v
-Z148 FD:/OneDrive/Documents/Programming/Model Sim/task1A_F.v
+Z166 w1662700507
+Z167 8D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v
+Z168 FD:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v
 L0 1
 R8
 r1
 31
-Z149 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/task1A_F.v|
-R12
-Z150 ntask1@a@f
-Z151 !s108 1662702339.460000
-Z152 !s107 D:/OneDrive/Documents/Programming/Model Sim/task1A_F.v|
+Z169 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v|
+R10
+Z170 n@m@u@x4to1
+Z171 !s108 1663306653.981000
+Z172 !s107 D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vrippe_adder
+!i10b 1
+Z173 !s100 mc?n4MJR6NPYS76UD>8[51
+Z174 IRAdJ[`jIKh`GH;N1?BXG@1
+Z175 VL>VQ0gBceMGNQY`Tj5GR[1
+R4
+R72
+R73
+R74
+L0 12
+R8
+r1
+!s85 0
+31
+R75
+R76
+R77
+!s101 -O0
+R10
+vtask1AF
+Z176 !s100 F6kSiAQmef^:=;mKc>KCO1
+Z177 I7V:9jhS?6UKjYO5Zal05o2
+Z178 V1dYFMO_Imf@GEbO8R[?F32
+R4
+Z179 w1661453289
+Z180 8D:/OneDrive/Documents/Programming/Model Sim/task1A_F.v
+Z181 FD:/OneDrive/Documents/Programming/Model Sim/task1A_F.v
+L0 1
+R8
+r1
+31
+Z182 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/task1A_F.v|
+R10
+Z183 ntask1@a@f
+Z184 !s108 1663306628.856000
+Z185 !s107 D:/OneDrive/Documents/Programming/Model Sim/task1A_F.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vtask1AFo
-Z153 !s100 KOY>e`[VO_ZDg7h1nW>7:1
-Z154 ILY@>X2I=U;L7[b80AO0CU3
-Z155 ViDd3[DgI]6>271SJCbOQL3
+Z186 !s100 KOY>e`[VO_ZDg7h1nW>7:1
+Z187 ILY@>X2I=U;L7[b80AO0CU3
+Z188 ViDd3[DgI]6>271SJCbOQL3
 R4
-Z156 w1661454259
-Z157 8D:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v
-Z158 FD:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v
+Z189 w1661454259
+Z190 8D:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v
+Z191 FD:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v
 L0 1
 R8
 r1
 31
-Z159 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v|
-R12
-Z160 ntask1@a@fo
-Z161 !s108 1662702339.636000
-Z162 !s107 D:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v|
+Z192 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v|
+R10
+Z193 ntask1@a@fo
+Z194 !s108 1663306629.192000
+Z195 !s107 D:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vtask1BF
-Z163 !s100 P7RMV<J0ILY4J>`^i8U5Q1
-Z164 Ia4T]`L0A?5_F1L][`ml@W2
-Z165 VA69]5lbd=n^PJg5O?4B4=0
+Z196 !s100 P7RMV<J0ILY4J>`^i8U5Q1
+Z197 Ia4T]`L0A?5_F1L][`ml@W2
+Z198 VA69]5lbd=n^PJg5O?4B4=0
 R4
-Z166 w1661456170
-Z167 8D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v
-Z168 FD:/OneDrive/Documents/Programming/Model Sim/task1B_F.v
+Z199 w1661456170
+Z200 8D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v
+Z201 FD:/OneDrive/Documents/Programming/Model Sim/task1B_F.v
 L0 1
 R8
 r1
 31
-Z169 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v|
-R12
-Z170 ntask1@b@f
-Z171 !s108 1662702339.820000
-Z172 !s107 D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v|
+Z202 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v|
+R10
+Z203 ntask1@b@f
+Z204 !s108 1663306629.388000
+Z205 !s107 D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vtask1BFo
-Z173 !s100 >5:QMZ5`<[0Im2OJId_1J2
-Z174 I3KcNf3V49kH;JP^nZSj@P2
-Z175 VYNXmBWWZEIGPQ6S5a=CmO1
+Z206 !s100 >5:QMZ5`<[0Im2OJId_1J2
+Z207 I3KcNf3V49kH;JP^nZSj@P2
+Z208 VYNXmBWWZEIGPQ6S5a=CmO1
 R4
-Z176 w1661456791
-Z177 8D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v
-Z178 FD:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v
+Z209 w1661456791
+Z210 8D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v
+Z211 FD:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v
 L0 1
 R8
 r1
 31
-Z179 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v|
-R12
-Z180 ntask1@b@fo
-Z181 !s108 1662702340.145000
-Z182 !s107 D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v|
+Z212 !s90 -reportprogress|300|-work|work|D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v|
+R10
+Z213 ntask1@b@fo
+Z214 !s108 1663306631.809000
+Z215 !s107 D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v|
 !i10b 1
 !s85 0
 !s101 -O0

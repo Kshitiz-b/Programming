@@ -61,6 +61,14 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	task1BF
 
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/RippleCarryAdder.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/RippleCarryAdder.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module fulladder
+-- Compiling module rippe_adder
+
+Top level modules:
+	rippe_adder
+
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module MUX4_1
@@ -103,6 +111,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	minterm
 
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/fullSubDe-Mux.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/fullSubDe-Mux.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Demultiplexer
+
+Top level modules:
+	Demultiplexer
+
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/mux4_1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/mux4_1.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module mus4_1
@@ -124,6 +139,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	maxterm
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module decoder24_behaviour
+
+Top level modules:
+	decoder24_behaviour
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic1.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
