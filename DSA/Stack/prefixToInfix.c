@@ -1,116 +1,115 @@
+// not working
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
 
-char operand_stack[50][80], operator_stack[50];
-int top_operator = -1, top_operand = -1;
-
-int push_operator(char operator)
+struct Node
 {
-    return operator_stack[++top_operator] = operator;
-    
-}
+    char data[1000];
+    struct Node *next;
+};
 
-void push_operand(char *opnd)
-{
-    strcpy(operand_stack[++top_operand], opnd);
-}
+struct Node *top = NULL;
 
-char pop_operator()
+void push(char value[])
 {
-    return (operator_stack[top_operator--]);
-}
-
-char *pop_operand()
-{
-    return (operand_stack[top_operand--]);
-}
-
-int empty(int t)
-{
-    if (t == 0)
+    struct Node *newNode;
+    newNode = (struct Node *)malloc(sizeof(struct Node));
+    strcpy(newNode->data, value);
+    if (top == NULL)
     {
-        return 1;
+        newNode->next = NULL;
     }
     else
     {
-        return 0;
+        newNode->next = top;
     }
+    top = newNode;
+}
+
+char *pop()
+{
+
+    char *temp_data = top->data;
+    top = top->next;
+    return temp_data;
+}
+
+void prefix(char data)
+{
+    char str[1000] = "";
+    char j[100];
+    strcpy(j, pop());
+    char ji[100];
+    strcpy(ji, pop());
+
+    char r[] = "(";
+
+    char ri[] = ")";
+    strcat(str, r);
+    strcat(str, ji);
+    strncat(str, &data, 1);
+    strcat(str, j);
+
+    strcat(str, ri);
+
+    push(str);
+}
+
+void reverse(char *exp){
+
+    int size = strlen(exp);
+    int j = size, i=0;
+    char temp[size];
+
+    temp[j--]='\0';
+    while(exp[i]!='\0')
+    {
+        if(exp[i] == '(')
+            temp[j] = ')';
+        else if(exp[i] == ')')
+            temp[j] = '(';
+        else
+            temp[j] = exp[i];
+        j--;
+        i++;
+    }
+    strcpy(exp,temp);
 }
 
 int main()
 {
-    // char prefix_expression[50], ch, temporary_string[50], operand_a[50], operand_b[50], operator[2];
-    // int count = 0, operand_count = 0;
+    char arr[100];
+    scanf("%s", arr);
+    reverse(arr);
+    char *ptr = arr;
+    int i = 0;
 
-    // scanf("%s", prefix_expression);
-    // while ((ch = prefix_expression[count++]) != '\0')
-    // {
-    //     if (isalnum(ch))
-    //     {
-    //         temporary_string[0] = ch;
-    //         temporary_string[1] = '\0';
-    //         push_operand(temporary_string);
-    //         operand_count++;
-    //         if (operand_count >= 2)
-    //         {
-    //             strcpy(operand_b, pop_operand());
-    //             strcpy(operand_a, pop_operand());
-    //             strcpy(temporary_string, "(");
-    //             strcat(temporary_string, operand_a);
-    //             ch = pop_operator();
-    //             operator[0] = ch;
-    //             operator[1] = '\0';
-    //             strcat(temporary_string, operator);
-    //             strcat(temporary_string, operand_b);
-    //             strcat(temporary_string, ")");
-    //             push_operand(temporary_string);
-    //             operand_count = operand_count - 1;
-    //         }
-    //     }
-    //     else
-    //     {
-    //         push_operator(ch);
-    //         if (operand_count == 1)
-    //         {
-    //             operand_count = 0;
-    //         }
-    //     }
-    // }
-    // if (!empty(top_operand))
-    // {
-    //     strcpy(operand_b, pop_operand());
-    //     strcpy(operand_a, pop_operand());
-    //     strcpy(temporary_string, "(");
-    //     strcat(temporary_string, operand_a);
-    //     ch = pop_operator();
-    //     operator[0] = ch;
-    //     operator[1] = '\0';
-    //     strcat(temporary_string, operator);
-    //     strcat(temporary_string, operand_b);
-    //     strcat(temporary_string, ")");
-    //     push_operand(temporary_string);
-    // }
-    // printf("%s", operand_stack[top_operand]);
+    while (*ptr != '\0')
+    {
+        char str[2];
+        str[0] = *ptr;
+        str[1] = '\0';
 
-    char choice[10];
-	scanf("%s", choice);
-	char str1[] = "*-A/BC-/AKL";
-	char str2[] = "*+AB-CD";  
-	char str3[] = "-AB";  
-	char str4[] = "A+B";
- 
+        if (*ptr >= 'A' && *ptr <= 'Z')
+        {
+            push(str);
+            i++;
+        }
+        else if (i < 2)
+        {
+            printf("Not Valid prefix Expression");
+            exit(0);
+        }
+        else
+        {
+            prefix(*ptr);
+        }
+        ptr++;
+    }
 
-	
-	if (!strcmp(choice, str2))
-	    printf("((A+B)*(C-D))");
-	else if (!strcmp(choice, str3))
-		printf("(A-B)");
-	else if (!strcmp(choice, str4))
-		printf("Not Valid Prefix Expression");
-	else if(strcmp(choice, str1))
-		printf("((A-(B/C))*((A/K)-L))");
-	
-	
-    return 0;
+    char *ptr1 = pop();
+    reverse(ptr1);
+
+    printf("%s", ptr1);
 }
