@@ -66,10 +66,10 @@ void evaluate(char s[])
         }
     }
 
-    if (ch_count == op_count)
-        printf("Not Valid Postfix Expression");
-    else
+    if (ch_count > op_count)
         printf("%d", st.stack[st.sp]);
+    else
+        printf("Not Valid Postfix Expression");
 }
 
 int main()

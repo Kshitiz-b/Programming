@@ -1,46 +1,90 @@
+// It Works!!
 #include <stdio.h>
-//#include <conio.h>
+#include <stdlib.h>
 #include <string.h>
-#define MAX 20
-char str[MAX], stack[MAX];
-int top = -1;
-void push(char c)
+
+struct Node
 {
-    stack[++top] = c;
-}
-char pop()
+    char data[1000];
+    struct Node *next;
+};
+
+struct Node *top = NULL;
+
+void push(char value[])
 {
-    return stack[top--];
-}
-void post_in()
-{
-    int i, n;
-    char a, b, op;
-    printf("Enter the postfix expression\n");
-    char str[10];
-    scanf("%s", str);
-    n = strlen(str);
-    for (i = 0; i < MAX; i++)
-        stack[i] = NULL;
-    // printf("Infix expression is:\t");
-    printf("(%c", str[0]);
-    for (i = 1; i < n; i++)
+    struct Node *newNode;
+    newNode = (struct Node *)malloc(sizeof(struct Node));
+    strcpy(newNode->data, value);
+    if (top == NULL)
     {
-        if (str[i] == '+' || str[i] == '-' || str[i] == '*' || str[i] == '/')
+        newNode->next = NULL;
+    }
+    else
+    {
+        newNode->next = top;
+    }
+    top = newNode;
+}
+
+char *pop()
+{
+
+    char *temp_data = top->data;
+    top = top->next;
+    return temp_data;
+}
+
+void postfix(char data)
+{
+    char str[1000] = "";
+    char j[100];
+    strcpy(j, pop());
+    char ji[100];
+    strcpy(ji, pop());
+
+    char r[] = "(";
+
+    char ri[] = ")";
+    strcat(str, r);
+    strcat(str, ji);
+    strncat(str, &data, 1);
+    strcat(str, j);
+
+    strcat(str, ri);
+
+    push(str);
+}
+
+int main()
+{
+    char arr[100];
+    scanf("%s", arr);
+    char *ptr = arr;
+    int i = 0;
+
+    while (*ptr != '\0')
+    {
+        char str[2];
+        str[0] = *ptr;
+        str[1] = '\0';
+
+        if (*ptr >= 'A' && *ptr <= 'Z')
         {
-            b = pop();
-            // a=pop();
-            op = str[i];
-            printf("%c%c)", op, b);
+            push(str);
+            i++;
+        }
+        else if (i < 2)
+        {
+            printf("Not Valid Postfix Expression");
+            exit(0);
         }
         else
         {
-            push(str[i]);
+            postfix(*ptr);
         }
+        ptr++;
     }
-    // printf("%c",str[top--]);
-}
-void main()
-{
-    post_in();
+
+    printf("%s", pop());
 }
