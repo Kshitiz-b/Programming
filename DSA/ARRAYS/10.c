@@ -1,5 +1,4 @@
 // Inserting after a target element
-// Inserting an element before a target element
 #include <stdio.h>
 
 int main()
