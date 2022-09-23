@@ -317,3 +317,13 @@ Model Sim/work/parity/_primary.dbs
 Model Sim/work/parity/_primary.vhd
 Model Sim/work/parity/verilog.prw
 Model Sim/work/parity/verilog.psm
+Model Sim/BoothMultiplier.v
+Model Sim/BoothMultiplier.v.bak
+Model Sim/Logic_Gates.cr.mti
+Model Sim/Logic_Gates.mpf
+Model Sim/work/_info
+Model Sim/work/@booth@multiplier/_primary.dat
+Model Sim/work/@booth@multiplier/_primary.dbs
+Model Sim/work/@booth@multiplier/_primary.vhd
+Model Sim/work/@booth@multiplier/verilog.prw
+Model Sim/work/@booth@multiplier/verilog.psm
