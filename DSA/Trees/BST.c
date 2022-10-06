@@ -97,9 +97,9 @@ int main()
     // insertion(root, 2);
     // display(root, 1);
 
+    printf("Enter your choice (i: Insertion, d: Deletion, p: Print, e: End)\n");
     do
     {
-        // printf("Enter your choice (i: Insertion, d: Deletion, p: Print, e: End)\n");
         scanf("%c", &choice);
         switch (choice)
         {
