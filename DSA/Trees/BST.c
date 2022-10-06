@@ -72,7 +72,7 @@ struct node *display(struct node *root, int level)
         printf("%d", root->data);
         display(root->left, level + 1);
     }
-    
+
     return (0);
 }
 int main()
@@ -99,7 +99,7 @@ int main()
 
     do
     {
-        //printf("Enter your choice (i: Insertion, d: Deletion, p: Print)\n");
+        // printf("Enter your choice (i: Insertion, d: Deletion, p: Print, e: End)\n");
         scanf("%c", &choice);
         switch (choice)
         {
