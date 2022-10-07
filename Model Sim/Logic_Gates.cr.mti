@@ -1,4 +1,25 @@
-{D:/OneDrive/Documents/Programming/Model Sim/logic2.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic2.v}
+{D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/TFlipFlop.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/TFlipFlop.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module tff
+
+Top level modules:
+	tff
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/DFlipFlop.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/DFlipFlop.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module dff
+
+Top level modules:
+	dff
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic2.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic2.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module logic2
 
@@ -11,6 +32,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	full_add_tb
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/JKFlipFlop.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/JKFlipFlop.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module jkff
+
+Top level modules:
+	jkff
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -54,6 +82,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	task1BFo
 
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module task1BF
+
+Top level modules:
+	task1BF
+
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/BoothMultiplier.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/BoothMultiplier.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module BoothMultiplier
@@ -61,12 +96,15 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	BoothMultiplier
 
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v}
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit_tb.v} {2 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit_tb.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module task1BF
+-- Compiling module alu
+-- Compiling module tb_alu
+** Warning: D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit_tb.v(70): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
 
 Top level modules:
-	task1BF
+	tb_alu
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/RippleCarryAdder.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/RippleCarryAdder.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -117,6 +155,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	ParityChecker
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/SRFlipFlop.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/SRFlipFlop.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module srff
+
+Top level modules:
+	srff
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/full_sub.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/full_sub.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
