@@ -1,9 +1,20 @@
-{D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit.v}
+{D:/OneDrive/Documents/Programming/Model Sim/encoder.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/encoder.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module alu
+-- Compiling module Encoder
+-- Compiling module Encoder_tb
 
 Top level modules:
-	alu
+	Encoder_tb
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit.v} {2 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module alu
+-- Compiling module tb_alu
+** Warning: D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit.v(71): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+
+Top level modules:
+	tb_alu
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/TFlipFlop.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/TFlipFlop.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -33,6 +44,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	full_add_tb
 
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ALU_1bit.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_1bit.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALU_1bit
+
+Top level modules:
+	ALU_1bit
+
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/JKFlipFlop.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/JKFlipFlop.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module jkff
@@ -53,6 +71,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	logic3
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module task1BFo
+
+Top level modules:
+	task1BFo
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -75,12 +100,12 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	task1AF
 
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v}
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder_2to4_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder_2to4_tb.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module task1BFo
+-- Compiling module tb
 
 Top level modules:
-	task1BFo
+	tb
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -96,15 +121,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	BoothMultiplier
 
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit_tb.v} {2 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit_tb.v}
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit_tb.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module alu
--- Compiling module tb_alu
-** Warning: D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit_tb.v(70): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-
+-- Compiling module ALU
+-- Compiling module alu_test
 
 Top level modules:
-	tb_alu
+	alu_test
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/RippleCarryAdder.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/RippleCarryAdder.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -120,6 +143,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	ParityChecker_tb
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder_3to8_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder_3to8_tb.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module decoder_tb
+
+Top level modules:
+	decoder_tb
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -163,6 +193,21 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	srff
 
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder_4to16.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder_4to16.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module decoder_4to16
+-- Compiling module decoder_4to16_tb
+
+Top level modules:
+	decoder_4to16_tb
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder_3to8.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder_3to8.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module decoder3_to_8
+
+Top level modules:
+	decoder3_to_8
+
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/full_sub.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/full_sub.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module full_sub
@@ -177,12 +222,33 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	minterm
 
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ALU_4bit.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_4bit.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/fullSubDe-Mux.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/fullSubDe-Mux.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module Demultiplexer
 
 Top level modules:
 	Demultiplexer
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder_2to4.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder_2to4.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module decoder24_behaviour
+
+Top level modules:
+	decoder24_behaviour
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/MUX_4to1_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/MUX_4to1_tb.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module tb_4to1_mux
+
+Top level modules:
+	tb_4to1_mux
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/mux4_1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/mux4_1.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -212,6 +278,15 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	decoder24_behaviour
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/priorityEncoder_8to3.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/priorityEncoder_8to3.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module priorityencoder_83
+-- Compiling module priorityencoder_83_tb
+
+Top level modules:
+	priorityencoder_83
+	priorityencoder_83_tb
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic1.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
