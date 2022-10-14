@@ -166,6 +166,36 @@ void display()
         printf("NULL\n");
 }
 
+void reverse()
+{
+    struct Node *prevnode = NULL;
+    struct Node *current = list, *nextnode = list;
+
+    while (nextnode != NULL)
+    {
+        nextnode = nextnode->next;
+        current->next = prevnode;
+        prevnode = current;
+        current = nextnode;
+    }
+    list = prevnode;
+    printf("Reversed Linked List is:\n");
+    display();
+}
+
+void RecursiveReverse(struct Node *p)
+{
+    if (p->next == NULL)
+    {
+        list = p;
+        return;
+    }
+    RecursiveReverse(p->next);
+    struct Node *q = p->next;
+    q->next = p;
+    p->next = NULL;
+}
+
 int main()
 {
     int n, X, T;
@@ -182,7 +212,7 @@ int main()
     int choice;
     do
     {
-        printf("Enter YOur Choice: ");
+        printf("Enter Your Choice: ");
         scanf("%d", &choice);
 
         switch (choice)
@@ -216,10 +246,16 @@ int main()
             InsertBefore(X, T);
             break;
         case 7:
+            reverse();
+            break;
+        case 8:
+            RecursiveReverse(list);
+            break;
+        case 9:
             display();
             break;
         }
-    } while (choice != 9);
+    } while (choice != 0);
 
     return 0;
 }
