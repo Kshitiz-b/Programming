@@ -43,7 +43,8 @@
     "xtr1common": "cpp",
     "xutility": "cpp",
     "string": "cpp",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "list": "c"
   },
   "C_Cpp.errorSquiggles": "Disabled",
   "C_Cpp_Runner.cCompilerPath": "C:/msys64/mingw64/bin/gcc.exe",
