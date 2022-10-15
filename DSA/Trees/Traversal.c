@@ -32,6 +32,15 @@ void traversePostorder(struct node *root)
     traversePostorder(root->right);
     printf(" %d ", root->data);
 }
+void printLeaf(struct node *root)
+{
+    if (root == NULL)
+        return;
+    printLeaf(root->left);
+    printLeaf(root->right);
+    if (root->right == NULL && root->left == NULL)
+        printf(" %d ", root->data);
+}
 void traversePreorder(struct node *root)
 {
     if (root == NULL)
@@ -59,5 +68,7 @@ int main()
     traversePostorder(root);
     printf("\n The Preorder traversal of given binary tree is-\n");
     traversePreorder(root);
+    printf("\n The Leaf Nodes are-\n");
+    printLeaf(root);
     return 0;
 }
