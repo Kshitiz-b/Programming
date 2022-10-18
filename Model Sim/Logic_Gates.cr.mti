@@ -72,13 +72,6 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	logic3
 
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module task1BFo
-
-Top level modules:
-	task1BFo
-
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module MUX4to1
@@ -86,12 +79,12 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	MUX4to1
 
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic4.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic4.v}
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module logic4
+-- Compiling module task1BFo
 
 Top level modules:
-	logic4
+	task1BFo
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1A_F.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1A_F.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -99,6 +92,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	task1AF
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic4.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic4.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module logic4
+
+Top level modules:
+	logic4
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder_2to4_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder_2to4_tb.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
