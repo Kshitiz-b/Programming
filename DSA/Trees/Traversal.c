@@ -51,17 +51,17 @@ void traversePreorder(struct node *root)
 }
 int main()
 {
-    struct node *root = create(40);
-    root->left = create(30);
-    root->right = create(50);
-    root->left->left = create(25);
-    root->left->right = create(35);
-    root->left->left->left = create(15);
-    root->left->left->right = create(28);
-    root->right->left = create(45);
-    root->right->right = create(60);
-    root->right->right->left = create(55);
-    root->right->right->right = create(70);
+    struct node *root = create(35);
+    root->left = create(40);
+    root->right = create(99);
+    root->left->left = create(12);
+    root->left->right = create(4);
+    root->left->left->left = create(70);
+    root->left->left->right = create(3);
+    root->right->left = create(6);
+    root->right->right = create(80);
+    root->right->right->left = create(60);
+    root->right->right->right = create(31);
     printf("\n The Inorder traversal of given binary tree is -\n");
     traverseInorder(root);
     printf("\n The Postorder traversal of given binary tree is-\n");

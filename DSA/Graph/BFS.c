@@ -15,7 +15,6 @@ void bfs(int v)
 void main()
 {
     int v;
-    clrscr();
     printf("\n Enter the number of vertices:");
     scanf("%d", &n);
     for (i = 1; i <= n; i++)

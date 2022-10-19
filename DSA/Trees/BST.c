@@ -8,7 +8,7 @@ struct node
 };
 struct node *create(int x)
 {
-    struct node *temp = malloc(sizeof(struct node));
+    struct node *temp = (struct node *)malloc(sizeof(struct node));
     temp->data = x;
     temp->left = temp->right = NULL;
     return temp;
@@ -31,7 +31,6 @@ struct node *subtreedelete(struct node *root, struct node *q)
     {
         q->data = root->data;
         root = root->left;
-        free(root);
     }
     return (root);
 }
