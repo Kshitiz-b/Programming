@@ -1,4 +1,27 @@
 import java.util.Scanner;
+
+class InvalidUsernameException extends Exception {
+    int usernameConditionViolated = 0;
+
+    public InvalidUsernameException(int conditionViolated) {
+        super("Invalid Username: ");
+        usernameConditionViolated = conditionViolated;
+    }
+
+    public String printMessage() {
+        switch (usernameConditionViolated) {
+
+            case 1:
+                return ("Username length should be  between 8 to 15 characters");
+            case 2:
+                return ("Username should not contain any space");
+            case 3:
+                return ("Username should not contain any special character");
+        }
+        return ("");
+    }
+}
+
 class InvalidPasswordException extends Exception {
 
     int passwordConditionViolated = 0;
@@ -32,16 +55,16 @@ class InvalidPasswordException extends Exception {
             case 6:
                 return ("Password should contain at"
                         + " least one lowercase letter(a-z)");
+
         }
 
         return ("");
     }
 }
 
-public class PasswordValidator {
+class PasswordValidator extends Validator {
 
-    public static void isValid(String password)
-            throws InvalidPasswordException {
+    public static void isValid(String password) throws InvalidPasswordException {
 
         if (!((password.length() >= 8) && (password.length() <= 15))) {
             throw new InvalidPasswordException(1);
@@ -113,29 +136,71 @@ public class PasswordValidator {
 
     }
 
+}
+
+class UsernameValidator extends Validator {
+    public static void isValid(String username) throws InvalidUsernameException {
+
+        if (!((username.length() >= 8) && (username.length() <= 15))) {
+            throw new InvalidUsernameException(1);
+        }
+
+        if (username.contains(" ")) {
+            throw new InvalidUsernameException(2);
+        }
+        
+        if ((username.contains("@") || username.contains("#")
+                || username.contains("!") || username.contains("~")
+                || username.contains("$") || username.contains("%")
+                || username.contains("^") || username.contains("&")
+                || username.contains("*") || username.contains("(")
+                || username.contains(")") || username.contains("-")
+                || username.contains("+") || username.contains("/")
+                || username.contains(":") || username.contains(".")
+                || username.contains(", ") || username.contains("<")
+                || username.contains(">") || username.contains("?")
+                || username.contains("|"))) {
+            throw new InvalidUsernameException(3);
+        }
+
+
+    }
+}
+
+public class Validator {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.println("Enter the password: ");
-            String password1 = sc.next();
+            String password1 = sc.nextLine();
             try {
                 System.out.println("Is Password " + password1 + " valid?");
-                isValid(password1);
+                PasswordValidator.isValid(password1);
                 System.out.println("Valid Password");
             } catch (InvalidPasswordException e) {
                 System.out.print(e.getMessage());
                 System.out.println(e.printMessage());
             }
+            System.out.println("Enter the username: ");
+            String username1 = sc.nextLine();
+            try {
+                System.out.println("Is Username " + username1 + " valid?");
+                UsernameValidator.isValid(username1);
+                System.out.println("Valid Username");
+            } catch (InvalidUsernameException m) {
+                System.out.print(m.getMessage());
+                System.out.println(m.printMessage());
+            }
         }
 
         // String password2 = "Geek007@GFG";
         // try {
-        //     System.out.println("\nIs Password "
-        //             + password2 + " valid?");
-        //     isValid(password2);
-        //     System.out.println("Valid Password");
+        // System.out.println("\nIs Password "
+        // + password2 + " valid?");
+        // isValid(password2);
+        // System.out.println("Valid Password");
         // } catch (InvalidPasswordException e) {
-        //     System.out.print(e.getMessage());
-        //     System.out.println(e.printMessage());
+        // System.out.print(e.getMessage());
+        // System.out.println(e.printMessage());
         // }
     }
 }
