@@ -1,10 +1,17 @@
-{D:/OneDrive/Documents/Programming/Model Sim/encoder.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/encoder.v}
+{D:/OneDrive/Documents/Programming/Model Sim/RingCounter.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/RingCounter.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Encoder
--- Compiling module Encoder_tb
+-- Compiling module ring_counter
+-- Compiling module ring_counter_test
 
 Top level modules:
-	Encoder_tb
+	ring_counter_test
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/DFlipFlop.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/DFlipFlop.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module dff
+
+Top level modules:
+	dff
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit.v} {2 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -16,147 +23,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	tb_alu
 
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/TFlipFlop.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/TFlipFlop.v}
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/SIPO.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/SIPO.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module tff
+-- Compiling module sipo
+-- Compiling module sipo_test
 
 Top level modules:
-	tff
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/DFlipFlop.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/DFlipFlop.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module dff
-
-Top level modules:
-	dff
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic2.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic2.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module logic2
-
-Top level modules:
-	logic2
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/full_add_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/full_add_tb.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module full_add_tb
-
-Top level modules:
-	full_add_tb
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ALU_1bit.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_1bit.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ALU_1bit
-
-Top level modules:
-	ALU_1bit
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/JKFlipFlop.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/JKFlipFlop.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module jkff
-
-Top level modules:
-	jkff
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module full_sub_tb
-
-Top level modules:
-	full_sub_tb
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic3.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic3.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module logic3
-
-Top level modules:
-	logic3
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module MUX4to1
-
-Top level modules:
-	MUX4to1
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module task1BFo
-
-Top level modules:
-	task1BFo
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1A_F.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1A_F.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module task1AF
-
-Top level modules:
-	task1AF
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic4.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic4.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module logic4
-
-Top level modules:
-	logic4
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder_2to4_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder_2to4_tb.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module tb
-
-Top level modules:
-	tb
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module task1BF
-
-Top level modules:
-	task1BF
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/BoothMultiplier.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/BoothMultiplier.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module BoothMultiplier
-
-Top level modules:
-	BoothMultiplier
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit_tb.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ALU
--- Compiling module alu_test
-
-Top level modules:
-	alu_test
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/RippleCarryAdder.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/RippleCarryAdder.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module fulladder
--- Compiling module rippe_adder
-
-Top level modules:
-	rippe_adder
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/parity_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/parity_tb.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ParityChecker_tb
-
-Top level modules:
-	ParityChecker_tb
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder_3to8_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder_3to8_tb.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module decoder_tb
-
-Top level modules:
-	decoder_tb
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module MUX4_1
-
-Top level modules:
-	MUX4_1
+	sipo_test
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/full_add_BL.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/full_add_BL.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -165,33 +38,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	full_add_BL
 
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v}
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/PIPO.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/PIPO.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module mux4_1_cs
+-- Compiling module pipo
+-- Compiling module pipo_test
 
 Top level modules:
-	mux4_1_cs
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module task1AFo
-
-Top level modules:
-	task1AFo
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/parity.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/parity.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ParityChecker
-
-Top level modules:
-	ParityChecker
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/SRFlipFlop.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/SRFlipFlop.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module srff
-
-Top level modules:
-	srff
+	pipo_test
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder_4to16.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder_4to16.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -201,61 +54,12 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	decoder_4to16_tb
 
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder_3to8.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder_3to8.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module decoder3_to_8
-
-Top level modules:
-	decoder3_to_8
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/full_sub.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/full_sub.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module full_sub
-
-Top level modules:
-	full_sub
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task2Bb_min.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task2Bb_min.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module minterm
-
-Top level modules:
-	minterm
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ALU_4bit.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_4bit.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ALU
-
-Top level modules:
-	ALU
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/fullSubDe-Mux.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/fullSubDe-Mux.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Demultiplexer
-
-Top level modules:
-	Demultiplexer
-
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder_2to4.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder_2to4.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module decoder24_behaviour
 
 Top level modules:
 	decoder24_behaviour
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/MUX_4to1_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/MUX_4to1_tb.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module tb_4to1_mux
-
-Top level modules:
-	tb_4to1_mux
-
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/mux4_1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/mux4_1.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module mus4_1
-
-Top level modules:
-	mus4_1
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task2A.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task2A.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -279,6 +83,14 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	decoder24_behaviour
 
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/SISO.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/SISO.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module siso
+-- Compiling module siso_test
+
+Top level modules:
+	siso_test
+
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/priorityEncoder_8to3.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/priorityEncoder_8to3.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module priorityencoder_83
@@ -287,6 +99,282 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	priorityencoder_83
 	priorityencoder_83_tb
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic2.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic2.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module logic2
+
+Top level modules:
+	logic2
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/TFlipFlop.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/TFlipFlop.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module tff
+
+Top level modules:
+	tff
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/encoder.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/encoder.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Encoder
+-- Compiling module Encoder_tb
+
+Top level modules:
+	Encoder_tb
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/full_sub_tb.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module full_sub_tb
+
+Top level modules:
+	full_sub_tb
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/JKFlipFlop.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/JKFlipFlop.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module jkff
+
+Top level modules:
+	jkff
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/4to1MUX.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MUX4to1
+
+Top level modules:
+	MUX4to1
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/PISO.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/PISO.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module piso
+-- Compiling module piso_test
+
+Top level modules:
+	piso_test
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder_2to4_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder_2to4_tb.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1B_F.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module task1BF
+
+Top level modules:
+	task1BF
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/UpCounter.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/UpCounter.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module up_counter
+-- Compiling module up_counter_test
+
+Top level modules:
+	up_counter_test
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/UpDownCounter.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/UpDownCounter.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module up_down
+-- Compiling module up_down_test
+
+Top level modules:
+	up_down_test
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ALU_4bit.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_4bit.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/fullSubDe-Mux.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/fullSubDe-Mux.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Demultiplexer
+
+Top level modules:
+	Demultiplexer
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/mux4_1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/mux4_1.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mus4_1
+
+Top level modules:
+	mus4_1
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/full_add_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/full_add_tb.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module full_add_tb
+
+Top level modules:
+	full_add_tb
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic3.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic3.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module logic3
+
+Top level modules:
+	logic3
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ALU_1bit.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_1bit.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALU_1bit
+
+Top level modules:
+	ALU_1bit
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1B_F'.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module task1BFo
+
+Top level modules:
+	task1BFo
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/RippleCarryAdder.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/RippleCarryAdder.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module fulladder
+-- Compiling module rippe_adder
+
+Top level modules:
+	rippe_adder
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ModNCounter.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ModNCounter.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module modN_counter
+-- Compiling module modN_counter_test
+
+Top level modules:
+	modN_counter_test
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/JohnsonCounter.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/JohnsonCounter.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module johnson_counter
+-- Compiling module johnson_counter_test
+
+Top level modules:
+	johnson_counter_test
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/MUX(1)4_1.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MUX4_1
+
+Top level modules:
+	MUX4_1
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/parity.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/parity.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ParityChecker
+
+Top level modules:
+	ParityChecker
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/SRFlipFlop.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/SRFlipFlop.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module srff
+
+Top level modules:
+	srff
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task2Bb_min.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task2Bb_min.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module minterm
+
+Top level modules:
+	minterm
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/RippleUpCounter.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/RippleUpCounter.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ripple_up_counter
+-- Compiling module ripple_up_test
+
+Top level modules:
+	ripple_up_test
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1A_F.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1A_F.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module task1AF
+
+Top level modules:
+	task1AF
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic4.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic4.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module logic4
+
+Top level modules:
+	logic4
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/BoothMultiplier.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/BoothMultiplier.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module BoothMultiplier
+
+Top level modules:
+	BoothMultiplier
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_8bit_tb.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALU
+-- Compiling module alu_test
+
+Top level modules:
+	alu_test
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/parity_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/parity_tb.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ParityChecker_tb
+
+Top level modules:
+	ParityChecker_tb
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder_3to8_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder_3to8_tb.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module decoder_tb
+
+Top level modules:
+	decoder_tb
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mux4_1_cs
+
+Top level modules:
+	mux4_1_cs
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module task1AFo
+
+Top level modules:
+	task1AFo
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder_3to8.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder_3to8.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module decoder3_to_8
+
+Top level modules:
+	decoder3_to_8
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/RippleDownCounter.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/RippleDownCounter.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ripple_down_counter
+-- Compiling module ripple_down_test
+
+Top level modules:
+	ripple_down_test
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/full_sub.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/full_sub.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module full_sub
+
+Top level modules:
+	full_sub
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/MUX_4to1_tb.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/MUX_4to1_tb.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module tb_4to1_mux
+
+Top level modules:
+	tb_4to1_mux
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/logic1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/logic1.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
