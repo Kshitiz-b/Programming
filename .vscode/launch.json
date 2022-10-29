@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch J11",
+            "request": "launch",
+            "mainClass": "J11",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch stringBuffer",
+            "request": "launch",
+            "mainClass": "stringBuffer",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
             "name": "Launch Validator",
             "request": "launch",
             "mainClass": "Validator",
