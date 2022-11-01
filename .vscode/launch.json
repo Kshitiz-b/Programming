@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch inherit",
+            "request": "launch",
+            "mainClass": "inherit",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
             "name": "Launch Hello",
             "request": "launch",
             "mainClass": "Hello",
