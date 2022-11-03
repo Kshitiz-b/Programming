@@ -25,7 +25,7 @@ class master extends account implements admin {
     }
 }
 
-public class inherit {
+public class Inherit {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.println("Enter data: ");

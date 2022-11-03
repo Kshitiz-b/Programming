@@ -1,3 +1,4 @@
+// Example of Abstract Class
 abstract class Shape {
     int colour;
     int getColour() {
@@ -21,6 +22,6 @@ class Square extends Shape {
 public class J14 {
     public static void main(String[] args) {
         Square s = new Square(5, 10.0);
-        System.out.println("The Area of the Aquare of side "+ s.side + " is " +s.getArea());
+        System.out.println("The Area of the Square of side " + s.side + " and Colour Code " + s.colour + " is " + s.getArea());
     }
 }
