@@ -3,6 +3,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch J14",
+            "request": "launch",
+            "mainClass": "J14",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch J13",
+            "request": "launch",
+            "mainClass": "J13",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch J12",
+            "request": "launch",
+            "mainClass": "J12",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
             "name": "Launch inherit",
             "request": "launch",
             "mainClass": "inherit",
