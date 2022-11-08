@@ -11,13 +11,6 @@
             "tasks": [
                 "run"
             ]
-        },
-        {
-            "name": "maven run",
-            "type": "maven",
-            "tasks": [
-                "run"
-            ]
         }
     ]
 }
