@@ -3,8 +3,8 @@ x = int(input("Enter First Number: "))
 y = int(input("Enter Second Number: "))
 
 if x > y:
-    print(x, "is greater")
+    print("The first number:", x, "is greater")
 elif x == y:
-    print("X is equal to Y")
+    print("X:", x, "is equal to Y:", y)
 else:
-    print(y, "is greater")
+    print("The second number:", y, "is greater")
