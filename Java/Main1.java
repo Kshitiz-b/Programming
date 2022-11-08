@@ -64,7 +64,7 @@ public class Main1 {
         f1.stockAvailability();
         f1.printSaleReport();
         System.out.println();
-        
+
         electronic_accessories e1 = new electronic_accessories(10, 12, 10000.00, 5);
         System.out.println("For Electronic Accessories");
         e1.stockAvailability();
