@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ExceptionTest3",
+            "request": "launch",
+            "mainClass": "ExceptionTest3",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
             "name": "Launch ExceptionTest2",
             "request": "launch",
             "mainClass": "ExceptionTest2",
