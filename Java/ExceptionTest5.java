@@ -3,6 +3,7 @@ import java.util.Scanner;
 class BalanceException extends Exception {
     public BalanceException(String message) {
         super(message);
+        System.out.println(message);
     }
 }
 
