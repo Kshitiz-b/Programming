@@ -104,7 +104,7 @@ public class MultInheritance {
     }
 
     public static void HighSal(Person p1, Person p2, Person p3, Student s1, Student s2, Student s3, Employee e1,
-            Employee e2, Employee e3) {
+                               Employee e2, Employee e3) {
         if (e1.Salary > e2.Salary && e1.Salary > e3.Salary)
             System.out.println(
                     "The Person having highest salary is " + p1.PersonName + "\nAnd Course is " + s1.CourseName);
