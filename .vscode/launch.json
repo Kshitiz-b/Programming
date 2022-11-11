@@ -3,6 +3,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MultInheritance",
+            "request": "launch",
+            "mainClass": "MultInheritance",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch J18",
+            "request": "launch",
+            "mainClass": "J18",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main2",
+            "request": "launch",
+            "mainClass": "Main2",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "Launch shape",
+            "request": "launch",
+            "mainClass": "shape",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
             "name": "Launch ExceptionTest6",
             "request": "launch",
             "mainClass": "ExceptionTest6",
@@ -349,7 +377,6 @@
             "internalConsoleOptions": "openOnSessionStart",
             "MIMode": "gdb",
             "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
-            "console": "integratedTerminal",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
