@@ -6428,3 +6428,18 @@ Model Sim/Logic_Gates.mpf
 CppProperties.json
 .gitignore
 .gitignore
+Model Sim/Logic_Gates.cr.mti
+Model Sim/Logic_Gates.mpf
+Model Sim/N_Counter.v
+Model Sim/N_Counter.v.bak
+Model Sim/work/_info
+Model Sim/work/@n_@counter_test/_primary.dat
+Model Sim/work/@n_@counter_test/_primary.dbs
+Model Sim/work/@n_@counter_test/_primary.vhd
+Model Sim/work/@n_@counter_test/verilog.prw
+Model Sim/work/@n_@counter_test/verilog.psm
+Model Sim/work/mod/_primary.dat
+Model Sim/work/mod/_primary.dbs
+Model Sim/work/mod/_primary.vhd
+Model Sim/work/mod/verilog.prw
+Model Sim/work/mod/verilog.psm
