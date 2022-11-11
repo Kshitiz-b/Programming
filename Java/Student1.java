@@ -1,22 +1,22 @@
-public class Student {
-    String name;
+// public class Student1 {
+//     String name;
 
-    public Student(String S) {
-        name = S;
-    }
+//     public Student1(String S) {
+//         name = S;
+//     }
 
-    public Student() {
-        name = "Unknown";
-    }
+//     public Student1() {
+//         name = "Unknown";
+//     }
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        Student S = new Student("Kshitiz");
-        Student A = new Student();
-        System.out.println("The name is: " + S.name);
-        System.out.println("The name is: " + A.name);
+//         Student1 S = new Student1("Kshitiz");
+//         Student1 A = new Student1();
+//         System.out.println("The name is: " + S.name);
+//         System.out.println("The name is: " + A.name);
 
 
-    }
+//     }
 
-}
+// }
