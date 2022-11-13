@@ -30,12 +30,16 @@ void create(int A[], int n)
         last->next = t;
         last = t;
     }
+    struct Node *l = list;
+    while (l->next != list)
+        l = l->next;
+    list->prev = l;
 }
 
 void Display()
 {
     struct Node *l;
-    struct Node *p;
+    // struct Node *p;
 
     if (list == NULL)
         printf("List is Empty\n");
@@ -46,13 +50,17 @@ void Display()
         for (l = list; l->next != list; l = l->next)
             printf("%d ", l->data);
         printf("%d->List\n", l->data);
-        
+
         printf("Backward\n");
         printf("List->");
-        for (l = list; l->next != list; l = l->next);
-        for (; l->prev != l; l = l->prev)
+        for (l = list; l->next != list; l = l->next)
+            ;
+        for (; l->prev != list->prev; l = l->prev)
             printf("%d ", l->data);
         printf("%d->List", l->data);
+
+        struct Node *t = list;
+        printf("\nPrev:%d\nNext:%d", t->prev->data, t->next->data);
     }
 }
 
