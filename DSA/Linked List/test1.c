@@ -13,7 +13,7 @@ void create(int A[], int n)
     struct Node *t, *last;
     head = (struct Node *)malloc(sizeof(struct Node));
     head->data = A[0];
-    head->next = head;
+    head->next = NULL;
     last = head;
 
     for (int i = 1; i < n; i++)
@@ -26,22 +26,24 @@ void create(int A[], int n)
     }
 }
 
-void display(int A[], int n)
+void display()
 {
-    struct Node *l;
-
     if (head == NULL)
         printf("List is Empty\n");
     else
     {
         printf("List->");
-        for (l = head; l->next != head; l = l->next)
+        struct Node *l = head;
+        while (l->next != NULL)
+        {
             printf("%d->", l->data);
-        printf("%d->List\n", l->data);
+            l = l->next;
+        }
+        printf("%d->NULL\n", l->data);
     }
 }
 
-void DeleteAfter(int A[], int n, int T)
+void Deletion(int A[], int n, int T)
 {
     int flag = 0;
     for (int i = 0; i < n; i++)
@@ -54,26 +56,24 @@ void DeleteAfter(int A[], int n, int T)
         else
             flag = 0;
     }
-    if (flag == 1)
+
+    if (flag == 0)
+        printf("Target Element is Not Found\n");
+    else
     {
-        struct Node *l = head, *p = head;
+        struct Node *l = head;
         while (l->data != T)
         {
             l = l->next;
         }
-        l = l->next;
         if (l == head)
         {
-            struct Node *temp = head;
-            while (temp->next != head)
-            {
-                temp = temp->next;
-            }
-            temp->next = head->next;
-            head = head->next;
+            l = l->next;
+            head = l;
         }
         else
         {
+            struct Node *p = head;
             while (p->next != l)
             {
                 p = p->next;
@@ -81,11 +81,10 @@ void DeleteAfter(int A[], int n, int T)
             p->next = l->next;
             l = p;
         }
-
-        display(A, n);
+        
+        printf("After Deletion\n");
+        display();
     }
-    else
-        printf("Target Element is Not Found\n");
 }
 
 int main()
@@ -101,7 +100,7 @@ int main()
 
     create(A, n);
     display(A, n);
-    DeleteAfter(A, n, T);
+    Deletion(A, n, T);
 
     return 0;
 }
