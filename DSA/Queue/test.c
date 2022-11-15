@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 int front = -1, rear = -1;
 
 void Enqueue(int A[], int n, int X)
@@ -8,33 +8,36 @@ void Enqueue(int A[], int n, int X)
     {
         front++;
         rear++;
-
         A[rear] = X;
     }
     else
     {
         rear++;
-
         A[rear] = X;
     }
 }
 
 void Dequeue(int A[], int n)
 {
-    printf("%d is deleted\n", A[front]);
-    front++;
+    if ((rear == -1) || (front > rear))
+        printf("Queue is Empty\n");
+    else
+    {
+        printf("%d is deleted\n", A[front]);
+        front++;
+    }
 }
 
-void display(int A[], int n)
+void Display(int A[], int n)
 {
-    if (front == -1 || front > rear)
-        printf("Queue is Empty");
+    if ((rear == -1) || (front > rear))
+        printf("Queue is Empty\n");
     else
     {
         printf("FRONT->");
         for (int i = front; i <= rear; i++)
         {
-            if (i == rear)
+            if(i==rear)
                 printf("%d", A[i]);
             else
                 printf("%d ", A[i]);
@@ -45,29 +48,15 @@ void display(int A[], int n)
 
 int main()
 {
-    int n = 100;
+    int n=10;
     int A[n];
-    int X;
 
-    int choice;
-
-    do
-    {
-        scanf("%d", &choice);
-        switch (choice)
-        {
-        case 1:
-            scanf("%d", &X);
-            Enqueue(A, n, X);
-            break;
-        case 2:
-            Dequeue(A, n);
-            break;
-        case 3:
-            display(A, n);
-            break;
-        }
-    } while (choice != 4);
-
-    return 0;
+    Enqueue(A, n, 15);
+    Enqueue(A, n, 25);
+    Enqueue(A, n, 35);
+    Enqueue(A, n, 45);
+    Display(A, n);
+    Dequeue(A, n);
+    Dequeue(A, n);
+    Display(A, n);
 }
