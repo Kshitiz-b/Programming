@@ -20,7 +20,8 @@ void Push(int x)
     if (t == NULL)
         printf("Stack is Full\n");
     else if (top != NULL)
-    {   top->next = t;
+    {
+        top->next = t;
         top = t;
     }
     else
@@ -38,7 +39,8 @@ void Pop()
         printf("Stack is Empty\n");
     else
     {
-        for (l = list; l->next != top && l->next != NULL; l = l->next);
+        for (l = list; l->next != top && l->next != NULL; l = l->next)
+            ;
 
         printf("%d is popped from stack\n", top->data);
         if (top != list)

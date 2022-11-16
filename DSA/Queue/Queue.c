@@ -60,7 +60,7 @@ void Display(int A[])
 int main()
 {
     int n, X;
-    printf("Enter the size of Queue: ");
+    //printf("Enter the size of Queue: ");
     scanf("%d", &n);
     int A[n];
 

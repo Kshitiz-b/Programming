@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void merge(int arr[], int l, int m, int r)
+void merge(int A[], int l, int mid, int r)
 {
     int i, j, k;
-    int n1 = m - l + 1;
-    int n2 = r - m;
+    int n1 = mid - l + 1;
+    int n2 = r - mid;
 
     int L[n1], R[n2];
 
     for (i = 0; i < n1; i++)
-        L[i] = arr[l + i];
+        L[i] = A[l + i];
     for (j = 0; j < n2; j++)
-        R[j] = arr[m + 1 + j];
+        R[j] = A[mid + 1 + j];
 
     i = 0;
     j = 0;
@@ -21,12 +21,12 @@ void merge(int arr[], int l, int m, int r)
     {
         if (L[i] <= R[j])
         {
-            arr[k] = L[i];
+            A[k] = L[i];
             i++;
         }
         else
         {
-            arr[k] = R[j];
+            A[k] = R[j];
             j++;
         }
         k++;
@@ -34,56 +34,56 @@ void merge(int arr[], int l, int m, int r)
 
     while (i < n1)
     {
-        arr[k] = L[i];
+        A[k] = L[i];
         i++;
         k++;
     }
 
     while (j < n2)
     {
-        arr[k] = R[j];
+        A[k] = R[j];
         j++;
         k++;
     }
 }
 
-void mergeSort(int arr[], int l, int r)
+void mergeSort(int A[], int l, int r)
 {
     if (l < r)
     {
-        int m = l + (r - l) / 2;
+        int mid = l + (r - l) / 2;
 
-        mergeSort(arr, l, m);
-        mergeSort(arr, m + 1, r);
+        mergeSort(A, l, mid);
+        mergeSort(A, mid + 1, r);
 
-        merge(arr, l, m, r);
+        merge(A, l, mid, r);
     }
 }
 
-void printArray(int A[], int size)
+void printArray(int A[], int n)
 {
     int i;
-    for (i = 0; i < size; i++)
+    for (i = 0; i < n; i++)
         printf("%d ", A[i]);
     printf("\n");
 }
 
 int main()
 {
-    int arr_size;
-    scanf("%d", &arr_size);
-    int arr[arr_size];
-    for (int i = 0; i < arr_size; i++)
+    int n;
+    scanf("%d", &n);
+    int A[n];
+    for (int i = 0; i < n; i++)
     {
-        scanf("%d", &arr[i]);
+        scanf("%d", &A[i]);
     }
 
     printf("Before Sorting\n");
-    printArray(arr, arr_size);
+    printArray(A, n);
 
-    mergeSort(arr, 0, arr_size - 1);
+    mergeSort(A, 0, n - 1);
 
     printf("After Sorting\n");
-    printArray(arr, arr_size);
+    printArray(A, n);
     return 0;
 }
