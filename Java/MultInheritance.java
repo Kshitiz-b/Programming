@@ -19,20 +19,20 @@ class Person {
 }
 
 class Student extends Person {
-    int Rollno;
+    int Roll;
     String CourseName;
     int FeesPaid;
     int Subjects;
 
     void getData(int no, String na, int fee, int sub) {
-        Rollno = no;
+        Roll = no;
         CourseName = na;
         FeesPaid = fee;
         Subjects = sub;
     }
 
     void putData() {
-        System.out.println(Rollno + "\n" + CourseName + "\n" + FeesPaid + "\n" + Subjects);
+        System.out.println(Roll + "\n" + CourseName + "\n" + FeesPaid + "\n" + Subjects);
     }
 }
 
