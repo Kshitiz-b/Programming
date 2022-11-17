@@ -189,6 +189,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	up_down_test
 
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/tb_k.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/tb_k.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module tb_k
+
+Top level modules:
+	tb_k
+
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ALU_4bit.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_4bit.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ALU
@@ -341,19 +348,19 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	decoder_tb
 
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module mux4_1_cs
-
-Top level modules:
-	mux4_1_cs
-
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/task1A_F'.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module task1AFo
 
 Top level modules:
 	task1AFo
+
+} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/mux(2)4_1.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mux4_1_cs
+
+Top level modules:
+	mux4_1_cs
 
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/decoder_3to8.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/decoder_3to8.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
