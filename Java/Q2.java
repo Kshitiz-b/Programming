@@ -66,7 +66,7 @@ class ResizableCircle extends Circle implements Resizable {
 
 }
 
-public class Test {
+public class Q2 {
     public static void main(String[] args) {
 
         GeometricObject obj1 = new Circle(4);
