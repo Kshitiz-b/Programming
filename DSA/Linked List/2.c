@@ -47,13 +47,13 @@ void RDidplay(struct Node *p)
     }
 }
 
-int main()
-{
-    int A[] = {3, 5, 7, 10, 15};
+    int main()
+    {
+        int A[] = {3, 5, 7, 10, 15};
 
-    create(A, 5);
+        create(A, 5);
 
-    RDidplay(first);
+        RDidplay(first);
 
-    return 0;
-}
+        return 0;
+    }
