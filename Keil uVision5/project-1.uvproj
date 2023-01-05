@@ -230,7 +230,7 @@
               <RCB>
                 <Type>0</Type>
                 <StartAddress>0x0</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0xffff</Size>
               </RCB>
               <RXB>
                 <Type>0</Type>
@@ -372,6 +372,11 @@
               <FileName>add.asm</FileName>
               <FileType>2</FileType>
               <FilePath>.\add.asm</FilePath>
+            </File>
+            <File>
+              <FileName>arithmetic.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\arithmetic.asm</FilePath>
             </File>
           </Files>
         </Group>
