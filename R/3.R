@@ -8,5 +8,6 @@ print(D)
 AT <- solve(A)
 BT <- solve(B)
 
-DT <- AT %*% BT
-print(D)
+DT <- BT %*% AT
+print(DT)
+
