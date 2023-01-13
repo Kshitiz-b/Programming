@@ -378,6 +378,11 @@
               <FileType>2</FileType>
               <FilePath>.\arithmetic.asm</FilePath>
             </File>
+            <File>
+              <FileName>CY Flag.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\CY Flag.asm</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

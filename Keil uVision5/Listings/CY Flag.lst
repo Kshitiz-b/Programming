@@ -1,0 +1,68 @@
+A51 MACRO ASSEMBLER  CY_FLAG                                                              01/11/2023 10:20:02 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\CY Flag.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE CY Flag.asm SET(SMALL) DEBUG PRINT(.\Listings\CY Flag.lst) OBJECT(.\Obj
+                      ects\CY Flag.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+
+0000 7492              2             MOV A, #92H 
+
+0002 7823              3             MOV R0, #23H
+
+0004 28                4             ADD A, R0
+
+0005 5001              5             JNC L1
+
+0007 0F                6             INC R7
+
+0008 7966              7             L1: MOV R1, # 66H
+
+000A 29                8             ADD A, R1
+
+000B 5001              9             JNC L2
+
+000D 0F               10             INC R7
+
+000E 7A87             11             L2: MOV R2, #87H
+
+0010 2A               12             ADD A, R2
+
+0011 5001             13             JNC L3
+
+0013 0F               14             INC R7
+
+0014 7BF5             15             L3: MOV R3, #0F5H
+
+0016 2B               16             ADD A, R3
+
+0017 5001             17             JNC L4
+
+0019 0F               18             INC R7
+
+001A                  19             L4:
+
+                      20     END
+
+A51 MACRO ASSEMBLER  CY_FLAG                                                              01/11/2023 10:20:02 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+L1 . . . . . . . .  C ADDR   0008H   A   
+L2 . . . . . . . .  C ADDR   000EH   A   
+L3 . . . . . . . .  C ADDR   0014H   A   
+L4 . . . . . . . .  C ADDR   001AH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

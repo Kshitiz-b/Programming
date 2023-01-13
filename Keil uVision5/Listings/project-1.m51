@@ -1,15 +1,16 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        01/04/2023  10:26:39  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        01/11/2023  10:20:02  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
-C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\add.obj, .\Objects\arithmetic.obj TO .\Objects\project-1 PR
->> INT (.\Listings\project-1.m51) RAMSIZE (256) CODE (0X0000-0XFFFF)
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\add.obj, .\Objects\arithmetic.obj, .\Objects\CY Flag.obj TO
+>>  .\Objects\project-1 PRINT (.\Listings\project-1.m51) RAMSIZE (256) CODE (0X0000-0XFFFF)
 
 
 INPUT MODULES INCLUDED:
   .\Objects\STARTUP.obj (?C_STARTUP)
   .\Objects\add.obj (ADD)
   .\Objects\arithmetic.obj (ARITHMETIC)
+  .\Objects\CY Flag.obj (CY_FLAG)
 
 
 LINK MAP OF MODULE:  .\Objects\project-1 (?C_STARTUP)
@@ -26,6 +27,7 @@ LINK MAP OF MODULE:  .\Objects\project-1 (?C_STARTUP)
             CODE    0000H     0003H     ABSOLUTE     
 * OVERLAP * CODE    0000H     0007H     ABSOLUTE     
 * OVERLAP * CODE    0000H     002AH     ABSOLUTE     
+* OVERLAP * CODE    0000H     001AH     ABSOLUTE     
                     002AH     07D6H                  *** GAP ***
             CODE    0800H     000CH     UNIT         ?C_C51STARTUP
 
@@ -57,11 +59,11 @@ SYMBOL TABLE OF MODULE:  .\Objects\project-1 (?C_STARTUP)
   N:0100H         SYMBOL        PBPSTACKTOP
   N:0000H         SYMBOL        PDATALEN
   N:0000H         SYMBOL        PDATASTART
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/11/2023  10:20:02  PAGE 2
+
+
   N:0000H         SYMBOL        PPAGE
   N:0000H         SYMBOL        PPAGEENABLE
-BL51 BANKED LINKER/LOCATER V6.22                                                      01/04/2023  10:26:39  PAGE 2
-
-
   D:00A0H         SYMBOL        PPAGE_SFR
   D:0081H         SYMBOL        SP
   C:0800H         SYMBOL        STARTUP1
@@ -111,6 +113,33 @@ SYMBOL TABLE OF MODULE:  .\Objects\project-1 (?C_STARTUP)
   C:0028H         LINE#         22
   -------         ENDMOD        ARITHMETIC
 
+  -------         MODULE        CY_FLAG
+  C:0008H         SYMBOL        L1
+  C:000EH         SYMBOL        L2
+  C:0014H         SYMBOL        L3
+  C:001AH         SYMBOL        L4
+  C:0000H         LINE#         2
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/11/2023  10:20:02  PAGE 3
+
+
+  C:0002H         LINE#         3
+  C:0004H         LINE#         4
+  C:0005H         LINE#         5
+  C:0007H         LINE#         6
+  C:0008H         LINE#         7
+  C:000AH         LINE#         8
+  C:000BH         LINE#         9
+  C:000DH         LINE#         10
+  C:000EH         LINE#         11
+  C:0010H         LINE#         12
+  C:0011H         LINE#         13
+  C:0013H         LINE#         14
+  C:0014H         LINE#         15
+  C:0016H         LINE#         16
+  C:0017H         LINE#         17
+  C:0019H         LINE#         18
+  -------         ENDMOD        CY_FLAG
+
 *** WARNING L5: CODE SPACE MEMORY OVERLAP
     FROM:    0000H
     TO:      0002H
@@ -119,8 +148,9 @@ SYMBOL TABLE OF MODULE:  .\Objects\project-1 (?C_STARTUP)
     FROM:    0000H
     TO:      0006H
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      01/04/2023  10:26:39  PAGE 3
-
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0029H
 
 *** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
     SYMBOL:  ?C_START
@@ -132,8 +162,8 @@ SYMBOL TABLE OF MODULE:  .\Objects\project-1 (?C_STARTUP)
     ADDRESS: 080AH
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0040H BYTE ( 3%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 005AH BYTE ( 4%) *
 ******************************************************************************
 
-Program Size: data=9.0 xdata=0 code=64
-LINK/LOCATE RUN COMPLETE.  4 WARNING(S),  0 ERROR(S)
+Program Size: data=9.0 xdata=0 code=90
+LINK/LOCATE RUN COMPLETE.  5 WARNING(S),  0 ERROR(S)

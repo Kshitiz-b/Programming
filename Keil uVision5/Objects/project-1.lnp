@@ -1,6 +1,7 @@
 ".\Objects\STARTUP.obj",
 ".\Objects\add.obj",
-".\Objects\arithmetic.obj" 
+".\Objects\arithmetic.obj",
+".\Objects\CY Flag.obj" 
 TO ".\Objects\project-1" 
 PRINT(".\Listings\project-1.m51") RAMSIZE(256) 
 CODE( 0X0000-0XFFFF )
