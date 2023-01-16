@@ -1,0 +1,63 @@
+Clear
+Store result
+Input
+Store I
+Input
+Store J
+Input
+Store K
+
+Load K
+Skipcond 000
+Jump nonneg
+
+Subt K
+Subt K
+Store K
+Clear
+Add one
+Store negflag
+Clear
+Jump loop
+
+
+nonneg,  Clear
+         Store negflag
+         Load K
+         Skipcond 400
+         Jump loop / false
+         Jump halt / true
+
+
+loop,    Load result
+         Add J
+         Store result
+
+         Load K
+         Subt one
+         Store K
+
+         Skipcond 400
+         Jump loop
+
+
+Load negflag
+Skipcond 800
+Jump halt
+
+Load result
+Subt result
+Subt result
+Store result
+
+halt,    Load result
+		 Add I
+         Output
+         Halt
+
+J, DEC 0
+K, DEC 0
+I, DEC 0
+one, DEC 1
+negflag, DEC 0
+result, DEC 0
