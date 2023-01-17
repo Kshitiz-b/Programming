@@ -1,5 +1,5 @@
 Clear
-Store result
+Store N
 Input
 Store I
 Input
@@ -25,13 +25,13 @@ nonneg,  Clear
          Store negflag
          Load K
          Skipcond 400
-         Jump loop / false
-         Jump halt / true
+         Jump loop 
+         Jump halt
 
 
-loop,    Load result
+loop,    Load N
          Add J
-         Store result
+         Store N
 
          Load K
          Subt one
@@ -45,12 +45,12 @@ Load negflag
 Skipcond 800
 Jump halt
 
-Load result
-Subt result
-Subt result
-Store result
+Load N
+Subt N
+Subt N
+Store N
 
-halt,    Load result
+halt,    Load N
 		 Add I
          Output
          Halt
@@ -60,4 +60,4 @@ K, DEC 0
 I, DEC 0
 one, DEC 1
 negflag, DEC 0
-result, DEC 0
+N, DEC 0
