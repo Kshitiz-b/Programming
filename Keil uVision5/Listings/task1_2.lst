@@ -1,4 +1,4 @@
-A51 MACRO ASSEMBLER  TASK1_2                                                              01/18/2023 17:35:21 PAGE     1
+A51 MACRO ASSEMBLER  TASK1_2                                                              01/18/2023 17:39:29 PAGE     1
 
 
 MACRO ASSEMBLER A51 V8.2.5.0
@@ -12,19 +12,19 @@ LOC  OBJ            LINE     SOURCE
 
 0000 75810D            2             MOV SP, #0DH
 
-0003 750810            3             MOV 08H, #10H
+0003 750D16            3             MOV 0DH, #16H
 
-0006 750911            4             MOV 09H, #11H
+0006 750C14            4             MOV 0CH, #14H
 
-0009 750A12            5             MOV 0AH, #12H
+0009 750B13            5             MOV 0BH, #13H
 
-000C 750B13            6             MOV 0BH, #13H
+000C 750A12            6             MOV 0AH, #12H
 
-000F 750C14            7             MOV 0CH, #14H
+000F 750911            7             MOV 09H, #11H
 
-0012 750D16            8             MOV 0DH, #16H
+0012 750810            8             MOV 08H, #10H
 
-0015 D000              9             POP 0   
+0015 D000              9             POP 0
 
 0017 D001             10             POP 1
 
@@ -34,9 +34,9 @@ LOC  OBJ            LINE     SOURCE
 
 001D D004             13             POP 4
 
-                      14     END     
+                      14     END
 
-A51 MACRO ASSEMBLER  TASK1_2                                                              01/18/2023 17:35:21 PAGE     2
+A51 MACRO ASSEMBLER  TASK1_2                                                              01/18/2023 17:39:29 PAGE     2
 
 SYMBOL TABLE LISTING
 ------ ----- -------
