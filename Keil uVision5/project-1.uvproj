@@ -364,24 +364,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>STARTUP.A51</FileName>
+              <FileName>task1_2.asm</FileName>
               <FileType>2</FileType>
-              <FilePath>.\STARTUP.A51</FilePath>
-            </File>
-            <File>
-              <FileName>add.asm</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\add.asm</FilePath>
-            </File>
-            <File>
-              <FileName>arithmetic.asm</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\arithmetic.asm</FilePath>
-            </File>
-            <File>
-              <FileName>CY Flag.asm</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\CY Flag.asm</FilePath>
+              <FilePath>.\task1_2.asm</FilePath>
             </File>
           </Files>
         </Group>

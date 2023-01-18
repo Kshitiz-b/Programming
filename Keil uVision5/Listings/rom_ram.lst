@@ -1,0 +1,50 @@
+A51 MACRO ASSEMBLER  ROM_RAM                                                              01/18/2023 10:51:42 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\rom_ram.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE rom_ram.asm SET(SMALL) DEBUG PRINT(.\Listings\rom_ram.lst) OBJECT(.\Obj
+                      ects\rom_ram.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+
+0000 900600            2             MOV DPTR, #600H
+
+0003 7860              3             MOV R0, #60H
+
+0005 7F06              4             MOV R7, #06
+
+0007 93                5             BACK: MOVC A, @A+DPTR
+
+0008 F6                6             MOV @R0, A
+
+0009 08                7             INC R0
+
+000A E4                8             CLR A
+
+000B DFFA              9             DJNZ R7, BACK
+
+0600                  10             ORG 600H
+
+0600 23455567         11                     DB 23H, 45H, 55H, 67H, 88H, 97H
+
+0604 8897                    
+                      12     END
+
+A51 MACRO ASSEMBLER  ROM_RAM                                                              01/18/2023 10:51:42 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   0007H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,4 +1,4 @@
-A51 MACRO ASSEMBLER  ARITHMETIC                                                           01/11/2023 10:20:02 PAGE     1
+A51 MACRO ASSEMBLER  ARITHMETIC                                                           01/17/2023 21:13:58 PAGE     1
 
 
 MACRO ASSEMBLER A51 V8.2.5.0
@@ -54,7 +54,7 @@ LOC  OBJ            LINE     SOURCE
 
                       23     END
 
-A51 MACRO ASSEMBLER  ARITHMETIC                                                           01/11/2023 10:20:02 PAGE     2
+A51 MACRO ASSEMBLER  ARITHMETIC                                                           01/17/2023 21:13:58 PAGE     2
 
 SYMBOL TABLE LISTING
 ------ ----- -------
