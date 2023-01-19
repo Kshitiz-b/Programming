@@ -4,7 +4,7 @@ using namespace std;
 class Knapsack
 {
 public:
-    void Ratio(int ratio[], int wt[], int pr[], int n)
+    void Ratio(double ratio[], double wt[], double pr[], int n)
     {
         for (int i = 0; i < n; i++)
         {
@@ -12,7 +12,7 @@ public:
         }
     }
 
-    void Sort(int ratio[], int wt[], int pr[], int n)
+    void Sort(double ratio[], double wt[], double pr[], int n)
     {
         int i, j, temp1, temp2, temp3;
 
@@ -44,9 +44,9 @@ public:
         }
     }
 
-    void Sack(int wt[], int pr[], int n, int maxWt)
+    void Sack(double wt[], double pr[], int n, int maxWt)
     {
-        int totalWt = 0, profit = 0, curr_profit, index;
+        double totalWt = 0, profit = 0;
         for (int i = 0; i < n; i++)
         {
             if (totalWt + wt[i] <= maxWt)
@@ -56,23 +56,10 @@ public:
             }
             else
             {
-                curr_profit = pr[i] * (double(maxWt - totalWt) / wt[i]);
-                pr[i] = curr_profit;
-                wt[i] = (maxWt - totalWt);
-                totalWt += wt[i];
-                profit += curr_profit;
-                
-                if(totalWt == maxWt)
-                {
-                    index = i;
-                    
-                }
+                profit += pr[i] * ((maxWt - totalWt) / wt[i]);
+                totalWt += (maxWt - totalWt) / wt[i];
+                break;
             }
-        }
-
-        for (int i = 0; i <= index && wt[i]!=0; i++)
-        {
-            cout << wt[i] << " " << pr[i] << endl;
         }
 
         cout << profit << endl;
@@ -83,7 +70,8 @@ int main()
 {
     int n, maxWt;
     cin >> n;
-    int wt[n], pr[n], ratio[n];
+    double wt[n], pr[n];
+    double ratio[n];
 
     for (int i = 0; i < n; i++)
     {
