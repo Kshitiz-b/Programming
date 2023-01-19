@@ -1,0 +1,25 @@
+A51 MACRO ASSEMBLER  TASK2_2                                                              01/18/2023 18:19:09 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\task2_2.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE task2_2.asm SET(SMALL) DEBUG PRINT(.\Listings\task2_2.lst) OBJECT(.\Obj
+                      ects\task2_2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+*** WARNING #A41 IN 0 (task2_2.asm, LINE 0): MISSING 'END' STATEMENT
+A51 MACRO ASSEMBLER  TASK2_2                                                              01/18/2023 18:19:09 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,1 @@
+"task2_2.asm" SET (SMALL) DEBUG PRINT(.\Listings\task2_2.lst) OBJECT(.\Objects\task2_2.obj) EP

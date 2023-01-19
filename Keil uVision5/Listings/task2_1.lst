@@ -1,4 +1,4 @@
-A51 MACRO ASSEMBLER  TASK2_1                                                              01/17/2023 22:58:26 PAGE     1
+A51 MACRO ASSEMBLER  TASK2_1                                                              01/18/2023 18:33:44 PAGE     1
 
 
 MACRO ASSEMBLER A51 V8.2.5.0
@@ -12,136 +12,40 @@ LOC  OBJ            LINE     SOURCE
 
 0000 900200            2             MOV DPTR, #200H
 
-0003 E4                3             CLR A
+0003 780E              3             MOV R0, #14
 
-0004 93                4             MOVC A, @A+DPTR
+0005 7940              4             MOV R1, #40H
 
-0005 F540              5             MOV 40H, A
+0007 E4                5             LOOP:   CLR A
 
-0007 A3                6             INC DPTR
+0008 93                6             MOVC A, @A+DPTR
 
-0008 E4                7             CLR A
+0009 F7                7             MOV @R1, A
 
-0009 93                8             MOVC A, @A+DPTR
+000A 09                8             INC R1
 
-000A F541              9             MOV 41H, A
+000B A3                9             INC DPTR
 
-000C A3               10             INC DPTR
+000C D8F9             10             DJNZ R0, LOOP
 
-000D E4               11             CLR A
+                      11                     
 
-000E 93               12             MOVC A, @A+DPTR
+000E 80FE             12     HERE: SJMP HERE
 
-000F F542             13             MOV 42H, A
+                      13     
 
-0011 A3               14             INC DPTR
+0200                  14     ORG 200H
 
-0012 E4               15             CLR A
-
-0013 93               16             MOVC A, @A+DPTR
-
-0014 F543             17             MOV 43H, A
-
-0016 A3               18             INC DPTR
-
-0017 E4               19             CLR A
-
-0018 93               20             MOVC A, @A+DPTR
-
-0019 F544             21             MOV 44H, A
-
-001B A3               22             INC DPTR
-
-001C E4               23             CLR A
-
-001D 93               24             MOVC A, @A+DPTR
-
-001E F545             25             MOV 45H, A
-
-0020 A3               26             INC DPTR
-
-0021 E4               27             CLR A
-
-0022 93               28             MOVC A, @A+DPTR
-
-0023 F546             29             MOV 46H, A
-
-0025 A3               30             INC DPTR
-
-0026 E4               31             CLR A
-
-0027 93               32             MOVC A, @A+DPTR
-
-0028 F547             33             MOV 47H, A
-
-002A A3               34             INC DPTR
-
-002B E4               35             CLR A
-
-002C 93               36             MOVC A, @A+DPTR
-
-002D F548             37             MOV 48H, A
-
-002F A3               38             INC DPTR
-
-0030 E4               39             CLR A
-
-0031 93               40             MOVC A, @A+DPTR
-
-0032 F549             41             MOV 49H, A
-
-0034 A3               42             INC DPTR
-
-0035 E4               43             CLR A
-
-0036 93               44             MOVC A, @A+DPTR
-
-0037 F550             45             MOV 50H, A
-
-0039 A3               46             INC DPTR
-
-003A E4               47             CLR A
-
-003B 93               48             MOVC A, @A+DPTR
-
-003C F551             49             MOV 51H, A
-
-003E A3               50             INC DPTR
-
-003F E4               51             CLR A
-
-0040 93               52             MOVC A, @A+DPTR
-
-0041 F552             53             MOV 52H, A
-
-0043 A3               54             INC DPTR
-
-0044 E4               55             CLR A
-
-0045 93               56             MOVC A, @A+DPTR
-
-0046 F553             57             MOV 53H, A
-
-A51 MACRO ASSEMBLER  TASK2_1                                                              01/17/2023 22:58:26 PAGE     2
-
-                      58                     
-
-0048 80FE             59     HERE: SJMP HERE
-
-                      60     
-
-0200                  61     ORG 200H
-
-0200 56495420         62             MYDATA: DB "VIT UNIVERSITY"
+0200 56495420         15             MYDATA: DB "VIT UNIVERSITY"
 
 0204 554E4956                
 0208 45525349                
 020C 5459                    
-                      63     END
+                      16     END
 
                                      
 
-A51 MACRO ASSEMBLER  TASK2_1                                                              01/17/2023 22:58:26 PAGE     3
+A51 MACRO ASSEMBLER  TASK2_1                                                              01/18/2023 18:33:44 PAGE     2
 
 SYMBOL TABLE LISTING
 ------ ----- -------
@@ -149,7 +53,8 @@ SYMBOL TABLE LISTING
 
 N A M E             T Y P E  V A L U E   ATTRIBUTES
 
-HERE . . . . . . .  C ADDR   0048H   A   
+HERE . . . . . . .  C ADDR   000EH   A   
+LOOP . . . . . . .  C ADDR   0007H   A   
 MYDATA . . . . . .  C ADDR   0200H   A   
 
 
