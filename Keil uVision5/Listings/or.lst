@@ -1,0 +1,40 @@
+A51 MACRO ASSEMBLER  OR                                                                   01/25/2023 11:29:35 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\or.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE or.asm SET(SMALL) DEBUG PRINT(.\Listings\or.lst) OBJECT(.\Objects\or.ob
+                      j) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0000h
+
+0000 7401              2             mov a, #257
+
+*** _________________________________________^
+*** WARNING #A52 IN 2 (or.asm, LINE 2): VALUE HAS BEEN TRUNCATED TO 8 BITS
+0002 7935              3             mov r1, #35h
+
+0004 74F1              4             mov a, #0f1h
+
+0006 441F              5             orl a, #01fh
+
+0008 F9                6             mov r1, a
+
+                       7     end
+
+A51 MACRO ASSEMBLER  OR                                                                   01/25/2023 11:29:35 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)

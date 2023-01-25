@@ -1,16 +1,16 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        01/18/2023  18:33:44  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        01/25/2023  11:35:52  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
-C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\task2_1.obj TO .\Objects\project-1 PRINT (.\Listings\project-1.m51) RAMSIZE (256) 
->> CODE (0X0000-0XFFFF)
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\jz.obj TO .\Objects\project-1 PRINT (.\Listings\project-1.m51) RAMSIZE (256) CODE 
+>> (0X0000-0XFFFF)
 
 
 INPUT MODULES INCLUDED:
-  .\Objects\task2_1.obj (TASK2_1)
+  .\Objects\jz.obj (JZ)
 
 
-LINK MAP OF MODULE:  .\Objects\project-1 (TASK2_1)
+LINK MAP OF MODULE:  .\Objects\project-1 (JZ)
 
 
             TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
@@ -20,34 +20,28 @@ LINK MAP OF MODULE:  .\Objects\project-1 (TASK2_1)
             REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
 
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
-            CODE    0000H     020EH     ABSOLUTE     
+            CODE    0000H     000AH     ABSOLUTE     
 
 
 
-SYMBOL TABLE OF MODULE:  .\Objects\project-1 (TASK2_1)
+SYMBOL TABLE OF MODULE:  .\Objects\project-1 (JZ)
 
   VALUE           TYPE          NAME
   ----------------------------------
 
-  -------         MODULE        TASK2_1
-  C:000EH         SYMBOL        HERE
-  C:0007H         SYMBOL        LOOP
-  C:0200H         SYMBOL        MYDATA
+  -------         MODULE        JZ
+  C:0000H         SYMBOL        XX
   C:0000H         LINE#         2
-  C:0003H         LINE#         3
+  C:0002H         LINE#         3
   C:0005H         LINE#         4
-  C:0007H         LINE#         5
+  C:0006H         LINE#         5
   C:0008H         LINE#         6
   C:0009H         LINE#         7
-  C:000AH         LINE#         8
-  C:000BH         LINE#         9
-  C:000CH         LINE#         10
-  C:000EH         LINE#         12
-  -------         ENDMOD        TASK2_1
+  -------         ENDMOD        JZ
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 001EH BYTE ( 1%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 000AH BYTE ( 0%) *
 ******************************************************************************
 
-Program Size: data=8.0 xdata=0 code=526
+Program Size: data=8.0 xdata=0 code=10
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

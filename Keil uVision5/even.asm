@@ -1,0 +1,14 @@
+ORG 0000H
+	MOV R0, #10
+	MOV R1, #35H
+	MOV R2, #0
+	CLR A
+	LOOP: 
+		INC R2
+		INC R2
+		ADD A, R2
+		MOV @R1, A
+		INC R1
+		DJNZ R0, LOOP
+	MOV 40H, A
+END

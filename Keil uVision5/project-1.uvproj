@@ -364,19 +364,14 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
+              <FileName>jz.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\jz.asm</FilePath>
+            </File>
+            <File>
               <FileName>task2_1.asm</FileName>
               <FileType>2</FileType>
               <FilePath>.\task2_1.asm</FilePath>
-            </File>
-            <File>
-              <FileName>task2_2.asm</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\task2_2.asm</FilePath>
-            </File>
-            <File>
-              <FileName>task2_3.asm</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\task2_3.asm</FilePath>
             </File>
           </Files>
         </Group>

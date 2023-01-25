@@ -1,0 +1,71 @@
+A51 MACRO ASSEMBLER  LOW_HIGH                                                             01/24/2023 16:00:06 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\low_high.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE low_high.asm SET(SMALL) DEBUG PRINT(.\Listings\low_high.lst) OBJECT(.\O
+                      bjects\low_high.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ;Assume that RAM locations 40 - 44 have the following values. Write a program to find the s
+                             um of the values. At the end of the program,
+
+                       2     ;register A should contain the low byte and R7 the high byte. All values are in hex.
+
+                       3     ;40=(7D)        41=(EB)         42=(C5)         43=(5B)         44=(30)
+
+0000                   4     ORG 0000H
+
+0000 75407D            5             MOV 40H, #07DH
+
+0003 7541EB            6             MOV 41H, #0EBH
+
+0006 7542C5            7             MOV 42H, #0C5H
+
+0009 75435B            8             MOV 43H, #05BH
+
+000C 754430            9             MOV 44H, #30H
+
+                      10             
+
+000F 7840             11             MOV R0, #40H
+
+0011 7A05             12             MOV R2, #5
+
+0013 E4               13             CLR A
+
+0014 FF               14             MOV R7, A
+
+0015                  15             LOOP: 
+
+0015 26               16                     ADD A, @R0
+
+0016 5001             17                     JNC NEXT
+
+0018 0F               18                     INC R7
+
+0019                  19                     NEXT:
+
+0019 08               20                             INC R0
+
+001A DAF9             21                             DJNZ R2, LOOP
+
+                      22     END
+
+A51 MACRO ASSEMBLER  LOW_HIGH                                                             01/24/2023 16:00:06 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+LOOP . . . . . . .  C ADDR   0015H   A   
+NEXT . . . . . . .  C ADDR   0019H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

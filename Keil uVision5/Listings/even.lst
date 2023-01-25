@@ -1,0 +1,53 @@
+A51 MACRO ASSEMBLER  EVEN                                                                 01/25/2023 11:22:44 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\even.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE even.asm SET(SMALL) DEBUG PRINT(.\Listings\even.lst) OBJECT(.\Objects\e
+                      ven.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+
+0000 780A              2             MOV R0, #10
+
+0002 7935              3             MOV R1, #35H
+
+0004 7A00              4             MOV R2, #0
+
+0006 E4                5             CLR A
+
+0007                   6             LOOP: 
+
+0007 0A                7                     INC R2
+
+0008 0A                8                     INC R2
+
+0009 2A                9                     ADD A, R2
+
+000A F7               10                     MOV @R1, A
+
+000B 09               11                     INC R1
+
+000C D8F9             12                     DJNZ R0, LOOP
+
+000E F540             13             MOV 40H, A
+
+                      14     END
+
+A51 MACRO ASSEMBLER  EVEN                                                                 01/25/2023 11:22:44 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+LOOP . . . . . . .  C ADDR   0007H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,41 @@
+A51 MACRO ASSEMBLER  JZ                                                                   01/25/2023 11:35:51 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\jz.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE jz.asm SET(SMALL) DEBUG PRINT(.\Listings\jz.lst) OBJECT(.\Objects\jz.ob
+                      j) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0000h
+
+0000 7850              2             xx: mov r0, #50h
+
+0002 755019            3             mov 50h, #25
+
+0005 E6                4             mov a, @r0
+
+0006 60F8              5             jz xx
+
+0008 08                6             inc r0
+
+0009 E6                7             mov a, @r0
+
+                       8     end
+
+A51 MACRO ASSEMBLER  JZ                                                                   01/25/2023 11:35:51 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+XX . . . . . . . .  C ADDR   0000H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
