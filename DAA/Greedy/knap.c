@@ -58,7 +58,7 @@ void Sack(double wt[], double pr[], int n, int maxWt)
         }
     }
 
-    printf("%lf", profit);
+    printf("%0.2lf", profit);
 }
 
 int main()
@@ -81,6 +81,7 @@ int main()
     Ratio(ratio, wt, pr, n);
     Sort(ratio, wt, pr, n);
     Sack(wt, pr, n, maxWt);
+
 
     return 0;
 }
