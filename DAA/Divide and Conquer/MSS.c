@@ -34,11 +34,12 @@ int Max_Subarray_Sum(int A[], int n)
 
 int main()
 {
-    int n;
-    scanf("%d", &n);
+    int n = 8;
+    // scanf("%d", &n);
     int A[n];
     for (int i = 0; i < n; i++)
         scanf("%d", &A[i]);
+
     printf("Maximum subarray sum = %d", Max_Subarray_Sum(A, n));
 
     return 0;

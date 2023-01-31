@@ -56,9 +56,9 @@ long karatsuba(long x, long y)
 int main()
 {
     long x, y;
-    scanf("%d %d", &x, &y);
+    scanf("%ld %ld", &x, &y);
 
     long ans = karatsuba(x, y);
-    printf("%d", ans);
+    printf("%ld", ans);
     return 0;
 }

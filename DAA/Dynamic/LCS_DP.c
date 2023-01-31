@@ -1,22 +1,20 @@
-// The longest common subsequence in C
 #include <stdio.h>
 #include <string.h>
+#define MAX_LIMIT 20
 
 int i, j, m, n, LCS_table[20][20];
-char S1[20] = "ACADB", S2[20] = "CBDA", b[20][20];
+char b[20][20];
 
-void lcsAlgo()
+void lcsAlgo(char S1[], char S2[])
 {
     m = strlen(S1);
     n = strlen(S2);
 
-    // Filling 0's in the matrix
     for (i = 0; i <= m; i++)
         LCS_table[i][0] = 0;
     for (i = 0; i <= n; i++)
         LCS_table[0][i] = 0;
 
-    // Building the mtrix in bottom-up way
     for (i = 1; i <= m; i++)
         for (j = 1; j <= n; j++)
         {
@@ -55,13 +53,16 @@ void lcsAlgo()
             j--;
     }
 
-    // Printing the sub sequences
-    printf("S1 : %s \nS2 : %s \n", S1, S2);
-    printf("LCS: %s", lcsAlgo);
+    printf("LCS IS: %s", lcsAlgo);
 }
 
 int main()
 {
-    lcsAlgo();
-    printf("\n");
+    char S1[20], S2[20];
+    fgets(S1, MAX_LIMIT, stdin);
+    fgets(S2, MAX_LIMIT, stdin);
+
+    lcsAlgo(S1, S2);
+
+    return 0;
 }
