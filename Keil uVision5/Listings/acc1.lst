@@ -1,0 +1,50 @@
+A51 MACRO ASSEMBLER  ACC1                                                                 02/01/2023 11:22:46 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\acc1.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE acc1.asm SET(SMALL) DEBUG PRINT(.\Listings\acc1.lst) OBJECT(.\Objects\a
+                      cc1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+
+0000 D2E0              2             SETB ACC.0
+
+0002 D2E1              3             SETB ACC.1
+
+0004 A2E0              4             MOV C, ACC.0
+
+0006 B3                5             CPL C
+
+0007 82E0              6             ANL C, ACC.0
+
+0009 92E2              7             MOV ACC.2, C
+
+000B A2E0              8             MOV C, ACC.0
+
+000D 82E1              9             ANL C, ACC.1
+
+000F 92E3             10             MOV ACC.3, C
+
+0011 80FE             11             H: SJMP H
+
+                      12     END     
+
+A51 MACRO ASSEMBLER  ACC1                                                                 02/01/2023 11:22:46 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+H. . . . . . . . .  C ADDR   0011H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

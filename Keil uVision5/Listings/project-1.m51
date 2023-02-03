@@ -1,16 +1,16 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        01/25/2023  11:35:52  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        02/01/2023  11:22:47  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
-C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\jz.obj TO .\Objects\project-1 PRINT (.\Listings\project-1.m51) RAMSIZE (256) CODE 
->> (0X0000-0XFFFF)
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\acc1.obj TO .\Objects\project-1 PRINT (.\Listings\project-1.m51) RAMSIZE (256) COD
+>> E (0X0000-0XFFFF)
 
 
 INPUT MODULES INCLUDED:
-  .\Objects\jz.obj (JZ)
+  .\Objects\acc1.obj (ACC1)
 
 
-LINK MAP OF MODULE:  .\Objects\project-1 (JZ)
+LINK MAP OF MODULE:  .\Objects\project-1 (ACC1)
 
 
             TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
@@ -20,28 +20,33 @@ LINK MAP OF MODULE:  .\Objects\project-1 (JZ)
             REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
 
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
-            CODE    0000H     000AH     ABSOLUTE     
+            CODE    0000H     0013H     ABSOLUTE     
 
 
 
-SYMBOL TABLE OF MODULE:  .\Objects\project-1 (JZ)
+SYMBOL TABLE OF MODULE:  .\Objects\project-1 (ACC1)
 
   VALUE           TYPE          NAME
   ----------------------------------
 
-  -------         MODULE        JZ
-  C:0000H         SYMBOL        XX
+  -------         MODULE        ACC1
+  D:00E0H         SYMBOL        ACC
+  C:0011H         SYMBOL        H
   C:0000H         LINE#         2
   C:0002H         LINE#         3
-  C:0005H         LINE#         4
+  C:0004H         LINE#         4
   C:0006H         LINE#         5
-  C:0008H         LINE#         6
+  C:0007H         LINE#         6
   C:0009H         LINE#         7
-  -------         ENDMOD        JZ
+  C:000BH         LINE#         8
+  C:000DH         LINE#         9
+  C:000FH         LINE#         10
+  C:0011H         LINE#         11
+  -------         ENDMOD        ACC1
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 000AH BYTE ( 0%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0013H BYTE ( 0%) *
 ******************************************************************************
 
-Program Size: data=8.0 xdata=0 code=10
+Program Size: data=8.0 xdata=0 code=19
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

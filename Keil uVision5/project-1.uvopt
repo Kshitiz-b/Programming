@@ -132,7 +132,7 @@
         <Mm>
           <WinNumber>1</WinNumber>
           <SubType>0</SubType>
-          <ItemText>d:0050h</ItemText>
+          <ItemText>d:0000h</ItemText>
           <AccSizeX>0</AccSizeX>
         </Mm>
       </MemoryWindow1>
@@ -187,20 +187,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\jz.asm</PathWithFileName>
-      <FilenameWithoutPath>jz.asm</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>1</GroupNumber>
-      <FileNumber>2</FileNumber>
-      <FileType>2</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\task2_1.asm</PathWithFileName>
-      <FilenameWithoutPath>task2_1.asm</FilenameWithoutPath>
+      <PathWithFileName>.\acc1.asm</PathWithFileName>
+      <FilenameWithoutPath>acc1.asm</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

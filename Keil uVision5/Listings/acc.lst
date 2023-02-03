@@ -1,0 +1,56 @@
+A51 MACRO ASSEMBLER  ACC                                                                  02/01/2023 10:39:58 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\acc.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE acc.asm SET(SMALL) DEBUG PRINT(.\Listings\acc.lst) OBJECT(.\Objects\acc
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0000h
+
+0000 D2E0              2             setb acc.0
+
+0002 D2E1              3             setb acc.1
+
+0004 C2E2              4             clr acc.2
+
+0006 D2E3              5             setb acc.3
+
+0008 A2E0              6             mov c, acc.0
+
+000A 82E1              7             anl c, acc.1
+
+000C 72E2              8             orl c, acc.2
+
+000E B3                9             cpl c
+
+000F 92E7             10             mov acc.7, c
+
+0011 A2E2             11             mov c, acc.2
+
+0013 B3               12             cpl c
+
+0014 82E7             13             anl c, acc.7
+
+0016 80FE             14             halt: sjmp halt
+
+                      15     end
+
+A51 MACRO ASSEMBLER  ACC                                                                  02/01/2023 10:39:58 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+HALT . . . . . . .  C ADDR   0016H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
