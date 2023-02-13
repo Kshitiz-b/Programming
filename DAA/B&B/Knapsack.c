@@ -9,6 +9,7 @@ typedef enum
 } BOOL;
 
 int N;
+int count = 1;
 int vals[100];
 int wts[100];
 
@@ -34,21 +35,35 @@ void printSubset(BOOL incl[N])
 {
     int i;
     int val = 0;
-    //printf("Included = { ");
+    int A[N];
+
+    // printf("Included = { ");
     for (i = 0; i < N; ++i)
     {
         if (incl[i])
         {
-            printf("1 ");
+            // printf("1 ");
+            A[i] = 1;
             val += vals[i];
         }
         else
         {
-            printf("0 ");
+            A[i] = 0;
+            // printf("0 ");
         }
     }
-    printf("\n");
-    //printf("}; Total value = %d\n", val);
+    count++;
+
+    if (count > 3 && count < 5)
+    {
+        for (i = 0; i < N; i++)
+        {
+
+            printf("%d ", A[i]);
+        }
+        printf("\n");
+    }
+    // printf("}; Total value = %d\n", val);
 }
 
 void findKnapsack(BOOL incl[N], int i)
@@ -67,7 +82,7 @@ void findKnapsack(BOOL incl[N], int i)
     {
         return;
     }
-    int x = wts[i];
+    // int x = wts[i];
     BOOL use[N], nouse[N];
     memcpy(use, incl, sizeof(use));
     memcpy(nouse, incl, sizeof(nouse));
@@ -79,7 +94,7 @@ void findKnapsack(BOOL incl[N], int i)
 
 int main(int argc, char const *argv[])
 {
-    printf("Enter the number of elements: ");
+    // printf("Enter the number of elements: ");
     scanf(" %d", &N);
     BOOL incl[N];
     int i;
@@ -88,12 +103,12 @@ int main(int argc, char const *argv[])
         scanf("%d", &vals[i]);
         incl[i] = NO;
     }
-    for(i=0;i<N;++i)
+    for (i = 0; i < N; ++i)
     {
         scanf("%d", &wts[i]);
         incl[i] = NO;
     }
-    //printf("Enter knapsack capacity: ");
+    // printf("Enter knapsack capacity: ");
     scanf(" %d", &cap);
     findKnapsack(incl, 0);
     return 0;
