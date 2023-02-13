@@ -189,13 +189,6 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	up_down_test
 
-} {} {}} {D:/OneDrive/Documents/Programming/Model Sim/tb_k.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/tb_k.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module tb_k
-
-Top level modules:
-	tb_k
-
 } {} {}} {D:/OneDrive/Documents/Programming/Model Sim/ALU_4bit.v} {1 {vlog -work work {D:/OneDrive/Documents/Programming/Model Sim/ALU_4bit.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ALU
