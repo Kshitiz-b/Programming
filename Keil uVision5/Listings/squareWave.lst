@@ -1,0 +1,59 @@
+A51 MACRO ASSEMBLER  SQUAREWAVE                                                           02/15/2023 11:07:39 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\squareWave.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE squareWave.asm SET(SMALL) DEBUG PRINT(.\Listings\squareWave.lst) OBJECT
+                      (.\Objects\squareWave.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+
+0000 758901            2             MOV TMOD, #01H
+
+0003 758A66            3             HERE: MOV TL0, #66H
+
+0006 758CFC            4             MOV TH0, #0FCH
+
+0009 B290              5             CPL P1.0
+
+000B 110F              6             ACALL DELAY
+
+000D 80F4              7             SJMP HERE
+
+000F D28C              8             DELAY: SETB TR0
+
+0011 308DFD            9             AGAIN: JNB TF0, AGAIN
+
+0014 C28C             10             CLR TR0
+
+0016 C28D             11             CLR TF0
+
+0018 22               12             RET
+
+                      13     END
+
+A51 MACRO ASSEMBLER  SQUAREWAVE                                                           02/15/2023 11:07:39 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AGAIN. . . . . . .  C ADDR   0011H   A   
+DELAY. . . . . . .  C ADDR   000FH   A   
+HERE . . . . . . .  C ADDR   0003H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+TF0. . . . . . . .  B ADDR   0088H.5 A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

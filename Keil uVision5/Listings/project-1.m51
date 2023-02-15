@@ -1,16 +1,16 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        02/01/2023  11:22:47  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        02/15/2023  11:07:39  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
-C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\acc1.obj TO .\Objects\project-1 PRINT (.\Listings\project-1.m51) RAMSIZE (256) COD
->> E (0X0000-0XFFFF)
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\squareWave.obj TO .\Objects\project-1 PRINT (.\Listings\project-1.m51) RAMSIZE (25
+>> 6) CODE (0X0000-0XFFFF)
 
 
 INPUT MODULES INCLUDED:
-  .\Objects\acc1.obj (ACC1)
+  .\Objects\squareWave.obj (SQUAREWAVE)
 
 
-LINK MAP OF MODULE:  .\Objects\project-1 (ACC1)
+LINK MAP OF MODULE:  .\Objects\project-1 (SQUAREWAVE)
 
 
             TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
@@ -20,33 +20,41 @@ LINK MAP OF MODULE:  .\Objects\project-1 (ACC1)
             REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
 
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
-            CODE    0000H     0013H     ABSOLUTE     
+            CODE    0000H     0019H     ABSOLUTE     
 
 
 
-SYMBOL TABLE OF MODULE:  .\Objects\project-1 (ACC1)
+SYMBOL TABLE OF MODULE:  .\Objects\project-1 (SQUAREWAVE)
 
   VALUE           TYPE          NAME
   ----------------------------------
 
-  -------         MODULE        ACC1
-  D:00E0H         SYMBOL        ACC
-  C:0011H         SYMBOL        H
+  -------         MODULE        SQUAREWAVE
+  C:0011H         SYMBOL        AGAIN
+  C:000FH         SYMBOL        DELAY
+  C:0003H         SYMBOL        HERE
+  D:0090H         SYMBOL        P1
+  B:0088H.5       SYMBOL        TF0
+  D:008CH         SYMBOL        TH0
+  D:008AH         SYMBOL        TL0
+  D:0089H         SYMBOL        TMOD
+  B:0088H.4       SYMBOL        TR0
   C:0000H         LINE#         2
-  C:0002H         LINE#         3
-  C:0004H         LINE#         4
-  C:0006H         LINE#         5
-  C:0007H         LINE#         6
-  C:0009H         LINE#         7
-  C:000BH         LINE#         8
-  C:000DH         LINE#         9
-  C:000FH         LINE#         10
-  C:0011H         LINE#         11
-  -------         ENDMOD        ACC1
+  C:0003H         LINE#         3
+  C:0006H         LINE#         4
+  C:0009H         LINE#         5
+  C:000BH         LINE#         6
+  C:000DH         LINE#         7
+  C:000FH         LINE#         8
+  C:0011H         LINE#         9
+  C:0014H         LINE#         10
+  C:0016H         LINE#         11
+  C:0018H         LINE#         12
+  -------         ENDMOD        SQUAREWAVE
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0013H BYTE ( 0%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0019H BYTE ( 1%) *
 ******************************************************************************
 
-Program Size: data=8.0 xdata=0 code=19
+Program Size: data=8.0 xdata=0 code=25
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -364,9 +364,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>acc1.asm</FileName>
+              <FileName>squareWave.asm</FileName>
               <FileType>2</FileType>
-              <FilePath>.\acc1.asm</FilePath>
+              <FilePath>.\squareWave.asm</FilePath>
             </File>
           </Files>
         </Group>
