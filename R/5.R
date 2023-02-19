@@ -42,3 +42,4 @@ l <- midx[m] - h / 2
 l
 mode <- l + ((fm - f1) / (2 * fm - f1 - f2)) * h
 mode
+
