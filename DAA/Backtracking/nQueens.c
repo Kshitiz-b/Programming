@@ -20,8 +20,8 @@ void print(int n)
     // printf("%d: ", ++count);
     count++;
 
-    if (count < 5)
-    {
+    // if (count < 5)
+    // {
         printf("(");
         for (i = 1; i <= n; ++i)
         {
@@ -30,14 +30,14 @@ void print(int n)
                 if (board[i] == j)
                 {
                     if (i != n)
-                        printf("%d ", j);
+                        printf("%d,", j);
                     else
                         printf("%d", j);
                 }
             }
         }
         printf(")\n");
-    }
+    //}
 }
 
 int place(int row, int column)
