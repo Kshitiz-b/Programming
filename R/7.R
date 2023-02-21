@@ -7,7 +7,6 @@ mean_marks
 # quartiles <- quantile(mid, probs = c(0.25, 0.5, 0.75))
 # quartiles
 
-
 cl <- cumsum(marks)
 cl
 n <- sum(marks)
