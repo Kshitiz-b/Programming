@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <strings.h>
-#define n 15
+#define n 16
 #define m 4
 
 void search(char *txt, char *pat)
 {
-    int x, y, i, j, count = 0, temp = 0, ans;
+    int i, j, count = 0, temp = 0, ans;
+    printf("Pattern found at ");
 
     for (i = 0; i <= n - m; i++)
     {
@@ -18,8 +19,16 @@ void search(char *txt, char *pat)
         }
         if (count == m)
         {
-            ans = temp - 1;
-            printf("%d ", ans);
+            if (temp - 1 != 12)
+            {
+                ans = temp - 1;
+                printf("%d ", ans);
+            }
+            else
+            {
+                ans = temp - 1;
+                printf("and %d", ans);
+            }
         }
         count = 0;
     }
