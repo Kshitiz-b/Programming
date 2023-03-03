@@ -1,0 +1,102 @@
+A51 MACRO ASSEMBLER  STATUS                                                               03/01/2023 10:28:34 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\status.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE status.asm SET(SMALL) DEBUG PRINT(.\Listings\status.lst) OBJECT(.\Objec
+                      ts\status.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+  0097                 1     SW1 EQU P1.7
+
+0000                   2             ORG 0H
+
+0000 758920            3                     MOV TMOD, #20H
+
+0003 758DFD            4                     MOV TH1, #-3
+
+0006 759850            5                     MOV SCON, #50H
+
+0009 D28E              6                     SETB TR1
+
+000B D297              7                     SETB SW1
+
+000D 20970C            8                     S1: JB SW1, NEXT
+
+0010 900030            9                     MOV DPTR, #MESS1
+
+0013 E4               10                     FN: CLR A
+
+0014 93               11                     MOVC A, @A+DPTR
+
+0015 60F6             12                     JZ S1
+
+0017 1128             13                     ACALL SENDCOM
+
+0019 A3               14                     INC DPTR
+
+001A 80F7             15                     SJMP FN
+
+001C 900033           16                     NEXT: MOV DPTR, #MESS2
+
+001F E4               17                     LN: CLR A
+
+0020 93               18                     MOVC A, @A+DPTR
+
+0021 60EA             19                     JZ S1
+
+0023 1128             20                     ACALL SENDCOM
+
+0025 A3               21                     INC DPTR
+
+0026 80F7             22                     SJMP LN
+
+                      23                     
+
+0028 F599             24                     SENDCOM: MOV SBUF,A
+
+002A 3099FD           25                     HERE: JNB TI, HERE
+
+002D C299             26                     CLR TI
+
+002F 22               27                     RET
+
+                      28                     
+
+0030 4E4F00           29                     MESS1: DB "NO", 0
+
+0033 59455300         30                     MESS2: DB "YES", 0
+
+                      31     END
+
+A51 MACRO ASSEMBLER  STATUS                                                               03/01/2023 10:28:34 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+FN . . . . . . . .  C ADDR   0013H   A   
+HERE . . . . . . .  C ADDR   002AH   A   
+LN . . . . . . . .  C ADDR   001FH   A   
+MESS1. . . . . . .  C ADDR   0030H   A   
+MESS2. . . . . . .  C ADDR   0033H   A   
+NEXT . . . . . . .  C ADDR   001CH   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+S1 . . . . . . . .  C ADDR   000DH   A   
+SBUF . . . . . . .  D ADDR   0099H   A   
+SCON . . . . . . .  D ADDR   0098H   A   
+SENDCOM. . . . . .  C ADDR   0028H   A   
+SW1. . . . . . . .  B ADDR   0090H.7 A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TI . . . . . . . .  B ADDR   0098H.1 A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,73 @@
+A51 MACRO ASSEMBLER  TASK3_3                                                              02/28/2023 20:52:31 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\task3_3.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE task3_3.asm SET(SMALL) DEBUG PRINT(.\Listings\task3_3.lst) OBJECT(.\Obj
+                      ects\task3_3.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H  ; Start of the program
+
+                       2     
+
+                       3     ; Initialize Counter 1 in Mode 1
+
+0000 758910            4     MOV TMOD, #10H  ; Counter 1, Mode 1
+
+                       5     
+
+                       6     ; Configure Pin T1 as input and Port 3 as output
+
+0003 75B000            7     MOV P3, #0H    ; Set all bits of Port 3 as output
+
+0006 D2B0              8     SETB P3.0      ; Set bit 0 of Port 3 high
+
+0008 D28A              9     SETB IT1       ; Enable external interrupt 1
+
+000A D2AA             10     SETB EX1       ; Enable external interrupt 1
+
+                      11     
+
+                      12     ; Main program loop
+
+000C                  13     MAIN:
+
+000C 80FE             14         SJMP MAIN     ; Jump back to the beginning of the loop
+
+                      15     
+
+                      16     ; External Interrupt 1 Service Routine
+
+000E                  17     INT1_ISR:
+
+000E E58B             18         MOV A, TL1     ; Move the state of TL1 to the accumulator
+
+0010 F5B0             19         MOV P3, A     ; Move the state of TL1 to Port 3
+
+0012 32               20         RETI          ; Return from interrupt
+
+                      21     END
+
+A51 MACRO ASSEMBLER  TASK3_3                                                              02/28/2023 20:52:31 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+EX1. . . . . . . .  B ADDR   00A8H.2 A   
+INT1_ISR . . . . .  C ADDR   000EH   A   
+IT1. . . . . . . .  B ADDR   0088H.2 A   
+MAIN . . . . . . .  C ADDR   000CH   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+TL1. . . . . . . .  D ADDR   008BH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

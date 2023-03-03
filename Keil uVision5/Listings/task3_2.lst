@@ -1,0 +1,58 @@
+A51 MACRO ASSEMBLER  TASK3_2                                                              02/28/2023 20:54:35 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\task3_2.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE task3_2.asm SET(SMALL) DEBUG PRINT(.\Listings\task3_2.lst) OBJECT(.\Obj
+                      ects\task3_2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1             ORG     0000H
+
+0000 900300            2                     MOV     DPTR,#300H              ;load look-up table address
+
+0003 74FF              3                     MOV     A,#0FFH         ;A=FF
+
+0005 F5A0              4                     MOV     P2,A                    ;configure P1 as input port
+
+0007 E5A0              5     BACK:           MOV     A,P2                    ;get X
+
+0009 93                6                     MOVC    A,@A+DPTR               ;get X squared from table
+
+000A F5B0              7                     MOV     P3,A
+
+000C A3                8                     INC DPTR                        ;issue it to P2
+
+000D 80F8              9                     SJMP    BACK                    ;keep doing it
+
+                      10     
+
+0300                  11                     ORG     300H
+
+0300                  12     XSQR_TABLE:
+
+0300 32314243         13                     DB      "21BCE2067"
+
+0304 45323036                
+0308 37                      
+                      14                     END
+
+A51 MACRO ASSEMBLER  TASK3_2                                                              02/28/2023 20:54:35 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   0007H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+XSQR_TABLE . . . .  C ADDR   0300H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

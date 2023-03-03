@@ -1,0 +1,58 @@
+A51 MACRO ASSEMBLER  TASK4_3                                                              03/01/2023 11:02:14 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\task4_3.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE task4_3.asm SET(SMALL) DEBUG PRINT(.\Listings\task4_3.lst) OBJECT(.\Obj
+                      ects\task4_3.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+
+0000 758911            2             MOV     TMOD,#11H ;counter 1, mode 2,C/T=1
+
+                       3                                      ;external pulses
+
+0003 758D00            4               MOV   TH1,#0           ;clear TH1
+
+0006 D2B5              5               SETB  P3.5             ;make T1 input
+
+0008 D28E              6     AGAIN:    SETB  TR1              ;start the counter
+
+000A E58B              7     BACK:     MOV   A,TL1            ;get copy of count TL1
+
+000C F5B0              8               MOV   P3,A             ;display it on port 3
+
+000E 308FF9            9               JNB   TF1,BACK         ;keep doing it if TF=0
+
+0011 C28E             10               CLR   TR1              ;stop the counter 1
+
+0013 C28F             11               CLR   TF1              ;make TF=0
+
+0015 80F1             12               SJMP  AGAIN            ;keep doing it
+
+                      13     END
+
+A51 MACRO ASSEMBLER  TASK4_3                                                              03/01/2023 11:02:14 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AGAIN. . . . . . .  C ADDR   0008H   A   
+BACK . . . . . . .  C ADDR   000AH   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+TF1. . . . . . . .  B ADDR   0088H.7 A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TL1. . . . . . . .  D ADDR   008BH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

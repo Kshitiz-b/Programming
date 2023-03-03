@@ -364,14 +364,14 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>squareWave.asm</FileName>
+              <FileName>task4_1.asm</FileName>
               <FileType>2</FileType>
-              <FilePath>.\squareWave.asm</FilePath>
+              <FilePath>.\task4_1.asm</FilePath>
             </File>
             <File>
-              <FileName>delay.asm</FileName>
+              <FileName>task4_3.asm</FileName>
               <FileType>2</FileType>
-              <FilePath>.\delay.asm</FilePath>
+              <FilePath>.\task4_3.asm</FilePath>
             </File>
           </Files>
         </Group>

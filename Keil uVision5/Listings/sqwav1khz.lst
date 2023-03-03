@@ -1,22 +1,22 @@
-A51 MACRO ASSEMBLER  SQUAREWAVE                                                           02/28/2023 20:22:23 PAGE     1
+A51 MACRO ASSEMBLER  SQWAV1KHZ                                                            02/27/2023 12:08:27 PAGE     1
 
 
 MACRO ASSEMBLER A51 V8.2.5.0
-OBJECT MODULE PLACED IN .\Objects\squareWave.obj
-ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE squareWave.asm SET(SMALL) DEBUG PRINT(.\Listings\squareWave.lst) OBJECT
-                      (.\Objects\squareWave.obj) EP
+OBJECT MODULE PLACED IN .\Objects\sqwav1khz.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE sqwav1khz.asm SET(SMALL) DEBUG PRINT(.\Listings\sqwav1khz.lst) OBJECT(.
+                      \Objects\sqwav1khz.obj) EP
 
 LOC  OBJ            LINE     SOURCE
 
 0000                   1     ORG 0000H
 
-0000 758901            2             MOV TMOD, #01H
+0000 758910            2             MOV TMOD, #10H
 
-0003 758A66            3             HERE: MOV TL0, #66H
+0003 758A86            3             HERE: MOV TL0, #86H
 
-0006 758CFC            4             MOV TH0, #0FCH
+0006 758DFD            4             MOV TH1, #0FDH
 
-0009 B290              5             CPL P1.0
+0009 B291              5             CPL P1.1
 
 000B 110F              6             ACALL DELAY
 
@@ -34,7 +34,7 @@ LOC  OBJ            LINE     SOURCE
 
                       13     END
 
-A51 MACRO ASSEMBLER  SQUAREWAVE                                                           02/28/2023 20:22:23 PAGE     2
+A51 MACRO ASSEMBLER  SQWAV1KHZ                                                            02/27/2023 12:08:27 PAGE     2
 
 SYMBOL TABLE LISTING
 ------ ----- -------
@@ -47,7 +47,7 @@ DELAY. . . . . . .  C ADDR   000FH   A
 HERE . . . . . . .  C ADDR   0003H   A   
 P1 . . . . . . . .  D ADDR   0090H   A   
 TF0. . . . . . . .  B ADDR   0088H.5 A   
-TH0. . . . . . . .  D ADDR   008CH   A   
+TH1. . . . . . . .  D ADDR   008DH   A   
 TL0. . . . . . . .  D ADDR   008AH   A   
 TMOD . . . . . . .  D ADDR   0089H   A   
 TR0. . . . . . . .  B ADDR   0088H.4 A   

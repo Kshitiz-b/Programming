@@ -1,0 +1,54 @@
+A51 MACRO ASSEMBLER  TASK4_1                                                              03/01/2023 11:01:58 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\task4_1.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE task4_1.asm SET(SMALL) DEBUG PRINT(.\Listings\task4_1.lst) OBJECT(.\Obj
+                      ects\task4_1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+
+0000 758920            2             MOV     TMOD,#20H       ;Timer 1, mode 2(auto-reload)
+
+0003 758DFD            3                     MOV     TH1,#-3 ;4800 baud
+
+0006 759850            4                     MOV     SCON,#50H       ;8-bit, 1 stop, REN enabled
+
+0009 D28E              5                     SETB    TR1             ;start Timer 1
+
+000B 3098FD            6     HERE:           JNB     RI,HERE ;wait for char to come in
+
+000E E599              7                     MOV     A,SBUF  ;save incoming byte in A
+
+0010 F590              8                     MOV     P1,A            ;send to port 1
+
+0012 C298              9                     CLR     RI              ;get ready to receive next byte
+
+0014 80F5             10                     SJMP    HERE            ;keep getting data
+
+                      11     END
+
+A51 MACRO ASSEMBLER  TASK4_1                                                              03/01/2023 11:01:58 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   000BH   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+RI . . . . . . . .  B ADDR   0098H.0 A   
+SBUF . . . . . . .  D ADDR   0099H   A   
+SCON . . . . . . .  D ADDR   0098H   A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

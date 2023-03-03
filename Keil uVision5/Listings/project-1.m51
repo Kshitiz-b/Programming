@@ -1,16 +1,17 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        02/15/2023  11:07:39  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/01/2023  11:02:15  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
-C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\squareWave.obj TO .\Objects\project-1 PRINT (.\Listings\project-1.m51) RAMSIZE (25
->> 6) CODE (0X0000-0XFFFF)
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\task4_1.obj, .\Objects\task4_3.obj TO .\Objects\project-1 PRINT (.\Listings\projec
+>> t-1.m51) RAMSIZE (256) CODE (0X0000-0XFFFF)
 
 
 INPUT MODULES INCLUDED:
-  .\Objects\squareWave.obj (SQUAREWAVE)
+  .\Objects\task4_1.obj (TASK4_1)
+  .\Objects\task4_3.obj (TASK4_3)
 
 
-LINK MAP OF MODULE:  .\Objects\project-1 (SQUAREWAVE)
+LINK MAP OF MODULE:  .\Objects\project-1 (TASK4_1)
 
 
             TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
@@ -20,41 +21,67 @@ LINK MAP OF MODULE:  .\Objects\project-1 (SQUAREWAVE)
             REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
 
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
-            CODE    0000H     0019H     ABSOLUTE     
+            CODE    0000H     0016H     ABSOLUTE     
+* OVERLAP * CODE    0000H     0017H     ABSOLUTE     
 
 
 
-SYMBOL TABLE OF MODULE:  .\Objects\project-1 (SQUAREWAVE)
+SYMBOL TABLE OF MODULE:  .\Objects\project-1 (TASK4_1)
 
   VALUE           TYPE          NAME
   ----------------------------------
 
-  -------         MODULE        SQUAREWAVE
-  C:0011H         SYMBOL        AGAIN
-  C:000FH         SYMBOL        DELAY
-  C:0003H         SYMBOL        HERE
+  -------         MODULE        TASK4_1
+  C:000BH         SYMBOL        HERE
   D:0090H         SYMBOL        P1
-  B:0088H.5       SYMBOL        TF0
-  D:008CH         SYMBOL        TH0
-  D:008AH         SYMBOL        TL0
+  B:0098H.0       SYMBOL        RI
+  D:0099H         SYMBOL        SBUF
+  D:0098H         SYMBOL        SCON
+  D:008DH         SYMBOL        TH1
   D:0089H         SYMBOL        TMOD
-  B:0088H.4       SYMBOL        TR0
+  B:0088H.6       SYMBOL        TR1
   C:0000H         LINE#         2
   C:0003H         LINE#         3
   C:0006H         LINE#         4
   C:0009H         LINE#         5
   C:000BH         LINE#         6
-  C:000DH         LINE#         7
-  C:000FH         LINE#         8
-  C:0011H         LINE#         9
+  C:000EH         LINE#         7
+  C:0010H         LINE#         8
+  C:0012H         LINE#         9
   C:0014H         LINE#         10
-  C:0016H         LINE#         11
-  C:0018H         LINE#         12
-  -------         ENDMOD        SQUAREWAVE
+  -------         ENDMOD        TASK4_1
+
+  -------         MODULE        TASK4_3
+  C:0008H         SYMBOL        AGAIN
+  C:000AH         SYMBOL        BACK
+  D:00B0H         SYMBOL        P3
+  B:0088H.7       SYMBOL        TF1
+  D:008DH         SYMBOL        TH1
+  D:008BH         SYMBOL        TL1
+  D:0089H         SYMBOL        TMOD
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/01/2023  11:02:15  PAGE 2
+
+
+  B:0088H.6       SYMBOL        TR1
+  C:0000H         LINE#         2
+  C:0003H         LINE#         4
+  C:0006H         LINE#         5
+  C:0008H         LINE#         6
+  C:000AH         LINE#         7
+  C:000CH         LINE#         8
+  C:000EH         LINE#         9
+  C:0011H         LINE#         10
+  C:0013H         LINE#         11
+  C:0015H         LINE#         12
+  -------         ENDMOD        TASK4_3
+
+*** WARNING L5: CODE SPACE MEMORY OVERLAP
+    FROM:    0000H
+    TO:      0015H
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0019H BYTE ( 1%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 002DH BYTE ( 2%) *
 ******************************************************************************
 
-Program Size: data=8.0 xdata=0 code=25
-LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+Program Size: data=8.0 xdata=0 code=45
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
