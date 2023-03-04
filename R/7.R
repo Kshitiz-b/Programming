@@ -4,8 +4,8 @@ mid
 marks <- c(5, 6, 15, 10, 5, 4, 2, 2)
 mean_marks <- sum(mid * marks) / sum(marks)
 mean_marks
-# quartiles <- quantile(mid, probs = c(0.25, 0.5, 0.75))
-# quartiles
+quartiles <- quantile(mid, probs = c(0.25, 0.5, 0.75))
+quartiles
 
 cl <- cumsum(marks)
 cl
@@ -37,7 +37,7 @@ Q3 <- l3 + ((((3 * n) / 4) - c3) / f3) * h3
 Q3
 Q <- (Q3 - Q1) / 2
 Q
-# quartile_deviation <- (quartiles[3] - quartiles[1]) / 2
-# quartile_deviation
+quartile_deviation <- (quartiles[3] - quartiles[1]) / 2
+quartile_deviation
 mean_deviation <- sum(abs(mid - mean_marks) * marks) / sum(marks)
 mean_deviation
