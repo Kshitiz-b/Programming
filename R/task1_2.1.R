@@ -1,3 +1,5 @@
+regno <- "21BCE2067"
+name <- "Kshitiz Bhargava"
 mid <- seq(132, 162, 5)
 mid
 f <- c(5, 15, 28, 24, 17, 10, 1)
