@@ -373,6 +373,11 @@
               <FileType>2</FileType>
               <FilePath>.\task4_3.asm</FilePath>
             </File>
+            <File>
+              <FileName>add.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\add.asm</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
