@@ -1,3 +1,5 @@
+#21BCE2067
+#Kshitiz Bhargava
 pbinom(4, 6, 0.95, lower.tail = FALSE)
 
 pbinom(4, 6, 0.95) - pbinom(1, 6, 0.95)
