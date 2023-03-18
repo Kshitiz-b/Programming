@@ -1,0 +1,64 @@
+A51 MACRO ASSEMBLER  TASK4_2                                                              03/15/2023 21:50:32 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\task4_2.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE task4_2.asm SET(SMALL) DEBUG PRINT(.\Listings\task4_2.lst) OBJECT(.\Obj
+                      ects\task4_2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+
+0000 020030            2             LJMP MAIN
+
+000B                   3             ORG 000BH
+
+000B B2A1              4                     CPL P2.1
+
+000D 32                5                     RETI
+
+                       6                     
+
+0030                   7                     ORG 0030H
+
+0030 758902            8                             MAIN: MOV TMOD, #02H
+
+0033 75A0FF            9                             MOV P2, #0FFH
+
+0036 758CBA           10                             MOV TH0, #-46H
+
+0039 75A882           11                             MOV IE, #82H
+
+003C D28C             12                             SETB TR0
+
+003E E5A0             13                             BACK: MOV A, P2
+
+0040 F5B0             14                             MOV P3, A
+
+0042 80FA             15                             SJMP BACK
+
+                      16     END
+
+A51 MACRO ASSEMBLER  TASK4_2                                                              03/15/2023 21:50:32 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   003EH   A   
+IE . . . . . . . .  D ADDR   00A8H   A   
+MAIN . . . . . . .  C ADDR   0030H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

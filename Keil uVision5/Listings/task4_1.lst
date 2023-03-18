@@ -1,4 +1,4 @@
-A51 MACRO ASSEMBLER  TASK4_1                                                              03/01/2023 11:01:58 PAGE     1
+A51 MACRO ASSEMBLER  TASK4_1                                                              03/15/2023 21:49:22 PAGE     1
 
 
 MACRO ASSEMBLER A51 V8.2.5.0
@@ -10,27 +10,57 @@ LOC  OBJ            LINE     SOURCE
 
 0000                   1     ORG 0000H
 
-0000 758920            2             MOV     TMOD,#20H       ;Timer 1, mode 2(auto-reload)
+0000 758920            2             MOV TMOD, #20H
 
-0003 758DFD            3                     MOV     TH1,#-3 ;4800 baud
+0003 758DFD            3             MOV TH1, #-3
 
-0006 759850            4                     MOV     SCON,#50H       ;8-bit, 1 stop, REN enabled
+0006 759850            4             MOV SCON, #50H
 
-0009 D28E              5                     SETB    TR1             ;start Timer 1
+0009 D28E              5             SETB TR1
 
-000B 3098FD            6     HERE:           JNB     RI,HERE ;wait for char to come in
+000B                   6             AGAIN: 
 
-000E E599              7                     MOV     A,SBUF  ;save incoming byte in A
+000B 744B              7                             MOV A, #"K"
 
-0010 F590              8                     MOV     P1,A            ;send to port 1
+000D 1129              8                             ACALL TRANS
 
-0012 C298              9                     CLR     RI              ;get ready to receive next byte
+000F 7453              9                             MOV A, #"S"
 
-0014 80F5             10                     SJMP    HERE            ;keep getting data
+0011 1129             10                             ACALL TRANS
 
-                      11     END
+0013 7448             11                             MOV A, #"H"
 
-A51 MACRO ASSEMBLER  TASK4_1                                                              03/01/2023 11:01:58 PAGE     2
+0015 1129             12                             ACALL TRANS
+
+0017 7449             13                             MOV A, #"I"
+
+0019 1129             14                             ACALL TRANS
+
+001B 7454             15                             MOV A, #"T"
+
+001D 1129             16                             ACALL TRANS
+
+001F 7449             17                             MOV A, #"I"
+
+0021 1129             18                             ACALL TRANS
+
+0023 745A             19                             MOV A, #"Z"
+
+0025 1129             20                             ACALL TRANS
+
+0027 80E2             21                             SJMP AGAIN
+
+0029 F599             22             TRANS: MOV SBUF, A
+
+002B 3099FD           23             HERE: JNB TI, HERE
+
+002E C299             24             CLR TI
+
+0030 22               25             RET
+
+                      26     END
+
+A51 MACRO ASSEMBLER  TASK4_1                                                              03/15/2023 21:49:22 PAGE     2
 
 SYMBOL TABLE LISTING
 ------ ----- -------
@@ -38,14 +68,15 @@ SYMBOL TABLE LISTING
 
 N A M E             T Y P E  V A L U E   ATTRIBUTES
 
-HERE . . . . . . .  C ADDR   000BH   A   
-P1 . . . . . . . .  D ADDR   0090H   A   
-RI . . . . . . . .  B ADDR   0098H.0 A   
+AGAIN. . . . . . .  C ADDR   000BH   A   
+HERE . . . . . . .  C ADDR   002BH   A   
 SBUF . . . . . . .  D ADDR   0099H   A   
 SCON . . . . . . .  D ADDR   0098H   A   
 TH1. . . . . . . .  D ADDR   008DH   A   
+TI . . . . . . . .  B ADDR   0098H.1 A   
 TMOD . . . . . . .  D ADDR   0089H   A   
 TR1. . . . . . . .  B ADDR   0088H.6 A   
+TRANS. . . . . . .  C ADDR   0029H   A   
 
 
 REGISTER BANK(S) USED: 0 

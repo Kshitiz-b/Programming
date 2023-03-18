@@ -1,0 +1,87 @@
+A51 MACRO ASSEMBLER  TASK4_4                                                              03/15/2023 21:53:37 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\task4_4.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE task4_4.asm SET(SMALL) DEBUG PRINT(.\Listings\task4_4.lst) OBJECT(.\Obj
+                      ects\task4_4.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+  00C0                 1     SCON1 EQU 0C0H
+
+  00C1                 2     SBUF1 EQU 0C1H
+
+  00C1                 3     TI1 BIT 0C1H
+
+0000                   4     ORG 0H
+
+0000 758920            5             MOV TMOD, #20H
+
+0003 758DFD            6             MOV TH1, #-3
+
+0006 75C050            7             MOV SCON1, #50H
+
+0009 D28E              8             SETB TR1
+
+000B 900023            9             MOV DPTR, #MESS1
+
+000E E4               10             FN:     CLR A
+
+000F 93               11             MOVC A, @A+DPTR
+
+0010 F590             12             MOV P1, A
+
+0012 6005             13             JZ S1
+
+0014 111B             14             ACALL SENDCOM
+
+0016 A3               15             INC DPTR
+
+0017 80F5             16             SJMP FN
+
+0019 80FE             17             S1: SJMP S1
+
+001B F5C1             18             SENDCOM: MOV SBUF1, A
+
+001D 308FFD           19             HERE1: JNB TF1, HERE1
+
+0020 C2C1             20             CLR TI1
+
+0022 22               21             RET
+
+                      22             
+
+0023 32314243         23             MESS1: DB "21BCE2067", 0
+
+0027 45323036                
+002B 3700                    
+                      24     END
+
+A51 MACRO ASSEMBLER  TASK4_4                                                              03/15/2023 21:53:37 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+FN . . . . . . . .  C ADDR   000EH   A   
+HERE1. . . . . . .  C ADDR   001DH   A   
+MESS1. . . . . . .  C ADDR   0023H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+S1 . . . . . . . .  C ADDR   0019H   A   
+SBUF1. . . . . . .  N NUMB   00C1H   A   
+SCON1. . . . . . .  N NUMB   00C0H   A   
+SENDCOM. . . . . .  C ADDR   001BH   A   
+TF1. . . . . . . .  B ADDR   0088H.7 A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TI1. . . . . . . .  B ADDR   00C0H.1 A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

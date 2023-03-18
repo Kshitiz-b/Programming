@@ -1,4 +1,4 @@
-A51 MACRO ASSEMBLER  TASK4_3                                                              03/01/2023 11:02:14 PAGE     1
+A51 MACRO ASSEMBLER  TASK4_3                                                              03/15/2023 21:52:09 PAGE     1
 
 
 MACRO ASSEMBLER A51 V8.2.5.0
@@ -10,31 +10,29 @@ LOC  OBJ            LINE     SOURCE
 
 0000                   1     ORG 0000H
 
-0000 758911            2             MOV     TMOD,#11H ;counter 1, mode 2,C/T=1
+0000 758950            2               MOV   TMOD,#01010000B
 
-                       3                                      ;external pulses
+0003 758B00            3               MOV   TL1,#0
 
-0003 758D00            4               MOV   TH1,#0           ;clear TH1
+0006 D2B5              4               SETB  P3.5
 
-0006 D2B5              5               SETB  P3.5             ;make T1 input
+0008 D28E              5     AGAIN:    SETB  TR1
 
-0008 D28E              6     AGAIN:    SETB  TR1              ;start the counter
+000A E58B              6     BACK:     MOV   A,TL1
 
-000A E58B              7     BACK:     MOV   A,TL1            ;get copy of count TL1
+000C F5B0              7               MOV   P3,A
 
-000C F5B0              8               MOV   P3,A             ;display it on port 3
+000E 308FF9            8               JNB   TF1,BACK
 
-000E 308FF9            9               JNB   TF1,BACK         ;keep doing it if TF=0
+0011 C28E              9               CLR   TR1
 
-0011 C28E             10               CLR   TR1              ;stop the counter 1
+0013 C28F             10               CLR   TF1
 
-0013 C28F             11               CLR   TF1              ;make TF=0
+0015 80F1             11               SJMP  AGAIN
 
-0015 80F1             12               SJMP  AGAIN            ;keep doing it
+                      12     END
 
-                      13     END
-
-A51 MACRO ASSEMBLER  TASK4_3                                                              03/01/2023 11:02:14 PAGE     2
+A51 MACRO ASSEMBLER  TASK4_3                                                              03/15/2023 21:52:09 PAGE     2
 
 SYMBOL TABLE LISTING
 ------ ----- -------
@@ -46,7 +44,6 @@ AGAIN. . . . . . .  C ADDR   0008H   A
 BACK . . . . . . .  C ADDR   000AH   A   
 P3 . . . . . . . .  D ADDR   00B0H   A   
 TF1. . . . . . . .  B ADDR   0088H.7 A   
-TH1. . . . . . . .  D ADDR   008DH   A   
 TL1. . . . . . . .  D ADDR   008BH   A   
 TMOD . . . . . . .  D ADDR   0089H   A   
 TR1. . . . . . . .  B ADDR   0088H.6 A   

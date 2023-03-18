@@ -364,19 +364,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>task4_1.asm</FileName>
+              <FileName>task4_4.asm</FileName>
               <FileType>2</FileType>
-              <FilePath>.\task4_1.asm</FilePath>
-            </File>
-            <File>
-              <FileName>task4_3.asm</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\task4_3.asm</FilePath>
-            </File>
-            <File>
-              <FileName>add.asm</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\add.asm</FilePath>
+              <FilePath>.\task4_4.asm</FilePath>
             </File>
           </Files>
         </Group>
