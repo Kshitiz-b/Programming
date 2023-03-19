@@ -1,5 +1,6 @@
 // C Program for Floyd Warshall Algorithm
 #include <stdio.h>
+#include <stdlib.h>
 
 // Number of vertices in the graph
 #define V 4
