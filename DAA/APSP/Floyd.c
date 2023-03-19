@@ -74,17 +74,18 @@ void printSolution(int dist[][V])
 // driver's code
 int main()
 {
+    char graph[V][V];
     for(int i=0;i<V;i++)
     {
         for(int j=0;j<V;j++)
         {
-            scanf("%d")
+            scanf("%c", &graph);
         }
     }
-    int graph[V][V] = {{0, 5, I, 10},
-                       {I, 0, 3, I},
-                       {I, I, 0, 1},
-                       {I, I, I, 0}};
+    // int graph[V][V] = {{0, 5, I, 10},
+    //                    {I, 0, 3, I},
+    //                    {I, I, 0, 1},
+    //                    {I, I, I, 0}};
 
     floydWarshall(graph);
     return 0;
