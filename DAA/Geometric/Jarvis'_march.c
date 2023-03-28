@@ -1,77 +1,90 @@
 #include <stdio.h>
+#include <stdlib.h>
 
+// Define a structure for the 2D point
 typedef struct Point
 {
-    int x, y;
+    int x;
+    int y;
 } Point;
 
-// Function to find the orientation of three points (p, q, r)
+// Helper function to check orientation of 3 points (clockwise or counter-clockwise)
 int orientation(Point p, Point q, Point r)
 {
     int val = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
     if (val == 0)
-        return 0;             // colinear
+        return 0;             // collinear
     return (val > 0) ? 1 : 2; // clockwise or counterclockwise
 }
 
-// Function to find the convex hull using Jarvis' March Algorithm
+// Jarvis' March Algorithm to find the convex hull
 void convexHull(Point points[], int n)
 {
-    // There must be at least 3 points
     if (n < 3)
-        return;
+        return; // not enough points
 
-    // Initialize result
+    // Initialize the result array
     int hull[n];
     for (int i = 0; i < n; i++)
         hull[i] = -1;
 
     // Find the leftmost point
-    int l = 0;
+    int leftmost = 0;
     for (int i = 1; i < n; i++)
-        if (points[i].x < points[l].x)
-            l = i;
+    {
+        if (points[i].x < points[leftmost].x)
+        {
+            leftmost = i;
+        }
+    }
 
-    // Start from the leftmost point, keep moving counterclockwise
-    // until we reach the start point again
-    int p = l, q;
+    // Start from leftmost point, keep moving counterclockwise until we reach the start point again
+    int p = leftmost, q;
+    int i = 0;
     do
     {
-        // Add current point to result
-        hull[p] = 1;
-
-        // Search for a point 'q' such that orientation(p, i, q) is counterclockwise
+        hull[i++] = p;
         q = (p + 1) % n;
-        for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
         {
-            // If i is more counterclockwise than current q, then update q
-            if (orientation(points[p], points[i], points[q]) == 2)
-                q = i;
+            if (orientation(points[p], points[j], points[q]) == 2)
+            {
+                q = j;
+            }
         }
-
-        // Set p as q for next iteration, so that q is added to result
         p = q;
+    } while (p != leftmost);
 
-    } while (p != l);
-
-    // Print convex hull
+    // Print the convex hull
+    printf("The Boundary Coordinates are\n");
     for (int i = 0; i < n; i++)
     {
-        if (hull[i] == 1)
-            printf("%d %d\n", points[i].x, points[i].y);
+        if (hull[i] != -1)
+        {
+            printf("%d %d\n", points[hull[i]].x, points[hull[i]].y);
+        }
     }
 }
 
-// Main function
 int main()
 {
-    Point points[100];
     int n = 7;
+    // scanf("%d", &n);
+
+    // Allocate memory for the array of points
+    Point *points = (Point *)malloc(n * sizeof(Point));
+
+    // Read the points from input
     for (int i = 0; i < n; i++)
     {
-        // printf("Point %d: ", i + 1);
         scanf("%d %d", &points[i].x, &points[i].y);
     }
+
+    // Compute the convex hull
     convexHull(points, n);
+
+    // Free the allocated memory
+    free(points);
+
     return 0;
 }
