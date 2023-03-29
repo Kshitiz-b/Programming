@@ -364,9 +364,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>task4_4.asm</FileName>
+              <FileName>exp5_2.asm</FileName>
               <FileType>2</FileType>
-              <FilePath>.\task4_4.asm</FilePath>
+              <FilePath>.\exp5_2.asm</FilePath>
             </File>
           </Files>
         </Group>

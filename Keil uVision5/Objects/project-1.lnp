@@ -1,4 +1,4 @@
-".\Objects\task4_4.obj" 
+".\Objects\exp5_2.obj" 
 TO ".\Objects\project-1" 
 PRINT(".\Listings\project-1.m51") RAMSIZE(256) 
 CODE( 0X0000-0XFFFF )

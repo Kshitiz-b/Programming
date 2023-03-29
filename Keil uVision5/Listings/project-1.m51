@@ -1,16 +1,16 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        03/15/2023  21:53:37  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/29/2023  10:45:36  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
-C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\task4_4.obj TO .\Objects\project-1 PRINT (.\Listings\project-1.m51) RAMSIZE (256) 
->> CODE (0X0000-0XFFFF)
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\exp5_2.obj TO .\Objects\project-1 PRINT (.\Listings\project-1.m51) RAMSIZE (256) C
+>> ODE (0X0000-0XFFFF)
 
 
 INPUT MODULES INCLUDED:
-  .\Objects\task4_4.obj (TASK4_4)
+  .\Objects\exp5_2.obj (EXP5_2)
 
 
-LINK MAP OF MODULE:  .\Objects\project-1 (TASK4_4)
+LINK MAP OF MODULE:  .\Objects\project-1 (EXP5_2)
 
 
             TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
@@ -20,54 +20,56 @@ LINK MAP OF MODULE:  .\Objects\project-1 (TASK4_4)
             REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
 
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
-            CODE    0000H     002DH     ABSOLUTE     
+            CODE    0000H     0053H     ABSOLUTE     
 
 
 
-SYMBOL TABLE OF MODULE:  .\Objects\project-1 (TASK4_4)
+SYMBOL TABLE OF MODULE:  .\Objects\project-1 (EXP5_2)
 
   VALUE           TYPE          NAME
   ----------------------------------
 
-  -------         MODULE        TASK4_4
-  C:000EH         SYMBOL        FN
-  C:001DH         SYMBOL        HERE1
-  C:0023H         SYMBOL        MESS1
+  -------         MODULE        EXP5_2
+  C:0040H         SYMBOL        BACK
+  D:00A8H         SYMBOL        IE
+  C:0030H         SYMBOL        MAIN
   D:0090H         SYMBOL        P1
-  C:0019H         SYMBOL        S1
-  N:00C1H         SYMBOL        SBUF1
-  N:00C0H         SYMBOL        SCON1
-  C:001BH         SYMBOL        SENDCOM
-  B:0088H.7       SYMBOL        TF1
+  D:00A0H         SYMBOL        P2
+  B:0098H.0       SYMBOL        RI
+  D:0099H         SYMBOL        SBUF
+  D:0098H         SYMBOL        SCON
+  C:0046H         SYMBOL        SERIAL
   D:008DH         SYMBOL        TH1
-  B:00C0H.1       SYMBOL        TI1
+  B:0098H.1       SYMBOL        TI
   D:0089H         SYMBOL        TMOD
   B:0088H.6       SYMBOL        TR1
-  C:0000H         LINE#         5
-  C:0003H         LINE#         6
-  C:0006H         LINE#         7
-  C:0009H         LINE#         8
-  C:000BH         LINE#         9
-  C:000EH         LINE#         10
-  C:000FH         LINE#         11
-  C:0010H         LINE#         12
-  C:0012H         LINE#         13
-  C:0014H         LINE#         14
-  C:0016H         LINE#         15
-  C:0017H         LINE#         16
-  C:0019H         LINE#         17
-  C:001BH         LINE#         18
-  C:001DH         LINE#         19
-  C:0020H         LINE#         20
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/15/2023  21:53:37  PAGE 2
+  C:0050H         SYMBOL        TRANS
+  C:0000H         LINE#         2
+  C:0023H         LINE#         4
+  C:0030H         LINE#         6
+  C:0032H         LINE#         7
+  C:0035H         LINE#         8
+  C:0038H         LINE#         9
+  C:003BH         LINE#         10
+  C:003EH         LINE#         11
+  C:0040H         LINE#         12
+  C:0042H         LINE#         13
+  C:0044H         LINE#         14
+  C:0046H         LINE#         15
+  C:0049H         LINE#         16
+  C:004BH         LINE#         17
+  C:004DH         LINE#         18
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/29/2023  10:45:36  PAGE 2
 
 
-  C:0022H         LINE#         21
-  -------         ENDMOD        TASK4_4
+  C:004FH         LINE#         19
+  C:0050H         LINE#         20
+  C:0052H         LINE#         21
+  -------         ENDMOD        EXP5_2
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 002DH BYTE ( 2%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0029H BYTE ( 2%) *
 ******************************************************************************
 
-Program Size: data=8.0 xdata=0 code=45
+Program Size: data=8.0 xdata=0 code=83
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,93 +1,149 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <math.h>
 
-// Function to contract an edge
-void contract_edge(int** adj_list, int* adj_list_size, int u, int v, int n) {
-    // Merge the vertices u and v
-    for (int i = 0; i < adj_list_size[v]; i++) {
-        int w = adj_list[v][i];
-        if (w != u) {
-            adj_list[u][adj_list_size[u]++] = w;
-            for (int j = 0; j < adj_list_size[w]; j++) {
-                if (adj_list[w][j] == v) {
-                    adj_list[w][j] = u;
-                    break;
-                }
+// Finds the global minimum cut of the given graph with n vertices and adjacency matrix graph
+int global_minimum_cut(int n, int **graph)
+{
+    // Allocate memory for the vertex labels
+    int *labels = (int *)malloc(n * sizeof(int));
+    for (int i = 0; i < n; i++)
+    {
+        labels[i] = i;
+    }
+
+    // Contract the vertices until only 2 are left
+    while (n > 2)
+    {
+        // Generate a random edge
+        int u = rand() % n;
+        int v = rand() % n;
+        while (labels[u] != labels[v])
+        {
+            if (graph[u][v] && rand() % 2 == 0)
+            {
+                break;
+            }
+            v = rand() % n;
+        }
+
+        // Contract the edge
+        for (int i = 0; i < n; i++)
+        {
+            graph[labels[u]][i] += graph[labels[v]][i];
+            graph[i][labels[u]] += graph[i][labels[v]];
+        }
+        labels[labels[v]] = labels[u];
+        n--;
+    }
+
+    // Count the cut
+    int cut = 0;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            if (graph[i][j])
+            {
+                cut += graph[i][j];
             }
         }
     }
-    adj_list_size[v] = 0;
-    // Remove self-loops
-    for (int i = 0; i < adj_list_size[u]; i++) {
-        int w = adj_list[u][i];
-        if (w == u) {
-            for (int j = i; j < adj_list_size[u]-1; j++) {
-                adj_list[u][j] = adj_list[u][j+1];
-            }
-            adj_list[u][adj_list_size[u]-1] = -1;
-            adj_list_size[u]--;
-            i--;
-        }
-    }
+
+    // Free the memory allocated for the vertex labels
+    free(labels);
+
+    // Return the cut
+    return cut;
 }
 
-// Function to compute the Global Minimum Cut
-int global_min_cut(int** adj_list, int* adj_list_size, int n) {
-    int* contracted = (int*) calloc(n, sizeof(int));
-    int num_vertices = n;
-    while (num_vertices > 2) {
-        // Choose a random edge to contract
-        int u, v;
-        do {
-            u = rand() % n;
-        } while (adj_list_size[u] == 0);
-        v = adj_list[u][rand() % adj_list_size[u]];
-        // Contract the edge (u, v)
-        contract_edge(adj_list, adj_list_size, u, v, n);
-        contracted[v] = 1;
-        num_vertices--;
-    }
-    // Count the number of crossing edges
-    int min_cut = 0;
-    for (int i = 0; i < n; i++) {
-        if (!contracted[i]) {
-            for (int j = 0; j < adj_list_size[i]; j++) {
-                int w = adj_list[i][j];
-                if (contracted[w]) {
-                    min_cut++;
-                }
+int main()
+{
+    int n = 4;
+    int adj[n][n];
+
+    // Initialize the adjacency matrix
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (i == 0 && j > 0)
+            {
+                adj[i][j] = 1;
+            }
+            else if (i == 1 && (j == 3 || j == 0))
+            {
+                adj[i][j] = 1;
+            }
+            else if (i == 2 && j == 3)
+            {
+                adj[i][j] = 1;
+            }
+            else if (i == 3 && j == 0)
+            {
+                adj[i][j] = 1;
+            }
+            else
+            {
+                adj[i][j] = 0;
             }
         }
     }
-    free(contracted);
-    return min_cut;
-}
-int main() {
+
+    // Allocate memory for the graph
+    int **graph = (int **)malloc(n * sizeof(int *));
+    for (int i = 0; i < n; i++)
+    {
+        graph[i] = (int *)malloc(n * sizeof(int));
+    }
+
+    // Copy the adjacency matrix to the graph
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            graph[i][j] = adj[i][j];
+        }
+    }
+
+    // Find the contraction edges
+    // printf("The contraction edges are:\n");
     srand(time(NULL));
-    int n, m;
-    printf("Enter the number of vertices: ");
-    scanf("%d", &n);
-    m = n*(n-1)/2; // Complete graph
-    int** adj_list = (int**) calloc(n, sizeof(int*));
-    int* adj_list_size = (int*) calloc(n, sizeof(int));
-    for (int i = 0; i < n; i++) {
-        adj_list[i] = (int*) calloc(n, sizeof(int));
-    }
-    printf("Creating a complete graph with %d vertices...\n", n);
-    for (int i = 0; i < n-1; i++) {
-        for (int j = i+1; j < n; j++) {
-            adj_list[i][adj_list_size[i]++] = j;
-            adj_list[j][adj_list_size[j]++] = i;
+    while (n > 2)
+    {
+        int cut = global_minimum_cut(n, graph);
+
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                if (graph[i][j] && rand() % (n - 1) < cut)
+                {
+
+                    printf("Contracting edge %d-%d\n", i, j);
+                    for (int k = 0; k < n; k++)
+                    {
+                        graph[i][k] += graph[j][k];
+                        graph[k][i] += graph[k][j];
+                    }
+                    graph[j][j] = 0;
+                    n--;
+                }
+            }
         }
+        printf("The cut found by the randomized algorithm is: %d\n", cut);
     }
-    int min_cut = global_min_cut(adj_list, adj_list_size, n);
-    printf("The minimum cut is %d.\n", min_cut);
-    for (int i = 0; i < n; i++) {
-        free(adj_list[i]);
+
+    // Find the cut found
+    // int cut = global_minimum_cut(n, graph);
+    // printf("The cut found by the randomized algorithm is: %d\n", cut);
+
+    // Free the memory allocated for the graph
+    for (int i = 0; i < n; i++)
+    {
+        free(graph[i]);
     }
-    free(adj_list);
-    free(adj_list_size);
+    free(graph);
+
     return 0;
 }
