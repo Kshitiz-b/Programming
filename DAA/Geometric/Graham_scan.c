@@ -158,7 +158,7 @@ void convexHull(Point points[], int numPoints)
 
     // Print the coordinates of the points in the convex hull
     printf("The Boundary Coordinates are\n");
-    for (int i = hullSize; i >= 0; i--)
+    for (int i = hullSize-1; i >= 0; i--)
     {
         printf("%d %d\n", hull[i].x, hull[i].y);
     }
