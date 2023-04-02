@@ -1,32 +1,45 @@
-#include <limits.h>
 #include <stdio.h>
+#define maxSize 100
 
-int MatrixChainOrder(int p[], int i, int j)
+int Matrix(int p[], int n)
 {
-    if (i == j)
-        return 0;
-    int k;
-    int min = INT_MAX;
-    int count;
+    int m[maxSize][maxSize];
+    int i, j, L, k, q;
 
-    for (k = i; k < j; k++)
+    for (i = 1; i <= n; i++)
+        m[i][i] = 0;
+
+    for (L = 2; L <= n; L++)
     {
-        count = MatrixChainOrder(p, i, k) + MatrixChainOrder(p, k + 1, j) + p[i - 1] * p[k] * p[j];
-
-        if (count < min)
-            min = count;
+        for (i = 1; i <= n - L + 1; i++)
+        {
+            j = i + L - 1;
+            m[i][j] = 999;
+            for (k = i; k <= j - 1; k++)
+            {
+                q = m[i][k] + m[k + 1][j] + p[i - 1] * p[k] * p[j];
+                if (q < m[i][j])
+                {
+                    m[i][j] = q;
+                }
+            }
+        }
     }
-
-    return min;
+    return m[1][n];
 }
 
 int main()
 {
-    int arr[] = {1, 2, 3, 4, 3};
-    int N = sizeof(arr) / sizeof(arr[0]);
+    int n;
+    scanf("%d", &n);
 
-    printf("Minimum number of multiplications is %d ",
-           MatrixChainOrder(arr, 1, N - 1));
-    getchar();
+    int p[n];
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &p[i]);
+    }
+
+    printf("ANS: %d", Matrix(p, n - 1));
+
     return 0;
 }
