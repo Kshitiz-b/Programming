@@ -17,11 +17,8 @@ int main()
 void print(int n)
 {
     int i, j;
-    // printf("%d: ", ++count);
     count++;
 
-    // if (count < 5)
-    // {
         printf("(");
         for (i = 1; i <= n; ++i)
         {
@@ -37,7 +34,6 @@ void print(int n)
             }
         }
         printf(")\n");
-    //}
 }
 
 int place(int row, int column)
