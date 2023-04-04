@@ -68,7 +68,7 @@ void convexHull(Point points[], int n)
 
 int main()
 {
-    int n = 7;
+    int n = 18;
     // scanf("%d", &n);
 
     // Allocate memory for the array of points
