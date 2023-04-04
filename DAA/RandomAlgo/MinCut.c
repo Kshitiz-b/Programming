@@ -107,20 +107,18 @@ int main()
     }
 
     // Find the contraction edges
-    // printf("The contraction edges are:\n");
+    printf("The contraction edges are:\n");
     srand(time(NULL));
     while (n > 2)
     {
         int cut = global_minimum_cut(n, graph);
-
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < n; j++)
             {
                 if (graph[i][j] && rand() % (n - 1) < cut)
                 {
-
-                    printf("Contracting edge %d-%d\n", i, j);
+                    printf("(%d,%d)\n", i, j);
                     for (int k = 0; k < n; k++)
                     {
                         graph[i][k] += graph[j][k];
@@ -135,7 +133,7 @@ int main()
     }
 
     // Find the cut found
-    // int cut = global_minimum_cut(n, graph);
+    int cut = global_minimum_cut(n, graph);
     // printf("The cut found by the randomized algorithm is: %d\n", cut);
 
     // Free the memory allocated for the graph
