@@ -1,0 +1,48 @@
+A51 MACRO ASSEMBLER  LABCAT                                                               04/05/2023 10:52:33 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\labcat.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE labcat.asm SET(SMALL) DEBUG PRINT(.\Listings\labcat.lst) OBJECT(.\Objec
+                      ts\labcat.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+
+0000 7850              2             MOV R0, #50H
+
+0002 7951              3             MOV R1, #51H
+
+0004 7A52              4             MOV R2, #52H
+
+0006 7B53              5             MOV R3, #53H
+
+0008 7C54              6             MOV R4, #54H
+
+000A C000              7             PUSH 0
+
+000C C001              8             PUSH 1
+
+000E C002              9             PUSH 2
+
+0010 C003             10             PUSH 3
+
+0012 C004             11             PUSH 4
+
+                      12     END
+
+A51 MACRO ASSEMBLER  LABCAT                                                               04/05/2023 10:52:33 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

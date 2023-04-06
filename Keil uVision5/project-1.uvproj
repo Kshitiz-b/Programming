@@ -364,9 +364,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>exp5_2.asm</FileName>
+              <FileName>labcat.asm</FileName>
               <FileType>2</FileType>
-              <FilePath>.\exp5_2.asm</FilePath>
+              <FilePath>.\labcat.asm</FilePath>
             </File>
           </Files>
         </Group>

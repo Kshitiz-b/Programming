@@ -124,7 +124,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGDP51</Key>
-          <Name>(98=333,328,676,622,0)(82=798,139,1006,254,1)(83=1009,138,1217,253,1)(84=798,261,1006,376,1)(85=862,275,1070,390,0)(99=150,121,363,420,0)(91=107,348,317,623,0)(92=632,148,842,423,0)(94=-1,-1,-1,-1,0)(95=195,153,402,351,0)(100=319,168,586,436,0)(5090=180,121,439,427,0)</Name>
+          <Name>(98=333,328,676,622,0)(82=798,139,1006,254,0)(83=1009,138,1217,253,0)(84=798,261,1006,376,0)(85=862,275,1070,390,0)(99=150,121,363,420,0)(91=107,348,317,623,0)(92=632,148,842,423,0)(94=-1,-1,-1,-1,0)(95=195,153,402,351,0)(100=319,168,586,436,0)(5090=180,121,439,427,0)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
       <Breakpoint/>
@@ -132,7 +132,7 @@
         <Mm>
           <WinNumber>1</WinNumber>
           <SubType>0</SubType>
-          <ItemText>d:00h</ItemText>
+          <ItemText>d:08h</ItemText>
           <AccSizeX>0</AccSizeX>
         </Mm>
       </MemoryWindow1>
@@ -194,8 +194,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\exp5_2.asm</PathWithFileName>
-      <FilenameWithoutPath>exp5_2.asm</FilenameWithoutPath>
+      <PathWithFileName>.\labcat.asm</PathWithFileName>
+      <FilenameWithoutPath>labcat.asm</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
