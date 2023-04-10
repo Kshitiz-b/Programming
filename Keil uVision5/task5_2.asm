@@ -1,0 +1,34 @@
+ORG 0000H
+	LJMP MAIN
+	ORG 000BH
+		CPL P3.2
+		RETI
+		ORG 23H
+			LJMP SERIAL
+			ORG 30H
+				MAIN: MOV P1, #0FFH
+				MOV TMOD, #22H
+				MOV TH1, #0F6H
+				MOV SCON, #50H
+				MOV TH0, #-92
+				MOV IE, #10010010B
+				SETB TR1
+				SETB TR0
+				BACK: MOV A, P1
+				MOV SBUF, A
+				MOV P2, A
+				SJMP BACK
+				
+				ORG 100H
+					SERIAL: JB TI, TRANS
+					AGAIN: MOV SBUF, #'K'
+					HERE: JNB TI, HERE
+					CLR TI
+					SJMP AGAIN
+					MOV A, SBUF
+					MOV P0, A
+					CLR RI
+					RETI
+					TRANS: CLR TI
+					RETI
+END

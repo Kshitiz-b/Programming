@@ -1,0 +1,112 @@
+A51 MACRO ASSEMBLER  TASK5_2                                                              04/10/2023 17:36:22 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\task5_2.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE task5_2.asm SET(SMALL) DEBUG PRINT(.\Listings\task5_2.lst) OBJECT(.\Obj
+                      ects\task5_2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+
+0000 020030            2             LJMP MAIN
+
+000B                   3             ORG 000BH
+
+000B B2B2              4                     CPL P3.2
+
+000D 32                5                     RETI
+
+0023                   6                     ORG 23H
+
+0023 020100            7                             LJMP SERIAL
+
+0030                   8                             ORG 30H
+
+0030 7590FF            9                                     MAIN: MOV P1, #0FFH
+
+0033 758922           10                                     MOV TMOD, #22H
+
+0036 758DF6           11                                     MOV TH1, #0F6H
+
+0039 759850           12                                     MOV SCON, #50H
+
+003C 758CA4           13                                     MOV TH0, #-92
+
+003F 75A892           14                                     MOV IE, #10010010B
+
+0042 D28E             15                                     SETB TR1
+
+0044 D28C             16                                     SETB TR0
+
+0046 E590             17                                     BACK: MOV A, P1
+
+0048 F599             18                                     MOV SBUF, A
+
+004A F5A0             19                                     MOV P2, A
+
+004C 80F8             20                                     SJMP BACK
+
+                      21                                     
+
+0100                  22                                     ORG 100H
+
+0100 209911           23                                             SERIAL: JB TI, TRANS
+
+0103 75994B           24                                             AGAIN: MOV SBUF, #'K'
+
+0106 3099FD           25                                             HERE: JNB TI, HERE
+
+0109 C299             26                                             CLR TI
+
+010B 80F6             27                                             SJMP AGAIN
+
+010D E599             28                                             MOV A, SBUF
+
+010F F580             29                                             MOV P0, A
+
+0111 C298             30                                             CLR RI
+
+0113 32               31                                             RETI
+
+0114 C299             32                                             TRANS: CLR TI
+
+0116 32               33                                             RETI
+
+                      34     END
+
+A51 MACRO ASSEMBLER  TASK5_2                                                              04/10/2023 17:36:22 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AGAIN. . . . . . .  C ADDR   0103H   A   
+BACK . . . . . . .  C ADDR   0046H   A   
+HERE . . . . . . .  C ADDR   0106H   A   
+IE . . . . . . . .  D ADDR   00A8H   A   
+MAIN . . . . . . .  C ADDR   0030H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+RI . . . . . . . .  B ADDR   0098H.0 A   
+SBUF . . . . . . .  D ADDR   0099H   A   
+SCON . . . . . . .  D ADDR   0098H   A   
+SERIAL . . . . . .  C ADDR   0100H   A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TI . . . . . . . .  B ADDR   0098H.1 A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+TRANS. . . . . . .  C ADDR   0114H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
