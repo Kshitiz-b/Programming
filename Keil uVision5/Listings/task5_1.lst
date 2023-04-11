@@ -1,0 +1,89 @@
+A51 MACRO ASSEMBLER  TASK5_1                                                              04/11/2023 20:59:18 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\task5_1.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE task5_1.asm SET(SMALL) DEBUG PRINT(.\Listings\task5_1.lst) OBJECT(.\Obj
+                      ects\task5_1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+
+0000 900200            2             MOV DPTR, #200H
+
+0003 7800              3             MOV R0, #0
+
+0005 020030            4             LJMP MAIN
+
+000B                   5             ORG 000BH
+
+000B B2A1              6                     CPL P2.1
+
+000D 32                7                     RETI
+
+0030                   8                     ORG 0030H
+
+0030 758901            9                             MAIN: MOV TMOD, #01H
+
+0033 758C89           10                             MOV TH0, #89H
+
+0036 758A5F           11                             MOV TL0, #5FH
+
+0039 75A882           12                             MOV IE, #10000010B
+
+003C D28C             13                             SETB TR0
+
+003E E4               14                             BACK: CLR A
+
+003F 93               15                             MOVC A, @A+DPTR
+
+0040 F580             16                             MOV P0, A
+
+0042 E580             17                             MOV A, P0
+
+0044 F590             18                             MOV P1, A
+
+0046 A3               19                             INC DPTR
+
+0047 08               20                             INC R0
+
+0048 B809F3           21                             CJNE R0, #9,  BACK
+
+004B 900200           22                             MOV DPTR, #200H
+
+004E 80EE             23                             SJMP BACK
+
+0200                  24             ORG 200H
+
+0200 32314243         25                     MYDATA: DB "21BCE2067"
+
+0204 45323036                
+0208 37                      
+                      26     END
+
+A51 MACRO ASSEMBLER  TASK5_1                                                              04/11/2023 20:59:18 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   003EH   A   
+IE . . . . . . . .  D ADDR   00A8H   A   
+MAIN . . . . . . .  C ADDR   0030H   A   
+MYDATA . . . . . .  C ADDR   0200H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

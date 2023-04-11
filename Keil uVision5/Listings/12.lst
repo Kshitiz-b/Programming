@@ -1,0 +1,66 @@
+A51 MACRO ASSEMBLER  12                                                                   04/11/2023 20:27:59 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\12.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE 12.asm SET(SMALL) DEBUG PRINT(.\Listings\12.lst) OBJECT(.\Objects\12.ob
+                      j) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+
+0000 7400              2             MOV A,#00H
+
+0002 900200            3             MOV DPTR,#200H
+
+0005 7810              4             MOV R0,#10H
+
+0007                   5             LOOP:
+
+0007 E4                6             CLR A
+
+0008 93                7             MOVC A,@A+DPTR
+
+0009 2A                8             ADD A,R2
+
+000A 5001              9             JNC NEXT
+
+000C 0B               10             INC R3
+
+000D A3               11             NEXT:INC DPTR
+
+000E FA               12             MOV R2,A
+
+000F D8F6             13             DJNZ R0,LOOP
+
+0011 80FE             14             HERE:SJMP HERE
+
+                      15             
+
+0200                  16             ORG 200H
+
+0200 22432334         17                     MYDATA: DB 22H,43H,23H,34H,31H,77H,91H,33H,43H,7H
+
+0204 31779133                
+0208 4307                    
+                      18     END
+
+A51 MACRO ASSEMBLER  12                                                                   04/11/2023 20:27:59 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   0011H   A   
+LOOP . . . . . . .  C ADDR   0007H   A   
+MYDATA . . . . . .  C ADDR   0200H   A   
+NEXT . . . . . . .  C ADDR   000DH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

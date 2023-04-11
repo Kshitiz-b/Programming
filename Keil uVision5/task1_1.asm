@@ -1,3 +1,5 @@
+// Write and assemble a program to load values into each of registers R0 - R4 and then push each of these registers onto the stack.
+// Single-step the program, and examine the stack and the SP register after the execution of each instruction.
 ORG 0000H
 	MOV R1, #35H
 	MOV R2, #45H

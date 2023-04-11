@@ -1,0 +1,67 @@
+A51 MACRO ASSEMBLER  6                                                                    04/11/2023 20:49:27 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\6.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE 6.asm SET(SMALL) DEBUG PRINT(.\Listings\6.lst) OBJECT(.\Objects\6.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ;Write an 8051 Assembly level program to Get the Data (your reg.no.) From Port P2 and Send 
+                             it to Port P3, Note: P2 is the input Port and P3 is Output Port.
+
+0000                   2     ORG 0000H
+
+0000 900200            3             MOV DPTR, #200H
+
+0003 7800              4             MOV R0, #0
+
+0005 758902            5             MOV TMOD, #02H
+
+0008 E4                6             BACK: CLR A
+
+0009 93                7             MOVC A, @A+DPTR
+
+000A F5A0              8             MOV P2, A
+
+000C E5A0              9             MOV A, P2
+
+000E F5B0             10             MOV P3, A
+
+0010 A3               11             INC DPTR
+
+0011 B809F4           12             CJNE R0, #9, BACK
+
+0014 900200           13             MOV DPTR, #200H
+
+0017 80EF             14             SJMP BACK
+
+                      15             
+
+0200                  16             ORG 200H
+
+0200 32314243         17                     MYDATA: DB "21BCE2067"
+
+0204 45323036                
+0208 37                      
+                      18     END
+
+A51 MACRO ASSEMBLER  6                                                                    04/11/2023 20:49:27 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   0008H   A   
+MYDATA . . . . . .  C ADDR   0200H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

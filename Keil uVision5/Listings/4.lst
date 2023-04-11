@@ -1,0 +1,92 @@
+A51 MACRO ASSEMBLER  4                                                                    04/11/2023 20:46:52 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\4.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE 4.asm SET(SMALL) DEBUG PRINT(.\Listings\4.lst) OBJECT(.\Objects\4.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ;Write an 8051 Assembly level program to Get the Data (your reg.no.) From Port P2 and Send 
+                             it to Port P3 continuously, 
+
+                       2     ;while an interrupt will do the following: Timer 0 will toggle the P2.1 bit every 100 micro
+                             seconds. 
+
+0000                   3     ORG 0000H
+
+0000 900200            4             MOV DPTR, #200H
+
+0003 7800              5             MOV R0, #0
+
+0005 020030            6             LJMP MAIN
+
+000B                   7             ORG 000BH
+
+000B B2A1              8                     CPL P2.1
+
+000D 32                9                     RETI
+
+0030                  10                     ORG 0030H
+
+0030 758902           11                             MAIN: MOV TMOD, #02H
+
+                      12                             
+
+0033 758CA4           13                             MOV TH0, #-92
+
+0036 75A882           14                             MOV IE, #10000010B
+
+0039 D28C             15                             SETB TR0
+
+003B E4               16                             BACK: CLR A
+
+003C 93               17                             MOVC A, @A+DPTR
+
+003D F5A0             18                             MOV P2, A
+
+003F E5A0             19                             MOV A, P2
+
+0041 F5B0             20                             MOV P3, A
+
+0043 A3               21                             INC DPTR
+
+0044 08               22                             INC R0
+
+0045 B809F3           23                             CJNE R0, #9,  BACK
+
+0048 900200           24                             MOV DPTR, #200H
+
+004B 80EE             25                             SJMP BACK
+
+0200                  26             ORG 200H
+
+0200 32314243         27                     MYDATA: DB "21BCE2067"
+
+0204 45323036                
+0208 37                      
+                      28     END
+
+A51 MACRO ASSEMBLER  4                                                                    04/11/2023 20:46:52 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   003BH   A   
+IE . . . . . . . .  D ADDR   00A8H   A   
+MAIN . . . . . . .  C ADDR   0030H   A   
+MYDATA . . . . . .  C ADDR   0200H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,54 @@
+A51 MACRO ASSEMBLER  50HZ                                                                 04/11/2023 15:04:10 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\50HZ.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE 50HZ.asm SET(SMALL) DEBUG PRINT(.\Listings\50HZ.lst) OBJECT(.\Objects\5
+                      0HZ.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+
+0000 758910            2             MOV TMOD, #10H
+
+0003 758B67            3             AGAIN: MOV TL1, #67H
+
+0006 758DFC            4             MOV TH1, #0FCH
+
+0009 D28E              5             SETB TR1
+
+000B 308FFD            6             BACK: JNB TF1, BACK
+
+000E C28E              7             CLR TR1
+
+0010 B290              8             CPL P1.0
+
+0012 C28F              9             CLR TF1
+
+0014 80ED             10             SJMP AGAIN
+
+                      11     END
+
+A51 MACRO ASSEMBLER  50HZ                                                                 04/11/2023 15:04:10 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AGAIN. . . . . . .  C ADDR   0003H   A   
+BACK . . . . . . .  C ADDR   000BH   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+TF1. . . . . . . .  B ADDR   0088H.7 A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TL1. . . . . . . .  D ADDR   008BH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

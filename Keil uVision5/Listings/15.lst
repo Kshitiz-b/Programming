@@ -1,0 +1,53 @@
+A51 MACRO ASSEMBLER  15                                                                   04/11/2023 15:47:30 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\15.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE 15.asm SET(SMALL) DEBUG PRINT(.\Listings\15.lst) OBJECT(.\Objects\15.ob
+                      j) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+
+0000 7590FB            2             MOV P1, #0FBH
+
+0003 7840              3             MOV R0, #40H
+
+0005 E590              4             MOV A, P1
+
+0007 75F00A            5             LOOP: MOV B, #10
+
+000A 84                6             DIV AB
+
+000B C5F0              7             XCH A, B
+
+000D 2430              8             ADD A, #30H
+
+000F F6                9             MOV @R0, A
+
+0010 C5F0             10             XCH A, B
+
+0012 08               11             INC R0
+
+0013 70F2             12             JNZ LOOP
+
+                      13     END
+
+A51 MACRO ASSEMBLER  15                                                                   04/11/2023 15:47:30 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+LOOP . . . . . . .  C ADDR   0007H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,67 @@
+A51 MACRO ASSEMBLER  YES                                                                  04/11/2023 15:04:25 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.5.0
+OBJECT MODULE PLACED IN .\Objects\YES.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE YES.asm SET(SMALL) DEBUG PRINT(.\Listings\YES.lst) OBJECT(.\Objects\YES
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+
+0000 758920            2             MOV TMOD, #20H
+
+0003 758DFA            3             MOV TH1, #-6
+
+0006 759850            4             MOV SCON, #50H
+
+0009 D28E              5             SETB TR1
+
+000B 7479              6             AGAIN: MOV A, #'y'
+
+000D 1119              7             ACALL TRANS
+
+000F 7445              8             MOV A, #'E'
+
+0011 1119              9             ACALL TRANS
+
+0013 7453             10             MOV A, #'S'
+
+0015 1119             11             ACALL TRANS
+
+0017 80F2             12             SJMP AGAIN
+
+0019 F599             13             TRANS: MOV SBUF, A
+
+001B 3099FD           14             HERE: JNB TI, HERE
+
+001E C299             15             CLR TI
+
+0020 22               16             RET
+
+                      17     END
+
+A51 MACRO ASSEMBLER  YES                                                                  04/11/2023 15:04:25 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AGAIN. . . . . . .  C ADDR   000BH   A   
+HERE . . . . . . .  C ADDR   001BH   A   
+SBUF . . . . . . .  D ADDR   0099H   A   
+SCON . . . . . . .  D ADDR   0098H   A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TI . . . . . . . .  B ADDR   0098H.1 A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+TRANS. . . . . . .  C ADDR   0019H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
