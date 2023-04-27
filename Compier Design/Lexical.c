@@ -56,12 +56,12 @@ int main()
 
             if (isKeyword(buffer) == 1)
             {
-                //printf("%s is keyword\n", buffer);
+                printf("%s is keyword\n", buffer);
                 keyword_count++;
             }
             else
             {
-                //printf("%s is indentifier\n", buffer);
+                printf("%s is indentifier\n", buffer);
                 identifier_count++;
             }
         }
