@@ -61,7 +61,7 @@ int main()
             }
             else
             {
-                printf("%s is indentifier\n", buffer);
+                printf("%s is identifier\n", buffer);
                 identifier_count++;
             }
         }
