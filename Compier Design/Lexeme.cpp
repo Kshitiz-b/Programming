@@ -1,17 +1,18 @@
 #include <bits/stdc++.h>
 #include <stdlib.h>
 #include <string.h>
+#include <string>
 #include <vector>
 #include <ctype.h>
 using namespace std;
 
 int isKeyword(char buffer[])
 {
-    char keywords[34][10] = {"auto", "break", "case", "char", "const", "continue", "default",
+    char keywords[34][10] = {"printf", "auto", "break", "case", "char", "const", "continue", "default",
                              "do", "double", "else", "enum", "extern", "float", "for", "goto",
                              "if", "int", "long", "register", "return", "short", "signed",
                              "sizeof", "static", "struct", "switch", "typedef", "union",
-                             "unsigned", "void", "volatile", "while", "main", "printf"};
+                             "unsigned", "void", "volatile", "while", "main"};
     int i, flag = 0;
     for (i = 0; i < 34; i++)
     {
@@ -36,42 +37,13 @@ bool numeric(string s)
     return false;
 }
 
-vector<char> removeDuplicate(vector<char> str, int n)
-{
-    unordered_map<char, int> exists;
-    int index = 0;
-    for (int i = 0; i < n; i++)
-    {
-        if (exists[str[i]] == 0)
-        {
-            str[index++] = str[i];
-            exists[str[i]]++;
-        }
-    }
-    return str;
-}
-vector<string> removeDuplicate(vector<string> str, int n)
-{
-    int index = 0;
-    for (int i = 0; i < n; i++)
-    {
-        int j;
-        for (j = 0; j < i; j++)
-            if (str[i] == str[j])
-                break;
-
-        if (j == i)
-            str[index++] = str[i];
-    }
-
-    return str;
-}
-
 int main()
 {
-    char ch, buffer[15], operators[] = "+-*/=%", special[] = ";(){}[]";
+    char ch, buffer[15];
+    vector<char> operators{'+', '-', '*', '/', '=', '%'};
+    vector<char> special{';', '(', ')', '{', '}', '[', ']'};
     int op_count = 0, keyword_count = 0, var_count = 0, const_count = 0;
-    vector<string> key, var, constant;
+    vector<string> key, var, constant, literal;
     vector<char> op, sp;
 
     int num[10];
@@ -86,18 +58,20 @@ int main()
     }
     while ((ch = fgetc(fp)) != EOF)
     {
-        for (i = 0; i < 7; i++)
+        for (i = 0; i < 5; i++)
         {
             if (ch == operators[i])
             {
                 op.push_back(ch);
+                operators.erase(operators.begin() + i);
             }
         }
-        for (i = 0; i < 8; i++)
+        for (i = 0; i < 6; i++)
         {
             if (ch == special[i])
             {
                 sp.push_back(ch);
+                special.erase(special.begin() + i);
             }
         }
 
@@ -137,34 +111,44 @@ int main()
     {
         cout << op[i] << " ";
     }
-    size = sp.size();
+
     printf("\nLexeme of Special: ");
-    removeDuplicate(sp, size);
+    size = sp.size();
+    sort(sp.begin(), sp.end());
     for (i = 0; i < size; ++i)
     {
         cout << sp[i] << " ";
     }
 
-    printf("\nLexeme of keywords: ");
+    printf("\nLexeme of Keywords: ");
     int size1 = key.size();
+    sort(key.begin(), key.end());
     for (i = 0; i < size1; i++)
     {
         cout << key[i] << " ";
     }
 
-    printf("\nLexeme of variables: ");
+    printf("\nLexeme of Variables: ");
     int size2 = var.size();
-    removeDuplicate(var, size2);
+    sort(var.begin(), var.end());
     for (i = 0; i < size2; i++)
     {
-        cout << var[i] << " ";
+        if (var[i] != var[i + 1])
+            cout << var[i] << " ";
     }
 
-    printf("\nLexeme of constant: ");
+    printf("\nLexeme of Constant: ");
     int size3 = constant.size();
     for (i = 0; i < size3; i++)
     {
         cout << constant[i] << " ";
+    }
+
+    printf("\nLexeme of Literals: ");
+    size = literal.size();
+    for (i = 0; i < size; i++)
+    {
+        cout << literal[i] << " ";
     }
 
     fclose(fp);
