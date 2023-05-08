@@ -1,1 +1,2 @@
 si = p*n*r/100
+inr = usd*80
