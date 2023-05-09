@@ -8,13 +8,13 @@ using namespace std;
 
 int isKeyword(char buffer[])
 {
-    char keywords[34][10] = {"printf", "auto", "break", "case", "char", "const", "continue", "default",
+    char keywords[35][10] = {"printf", "auto", "break", "case", "char", "const", "continue", "default",
                              "do", "double", "else", "enum", "extern", "float", "for", "goto",
                              "if", "int", "long", "register", "return", "short", "signed",
                              "sizeof", "static", "struct", "switch", "typedef", "union",
-                             "unsigned", "void", "volatile", "while", "main"};
+                             "unsigned", "void", "volatile", "while", "main", "cout"};
     int i, flag = 0;
-    for (i = 0; i < 34; i++)
+    for (i = 0; i < 35; i++)
     {
         if (strcmp(keywords[i], buffer) == 0)
         {
@@ -79,7 +79,7 @@ int main()
         {
             buffer[j++] = ch;
         }
-        else if ((ch == ' ' || ch == '\n') && (j != 0))
+        else if ((ch == ' ' || ch == '\n' || ch == '"') && (j != 0))
         {
             buffer[j] = '\0';
             j = 0;
@@ -125,7 +125,8 @@ int main()
     sort(key.begin(), key.end());
     for (i = 0; i < size1; i++)
     {
-        cout << key[i] << " ";
+        if (key[i] != key[i + 1])
+            cout << key[i] << " ";
     }
 
     printf("\nLexeme of Variables: ");

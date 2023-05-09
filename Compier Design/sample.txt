@@ -1,5 +1,5 @@
-void main()
+int main()
 {
-    int a = 20;
-    printf("%d", a);
+    cout<<"Hello World";
+    return 0;
 }
