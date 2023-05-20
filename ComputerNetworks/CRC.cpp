@@ -53,7 +53,7 @@ void Error_CRC(string data, string crc)
     {
         append += "0";
     }
-    cout << "Number of zero's to be appended are: " << append << endl;
+    // cout << "Number of zero's to be appended are: " << append << endl;
     new_data += append;
     cout << "Message after appending 0's: " << new_data << endl;
 
