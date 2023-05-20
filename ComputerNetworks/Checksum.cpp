@@ -1,49 +1,79 @@
 #include <iostream>
-#include <math.h>
+#include <string>
 using namespace std;
 
-string add(string bin1, string bin2)
+string complement(string str)
 {
-    string addRes;
-    int len, carry, re, i;
+    int len = str.length();
+    string result = "";
 
-    len = bin1.size();
-    addRes = "";
-    carry = 0;
-    for (i = (len - 1); i > -1; i--)
+    for(int i=0;i<len;i++)
     {
-        re = carry;
-        if (bin1[i] == '1')
-            re = re + 1;
-        else
-            re = re + 0;
-        if (bin2[i] == '1')
-            re = re + 1;
-        else
-            re = re + 0;
-        if (re % 2 == 1)
-            addRes = '1' + addRes;
-        else
-            addRes = '0' + addRes;
-        if (re < 2)
-            carry = 0;
-        else
-            carry = 1;
+        if(str[i] == '1')
+            result += '0';
+        else if(str[i] == '0')
+            result += '1';
     }
-    if (carry != 0)
-        addRes = '1' + addRes;
-    return addRes;
+
+    return result;
+}
+
+string add(string a, string b)
+{
+    string result = "";
+    int temp = 0;
+    int size_a = a.size() - 1;
+    int size_b = b.size() - 1;
+    while (size_a >= 0 || size_b >= 0 || temp == 1)
+    {
+        temp += ((size_a >= 0) ? a[size_a] - '0' : 0);
+        temp += ((size_b >= 0) ? b[size_b] - '0' : 0);
+        result = char(temp % 2 + '0') + result;
+        temp /= 2;
+        size_a--;
+        size_b--;
+    }
+    return result;
 }
 
 void checksum(string bin[], int n, int m)
 {
-    string addRes="";
-    for(int i=0;i<n;i++)
+    string addRes = "";
+    string tmp1 = "", tmp2 = "";
+    for (int i = 0; i < n; i++)
     {
         addRes = add(bin[i], addRes);
     }
 
+    //cout << addRes << endl;
+
+    int len = addRes.length();
+    if (len > m)
+    {
+        for (int i = 0; i < len - m; i++)
+        {
+            tmp1 += addRes[i];
+        }
+        //cout << tmp1 << endl;
+        for (int i = len - m; i < len; i++)
+        {
+            //cout << addRes[i] << " ";
+            tmp2 += addRes[i];
+        }
+        //cout << endl << tmp2 << endl;
+        addRes = add(tmp1, tmp2);
+    }
+
     cout << "Total Sum: " << addRes << endl;
+    string check = complement(addRes);
+    cout << "Checksum: " << check << endl;
+
+    cout << "Sent Message: ";
+    for(int i=0;i<n;i++)
+    {
+        cout << bin[i];
+    }
+    cout << check;
 }
 
 int main()
@@ -57,7 +87,7 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        cout << "Enter frame " << i+1 << ": ";
+        cout << "Enter frame " << i + 1 << ": ";
         cin >> bin[i];
     }
 
