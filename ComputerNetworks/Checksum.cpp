@@ -7,11 +7,11 @@ string complement(string str)
     int len = str.length();
     string result = "";
 
-    for(int i=0;i<len;i++)
+    for (int i = 0; i < len; i++)
     {
-        if(str[i] == '1')
+        if (str[i] == '1')
             result += '0';
-        else if(str[i] == '0')
+        else if (str[i] == '0')
             result += '1';
     }
 
@@ -45,7 +45,7 @@ void checksum(string bin[], int n, int m)
         addRes = add(bin[i], addRes);
     }
 
-    //cout << addRes << endl;
+    // cout << addRes << endl;
 
     int len = addRes.length();
     if (len > m)
@@ -54,13 +54,13 @@ void checksum(string bin[], int n, int m)
         {
             tmp1 += addRes[i];
         }
-        //cout << tmp1 << endl;
+        // cout << tmp1 << endl;
         for (int i = len - m; i < len; i++)
         {
-            //cout << addRes[i] << " ";
+            // cout << addRes[i] << " ";
             tmp2 += addRes[i];
         }
-        //cout << endl << tmp2 << endl;
+        // cout << endl << tmp2 << endl;
         addRes = add(tmp1, tmp2);
     }
 
@@ -69,7 +69,7 @@ void checksum(string bin[], int n, int m)
     cout << "Checksum: " << check << endl;
 
     cout << "Sent Message: ";
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
         cout << bin[i];
     }
