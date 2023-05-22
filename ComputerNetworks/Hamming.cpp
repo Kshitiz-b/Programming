@@ -65,7 +65,7 @@ void Hamming(int n, string message)
     cout << "Redundancy Bits: " << redundancyBits << endl;
 
     int totalBits = n + redundancyBits;
-    cout << "Total Bits: " << totalBits << endl;
+    cout << "Total bits: " << totalBits << endl;
 
     char hammingCode[totalBits];
     hammingCode[totalBits] = '\0';
@@ -140,7 +140,7 @@ void Hamming(int n, string message)
         }
     }
 
-    cout << hammingCode << endl;
+    cout << "Sent message pattern: " << hammingCode << endl;
 }
 
 int main()
