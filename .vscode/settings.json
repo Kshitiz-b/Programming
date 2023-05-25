@@ -74,5 +74,22 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
+  ],
+  "sqltools.useNodeRuntime": true,
+  "sqltools.connections": [
+    {
+      "oracleOptions": {
+        "autoCommit": false,
+        "lowerCase": false
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 1521,
+      "driver": "Oracle",
+      "name": "21BCE2067",
+      "database": "XE",
+      "username": "system",
+      "password": "password"
+    }
   ]
 }
