@@ -4,9 +4,9 @@ public class toggleSwitch {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        System.out.println((int)Math.sqrt(n));
+        //System.out.println((int)Math.sqrt(n));
         Boolean[] b = new Boolean[n + 1];
-        Arrays.fill(b, Boolean.TRUE);
+        Arrays.fill(b, Boolean.FALSE);
 
         int i, j, c=0;
         for(i=2;i<=n;i++) {
