@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "aliceApple",
+            "request": "launch",
+            "mainClass": "aliceApple",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
             "name": "Remainder",
             "request": "launch",
             "mainClass": "Remainder",
