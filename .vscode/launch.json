@@ -3,6 +3,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Sieve",
+            "request": "launch",
+            "mainClass": "Sieve",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "prime",
+            "request": "launch",
+            "mainClass": "prime",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "palDrome",
+            "request": "launch",
+            "mainClass": "palDrome",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
+            "name": "palindrome",
+            "request": "launch",
+            "mainClass": "palindrome",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
             "name": "Launch Q2",
             "request": "launch",
             "mainClass": "Q2",
