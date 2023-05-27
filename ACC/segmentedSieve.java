@@ -13,7 +13,7 @@ public class segmentedSieve {
             if (sm < l) {
                 sm += i;
             }
-            for (int j = 2*i; j <= h; j = j + i) {
+            for (int j = 2 * i; j <= h; j = j + i) {
                 isPrime[j] = false;
             }
         }
