@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "toggleSwitch",
+            "request": "launch",
+            "mainClass": "toggleSwitch",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
             "name": "aliceApple",
             "request": "launch",
             "mainClass": "aliceApple",
