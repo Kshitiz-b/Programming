@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EulerPhi",
+            "request": "launch",
+            "mainClass": "EulerPhi",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
             "name": "Strobo",
             "request": "launch",
             "mainClass": "Strobo",
