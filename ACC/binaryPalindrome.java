@@ -1,10 +1,11 @@
 import java.util.*;
 
-public class palDrome {
+public class binaryPalindrome {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the String:");
-        String str = sc.next();
+        int n = sc.nextInt();
+        String str = Integer.toBinaryString(n);
         str = str.toLowerCase();
         StringBuffer strrev = new StringBuffer(str);
         strrev.reverse();
