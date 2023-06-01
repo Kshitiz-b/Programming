@@ -56,10 +56,10 @@ int main()
     std::vector<SymbolTableEntry> symbol_table = createSymbolTable(input_source_code);
 
     // Display the symbol table entries
-    std::cout << "VARIABLES\tTYPE\tSIZE\tADDRESS\t\tSCOPE\tLINE_NUM\n";
+    std::cout << "VARIABLES\tTYPE\t\tSIZE\t\t   ADDRESS\t\t\t\t  SCOPE\t\t\tLINE_NUM\n";
     for (const auto &entry : symbol_table)
     {
-        std::cout << entry.variable_name << "\t\t" << entry.type << "\t" << entry.size << "\t" << entry.address << "\t" << entry.scope << "\t" << entry.line_num << std::endl;
+        std::cout << entry.variable_name << "  \t\t\t" << entry.type << "\t\t\t" << entry.size << "\t\t\t" << entry.address << "\t\t\t" << entry.scope << "\t\t\t" << entry.line_num << std::endl;
     }
 
     return 0;

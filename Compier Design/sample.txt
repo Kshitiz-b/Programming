@@ -1,7 +1,5 @@
 void main(){
-    int a=20;
-    int b=9989;
-    int c=10;
-    volume=a*b*c;
-    return volume;
+    int a = 10;
+    int b = 20;
+    int ans = a*b;
 }
