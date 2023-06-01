@@ -1,107 +1,65 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <unordered_map>
-using namespace std;
 
-struct SymbolEntry
+struct Symbol
 {
-    std::string name;
+    int line;
     std::string scope;
-    std::string type;
-    int lineNumber;
+    std::string dataType;
 };
 
-class SymbolTable
+void constructSymbolTable(const std::string &filename)
 {
-private:
-    std::unordered_map<std::string, SymbolEntry> symbolMap;
+    std::ifstream file(filename);
+    std::unordered_map<std::string, Symbol> symbolTable;
+    std::string line;
+    int lineNumber = 0;
 
-public:
-    void insertSymbol(const std::string &name, const std::string &scope, const std::string &type, int lineNumber)
+    while (std::getline(file, line))
     {
-        SymbolEntry entry;
-        entry.name = name;
-        entry.scope = scope;
-        entry.type = type;
-        entry.lineNumber = lineNumber;
+        lineNumber++;
+        std::string token;
+        std::istringstream iss(line);
 
-        symbolMap[name] = entry;
-    }
-
-    void displaySymbolTable() const
-    {
-        std::cout << "Symbol Table:\n";
-        std::cout << "----------------------------------------\n";
-        std::cout << "| Name\t| Scope\t| Type\t| Line Number |\n";
-        std::cout << "----------------------------------------\n";
-
-        for (const auto &pair : symbolMap)
+        while (iss >> token)
         {
-            const SymbolEntry &entry = pair.second;
-            std::cout << "| " << entry.name << "\t| " << entry.scope << "\t| " << entry.type << "\t| " << entry.lineNumber << " |\n";
+            // Check if token is a valid symbol (you can modify this condition as per your requirements)
+            if (isalpha(token[0]))
+            {
+                // Check if the symbol already exists in the symbol table
+                if (symbolTable.find(token) != symbolTable.end())
+                {
+                    // Symbol already exists, update its information
+                    symbolTable[token].line = lineNumber;
+                    // Update other information as needed
+                }
+                else
+                {
+                    // Symbol doesn't exist, add it to the symbol table
+                    Symbol symbol;
+                    symbol.line = lineNumber;
+                    // Assign other information as needed
+                    symbolTable[token] = symbol;
+                }
+            }
         }
-
-        std::cout << "----------------------------------------\n";
     }
-};
+
+    // Print the symbol table
+    for (const auto &entry : symbolTable)
+    {
+        std::cout << "Symbol: " << entry.first << ", Line: " << entry.second.line << std::endl;
+        // Print other information as needed
+    }
+
+    file.close();
+}
 
 int main()
 {
-    SymbolTable symbolTable;
-
-    std::string program;
-    std::string line;
-
-    std::cout << "Enter your program (end with $):\n";
-
-    // Read the program lines until $
-    do
-    {
-        std::getline(std::cin, line);
-        program += line + "\n";
-    } while (line != "$");
-
-    // Process the program to extract symbols and their attributes
-    std::string delimiter = " ";
-    size_t pos = 0;
-    std::string token;
-    int lineNumber = 1;
-
-    while ((pos = program.find(delimiter)) != std::string::npos)
-    {
-        token = program.substr(0, pos);
-
-        if (token == "int" || token == "float" || token == "double")
-        {
-            // Symbol declaration line
-            std::string type = token;
-
-            // Extract variable names
-            while ((pos = program.find(delimiter)) != std::string::npos)
-            {
-                program.erase(0, pos + delimiter.length());
-
-                if (program[0] == ';' || program[0] == ',')
-                {
-                    program.erase(0, 1);
-                    continue;
-                }
-
-                pos = program.find(delimiter);
-                token = program.substr(0, pos);
-
-                // Add the variable to the symbol table
-                symbolTable.insertSymbol(token, "global", type, lineNumber);
-            }
-        }
-
-        program.erase(0, pos + delimiter.length());
-        lineNumber++;
-    }
-
-    // Display the symbol table
-    cout << endl;
-    symbolTable.displaySymbolTable();
-
+    std::string filename = "sample.txt"; // Provide the path to your input text file
+    constructSymbolTable(filename);
     return 0;
 }

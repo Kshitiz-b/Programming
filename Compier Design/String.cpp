@@ -59,17 +59,6 @@ void spec(string str)
     cout << endl
          << "Subsequence: ";
 
-    // for (i = 0; i < size - 1; i++)
-    // {
-    //     subse = str[i];
-    //     for (int j = i + 1; j < size; j++)
-    //     {
-    //         subse = str[i];
-    //         subse = subse + str[j];
-    //     }
-
-    //     cout << subse << " ";
-    // }
     Subsequence(str, subse, 0);
 }
 
