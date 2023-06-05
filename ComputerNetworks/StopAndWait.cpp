@@ -5,7 +5,7 @@ void stopAndWait(float Tt, float Tp, int n, int loss, int A[])
 {
     cout << "Max Window size (1+2a): " << 1 + 2.0 * (Tp / Tt);
     cout << "\nRequired window size: " << Tt;
-    cout << "\nSender Window contains: " << "2,1,0";
+    cout << "\n";
 
     int flag = 1, trans = 0, ack = 0;
     for (int i = 0; i < n; i++)
@@ -39,6 +39,8 @@ void stopAndWait(float Tt, float Tp, int n, int loss, int A[])
         cout << "\nNumber of acknowledgements received: " << ack;
         cout << "\n";
     }
+    cout << "\nTotal Number of transmissions: " << trans;
+    cout << "\nTotal Number of acknowledgements received: " << ack;
 }
 
 int main()
