@@ -6,7 +6,7 @@ void selectiveRepeat(float Tt, float Tp, int n, int frames, int loss, int A[])
 {
     int size = 1 + 2.0 * (Tp / Tt);
     cout << "Max Window size (1+2a): " << size;
-    cout << "\nRequired window size: " << size;
+    cout << "\nRequired window size: " << n;
     cout << "\n";
 
     int flag = 1, trans = 0, ack = 0;
@@ -14,17 +14,41 @@ void selectiveRepeat(float Tt, float Tp, int n, int frames, int loss, int A[])
     int flag1 = 1, index;
     for (int i = c - n; i < c && c <= frames; i += n)
     {
-        cout << "Sender Window contains: ";
-        for (int j = c - 1; j >= i; j--)
+        if (flag1 == 0)
         {
-            cout << j;
-            if (j != i)
+            cout << "\nNow Sender Retransmitted frame: " << index;
+            cout << "\nAck received from receiver for frame (sequence no): " << index;
+        }
+        if (i != 0)
+        {
+            cout << "\nNumber of transmissions: " << trans;
+            cout << "\nNumber of acknowledgements received: " << ack;
+            cout << "\n";
+
+            cout << "\nNow Sender Window contains: ";
+            for (int j = c - 1; j >= i; j--)
             {
-                cout << ",";
+                cout << j;
+                if (j != i)
+                {
+                    cout << ",";
+                }
             }
         }
+        else
+        {
+            cout << "\nSender Window contains: ";
+            for (int j = c - 1; j >= i; j--)
+            {
+                cout << j;
+                if (j != i)
+                {
+                    cout << ",";
+                }
+            }
+            cout << "\n";
+        }
 
-        cout << "\n";
         for (int j = i; j < c; j++)
         {
 
@@ -53,19 +77,17 @@ void selectiveRepeat(float Tt, float Tp, int n, int frames, int loss, int A[])
                 flag1 = 0;
                 index = j;
                 trans++;
-            }
-            if (flag1 == 0)
-            {
-                cout << "\nNow Sender Retransmitted frame: " << index;
                 trans++;
                 ack++;
             }
         }
         c += n;
-        cout << "\nNumber of transmissions: " << trans;
-        cout << "\nNumber of acknowledgements received: " << ack;
-        cout << "\n";
     }
+    cout << "\nNow Sender Retransmitted frame: " << index;
+    cout << "\nAck received from receiver for frame (sequence no): " << index;
+    cout << "\n\nTotal Number of transmissions: " << trans;
+    cout << "\nTotal Number of acknowledgements received: " << ack;
+    cout << "\n";
 }
 
 int main()
