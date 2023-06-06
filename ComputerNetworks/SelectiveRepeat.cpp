@@ -14,8 +14,20 @@ void selectiveRepeat(float Tt, float Tp, int n, int frames, int loss, int A[])
     int flag1 = 1, index;
     for (int i = c - n; i < c && c <= frames; i += n)
     {
+        cout << "Sender Window contains: ";
+        for (int j = c - 1; j >= i; j--)
+        {
+            cout << j;
+            if (j != i)
+            {
+                cout << ",";
+            }
+        }
+
+        cout << "\n";
         for (int j = i; j < c; j++)
         {
+
             for (int k = 0; k < loss; k++)
             {
                 if (A[k] - 1 == j)
@@ -50,9 +62,9 @@ void selectiveRepeat(float Tt, float Tp, int n, int frames, int loss, int A[])
             }
         }
         c += n;
-        cout << "\n";
         cout << "\nNumber of transmissions: " << trans;
         cout << "\nNumber of acknowledgements received: " << ack;
+        cout << "\n";
     }
 }
 
@@ -70,6 +82,7 @@ int main()
     cin >> frames;
     cout << "How many frame loss: ";
     cin >> loss;
+    cout << "Which frame loss: ";
     string A;
     cin >> A;
     int B[loss];
