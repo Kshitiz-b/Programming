@@ -1,34 +1,96 @@
 #include <iostream>
-#include <queue>
+#include <string>
 using namespace std;
 
-void goBackN(float Tt, float Tp, int n, int frames, int loss, int A[])
+void goBackN(float Tt, float Tp, int n, int frames, int A[])
 {
     cout << "Max Window size (1+2a): " << 1 + 2.0 * (Tp / Tt);
     cout << "\nRequired window size: " << n;
     cout << "\n";
-    // int c = frames-n;
-
-    // for(int i=0;i<frames-n+1;i++)
-    // {
-    //     for(int j=i;j<frames-c;j++)
-    //     {
-    //         cout << j <<" ";
-    //     }
-    //     c--;
-    // }
-    // int B[frames];
-    // for(int i=0;i<frames;i++)
-    // {
-    //     B[i] = i;
-    // }
-    int c=n, x=0;
-    for(int i=c-1;i>=x && x!=frames;i--)
+    int i = 0;
+    int j = n;
+    int trans = 0, ack = 0;
+    int flag = 1, index, flag1 = 1;
+    string re = "";
+    while (i < frames && j <= frames)
     {
-        cout << i << " ";
-        c++;
-        x++;
+        if (i != 0)
+        {
+            cout << "\nNow Sender Window contains: ";
+        }
+        else
+        {
+            cout << "\nSender window contains: ";
+            trans += 4;
+        }
+        for (int k = j - 1; k >= i; k--)
+        {
+            cout << k;
+            re += (char)k + 48;
+        }
+
+        for (int k = i; k < j; k++)
+        {
+            if (A[0] - 1 != k)
+            {
+                flag = 1;
+                index = k;
+                break;
+            }
+            else
+            {
+                flag = 0;
+                index = k;
+                break;
+            }
+        }
+        cout << "\nTill Transmited data=" << trans;
+        cout << "\nTill Acknowledged data=" << ack;
+
+        if (flag == 1)
+        {
+            if (j != frames)
+            {
+                cout << "\nAck received from receiver for frame (sequence no): " << index;
+                trans++;
+                ack++;
+            }
+            else
+            {
+                cout << "\nAck received from receiver for frame (sequence no): " << index;
+                ack++;
+            }
+            flag1 = 1;
+        }
+        else
+        {
+            cout << "\nAck Not received from receiver for frame (sequence no): " << index;
+            flag1 = 0;
+            trans += 4;
+            ack++;
+        }
+        if (flag1 == 0)
+        {
+            cout << "\n\nNow Sender window contains (retranmit all in window): ";
+            for (int i = re.size() - 4; i < re.size(); i++)
+                cout << re[i];
+            cout << "\nTill Transmited data=" << trans;
+
+            cout << "\nTill Acknowledged data=" << ack;
+
+            cout << "\nAck received from receiver for frame (sequence no): " << index;
+            ack++;
+            index--;
+        }
+
+        i++;
+        if (j != frames)
+        {
+            j++;
+        }
+        cout << "\n";
     }
+    cout << "\nTotal Transmission: " << trans;
 }
 
 int main()
@@ -52,7 +114,7 @@ int main()
         cin >> A[i];
     }
 
-    goBackN(Tt, Tp, n, frames, loss, A);
+    goBackN(Tt, Tp, n, frames, A);
 
     return 0;
 }
