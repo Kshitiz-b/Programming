@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 void stopAndWait(float Tt, float Tp, int n, int loss, int A[])
@@ -55,14 +56,14 @@ int main()
     cin >> n;
     cout << "How many frame loss: ";
     cin >> loss;
-    int A[loss];
     cout << "Which frame loss: ";
-    for (int i = 0; i < loss; i++)
-    {
-        cin >> A[i];
-    }
+    string A;
+    cin >> A;
+    int B[loss];
+    B[0] = int(A[0]) - 48;
+    B[1] = int(A[2]) - 48;
 
-    stopAndWait(Tt, Tp, n, loss, A);
+    stopAndWait(Tt, Tp, n, loss, B);
 
     return 0;
 }
