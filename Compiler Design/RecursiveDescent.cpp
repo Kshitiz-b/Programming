@@ -1,123 +1,92 @@
 #include <iostream>
-#include <stdlib.h>
-using namespace std;
-/*
-E->TE'
-E'->+TE'|-TE'|null
-T-> FT'
-T'->*FT'|/FT'|null
-F-> id|num|(E)
-*/
-int count = 0;
-void E();
-void Ed();
-void T();
-void Td();
-void F();
+#include <string>
 
-string expr;
+using namespace std;
+
+string input;
+int index = 0;
+
+bool parseE();
+bool parseT();
+bool parseF();
+
+bool isId(char c)
+{
+    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
+}
+
+bool match(char c)
+{
+    if (index < input.length() && input[index] == c)
+    {
+        index++;
+        return true;
+    }
+    return false;
+}
+
+bool parseE()
+{
+    if (parseT())
+    {
+        if (match('+') && parseE())
+        {
+            return true;
+        }
+        return true;
+    }
+    return false;
+}
+
+bool parseT()
+{
+    if (parseF())
+    {
+        if (match('*') && parseT())
+        {
+            return true;
+        }
+        return true;
+    }
+    return false;
+}
+
+bool parseF()
+{
+    if (match('(') && parseE() && match(')'))
+    {
+        return true;
+    }
+    if (isId(input[index]))
+    {
+        index++;
+        return true;
+    }
+    return false;
+}
+
+bool parseInput(string str)
+{
+    input = str;
+    index = 0;
+    return parseE() && index == input.length();
+}
 
 int main()
 {
-    cin >> expr;
-    int l = expr.length();
-    expr += "$";
-    E();
-    if (l == count)
+    string expression;
+    cout << "Enter an expression: ";
+    getline(cin, expression);
+
+    if (parseInput(expression))
+    {
+        cout << "E = E+T | T\nT = T*F | F\nF = (E) | id \n" << endl;
         cout << "Accepted" << endl;
-    else
-        cout << "Rejected" << endl;
-}
-
-void E()
-{
-    cout << "E->TE'" << endl;
-    T();
-    Ed();
-}
-
-void Ed()
-{
-    if (expr[count] == '+')
-    {
-        count++;
-        cout << "E'->+TE'" << endl;
-        T();
-        Ed();
-    }
-
-    else if (expr[count] == '-')
-    {
-        count++;
-        cout << "E'->-TE'" << endl;
-        T();
-        Ed();
-    }
-
-    else
-    {
-        cout << "E'->null" << endl;
-    }
-}
-
-void T()
-{
-    cout << "T->FT'" << endl;
-    F();
-    Td();
-}
-
-void Td()
-{
-    if (expr[count] == '*')
-    {
-        count++;
-        cout << "T'->*FT'" << endl;
-        F();
-        Td();
-    }
-
-    else if (expr[count] == '/')
-    {
-        count++;
-        cout << "T'->/FT'" << endl;
-        F();
-        Td();
-    }
-
-    else
-    {
-        cout << "T'->null" << endl;
-    }
-}
-
-void F()
-{
-    if (isalpha(expr[count]))
-    {
-        count++;
-        cout << "F->id" << endl;
-    }
-    else if (isdigit(expr[count]))
-    {
-        count++;
-        cout << "F->digit" << endl;
-    }
-    else if (expr[count] == '(')
-    {
-        count++;
-        cout << "F->(E)" << endl;
-        E();
-        if (expr[count] != ')')
-        {
-            cout << "Rejected" << endl;
-            exit(0);
-        }
-        count++;
     }
     else
     {
         cout << "Rejected" << endl;
-        exit(0);
     }
+
+    return 0;
 }
