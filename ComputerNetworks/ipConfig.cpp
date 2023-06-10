@@ -24,14 +24,12 @@ void classes(string ip_dec)
     }
     int firstbyte = stoi(buffer);
 
-    //string total_bits = "";
-
     if(firstbyte >= 0 && firstbyte <= 127)
     {
         long long int total_bits = pow(2,31);
         long long int host = pow(2,24);
         long long int net = pow(2,7);
-        cout << "IP address class information: " << "A" << endl;
+        cout << "Then find that IP address class information: " << "A" << endl;
         cout << "Total IP addresses possible in that class: " << total_bits << endl;
         cout << "Possible host: " << host << endl;
         cout << "Possible Networks: " << net << endl;
@@ -43,7 +41,7 @@ void classes(string ip_dec)
         long long int total_bits = pow(2,30);
         long long int host = pow(2,16);
         long long int net = pow(2,14);
-        cout << "IP address class information: "  << "B" << endl;
+        cout << "Then find that IP address class information: "  << "B" << endl;
         cout << "Total IP addresses possible in that class: " << total_bits << endl;
         cout << "Possible host: " << host << endl;
         cout << "Possible Networks: " << net << endl;
@@ -55,7 +53,7 @@ void classes(string ip_dec)
         long long int total_bits = pow(2,29);
         long long int host = pow(2,8);
         long long int net = pow(2,21);
-        cout << "IP address class information: "  << "C" << endl;
+        cout << "Then find that IP address class information: "  << "C" << endl;
         cout << "Total IP addresses possible in that class: " << total_bits << endl;
         cout << "Possible host: " << host << endl;
         cout << "Possible Networks: " << net << endl;
@@ -64,22 +62,21 @@ void classes(string ip_dec)
     }
     else if(firstbyte >= 224 && firstbyte <= 239)
     {
-        cout << "IP address class information: "  << "D" << endl;
+        cout << "Then find that IP address class information: "  << "D" << endl;
     }
     else if(firstbyte >= 240 && firstbyte <= 225)
     {
-        cout << "IP address class information: "  << "E" << endl;
+        cout << "Then find that IP address class information: "  << "E" << endl;
     }
     else
     {
-        cout << "IP address class information: "  << "Invalid IP" << endl;
+        cout << "Invalid IP" << endl;
     }
 }
 
 int main()
 {
     string ip_dec;
-    //cout << "Enter the IP Address: ";
     cin >> ip_dec;
     ip_dec += '\0';
 
