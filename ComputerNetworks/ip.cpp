@@ -89,7 +89,7 @@ int main()
     cin >> ip_dec;
     ip_dec += '\0';
 
-    // cout << "KSHITIZ BHARGAVA - 21BCE2067\n";
+    cout << "KSHITIZ BHARGAVA - 21BCE2067\n";
 
     classes(ip_dec);
 
