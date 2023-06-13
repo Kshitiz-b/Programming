@@ -24,6 +24,7 @@ void classless(string ip)
     string buffer = "";
     string ip_bin = "";
     int A[4];
+    int B[4];
     int j = 0, network;
 
     while (i < ip.length())
@@ -69,14 +70,18 @@ void classless(string ip)
         octet = 3;
     }
 
-    buffer = ip_bin.substr(network, 32 - network);
-    for (int i = 0; i <= buffer.length(); i++)
+    string startip = ip_bin.substr(network, 32 - network);
+    string endip = ip_bin.substr(network, 32 - network);
+    for (int i = 0; i <= startip.length(); i++)
     {
-        buffer[i] = '0';
+        startip[i] = '0';
+    }
+    for (int i = 0; i <= endip.length(); i++)
+    {
+        endip[i] = '1';
     }
 
-    ip_bin.replace(network, 32 - network, buffer);
-
+    ip_bin.replace(network, 32 - network, startip);
     ip_bin += '\0';
     buffer = "";
     int k = 0;
@@ -87,7 +92,6 @@ void classless(string ip)
             A[k] = to_decimal(buffer);
             buffer = "";
             buffer += ip_bin[j];
-
             k++;
         }
         else
@@ -97,13 +101,33 @@ void classless(string ip)
         j++;
     }
 
-    int last_one = 8 - (network % 8);
-
-    int max_bit = 128;
-    for (int i = 1; i < last_one; i++)
+    ip_bin.replace(network, 32 - network, endip);
+    buffer = "";
+    j = 0;
+    k = 0;
+    while (j <= ip_bin.length())
     {
-        max_bit -= max_bit / 2;
+        if (j % 8 == 0 && j != 0)
+        {
+            B[k] = to_decimal(buffer);
+            buffer = "";
+            buffer += ip_bin[j];
+            k++;
+        }
+        else
+        {
+            buffer += ip_bin[j];
+        }
+        j++;
     }
+
+    // int last_one = 8 - (network % 8);
+
+    // int max_bit = 128;
+    // for (int i = 1; i < last_one; i++)
+    // {
+    //     max_bit -= max_bit / 2;
+    // }
 
     cout << "Starting IP: ";
     for (int i = 0; i < 4; i++)
@@ -119,42 +143,16 @@ void classless(string ip)
     }
     cout << endl;
 
-    int B[4];
     cout << "Ending IP: ";
     for (int i = 0; i < 4; i++)
     {
-        if (i >= octet)
+        if (i != 3)
         {
-            if (i == octet)
-            {
-                B[i] = A[i] + max_bit - 1;
-                cout << B[i] << ".";
-            }
-            if (i > octet)
-            {
-                B[i] = A[i] + 256 - 1;
-                if (i != 3)
-                {
-                    cout << B[i] << ".";
-                }
-                else
-                {
-                    cout << B[i];
-                }
-            }
+            cout << B[i] << ".";
         }
         else
         {
-            if (i != 3)
-            {
-                B[i] = A[i];
-                cout << A[i] << ".";
-            }
-            else
-            {
-                B[i] = A[i];
-                cout << A[i];
-            }
+            cout << B[i];
         }
     }
     cout << endl;
