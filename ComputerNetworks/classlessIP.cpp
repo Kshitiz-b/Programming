@@ -5,14 +5,6 @@
 
 using namespace std;
 
-string to_binary(string buffer)
-{
-    string temp = "";
-    int dec = stoi(buffer);
-    bitset<8> bin(dec);
-    return bin.to_string();
-}
-
 void classless(string ip)
 {
     int i = 0;
@@ -67,47 +59,32 @@ void classless(string ip)
     }
 
     cout << "The Default Subnet Mask: " << buffer << endl;
-
-    if (A[0] >= 0 && A[0] <= 127)
+    int octet;
+    if (network >= 1 && network <= 8)
     {
-        // cout << "IP Address belongs to class: " << "A" << endl;
-        //  cout << "Network IP Address: " << A[0] << ".0.0.0" << endl;
-        //  cout << "Direct Broadcast Address: " << A[0] << ".255.255.255" << endl;
-        //  cout << "Limited Broadcast Address = 255.255.255.255" << endl;
+        octet = 1;
     }
-    else if (A[0] >= 128 && A[0] <= 191)
+    else if (network > 8 && network <= 16)
     {
-
-        // cout << "IP Address belongs to class: " << "B" << endl;
-        //  cout << " IP Address: " << A[0] << "." << A[1] << ".0.0" << endl;
-        //  cout << "Direct Broadcast Address: " << A[0] << "." << A[1] << ".255.255" << endl;
-        //  cout << "Limited Broadcast Address = 255.255.255.255";
+        octet = 2;
     }
-    else if (A[0] >= 192 && A[0] <= 223)
+    else if (network > 16 && network <= 24)
     {
-        // cout << "IP Address belongs to class: " << "C" << endl;
-        //  cout << "Network IP Address: " << A[0] << "." << A[1] << "." << A[2] << ".0" << endl;
-        //  cout << "Direct Broadcast Address: " << A[0] << "." << A[1] << "." << A[2] << ".255" << endl;
-        //  cout << "Limited Broadcast Address = 255.255.255.255";
-    }
-    else if (A[0] >= 224 && A[0] <= 239)
-    {
-        // cout << "IP Address belongs to class: " << "D" << endl;
-        //  cout << "Network IP Address: Not available" << endl;
-        //  cout << "Direct Broadcast Address: Not available" << endl;
-        //  cout << "Limited Broadcast Address: Not available" << endl;
-    }
-    else if (A[0] >= 240 && A[0] <= 255)
-    {
-        // cout << "IP Address belongs to class: " << "E" << endl;
-        //  cout << "Network IP Address: Not available" << endl;
-        //  cout << "Direct Broadcast Address: Not available" << endl;
-        //  cout << "Limited Broadcast Address: Not available" << endl;
+        octet = 3;
     }
     else
     {
-        cout << "not a valid IP Address" << endl;
+        octet = 4;
     }
+    int last_one = 8 - (network % 8);
+
+    int max_bit = 128;
+    for (int i = 1; i < last_one; i++)
+    {
+        max_bit -= max_bit / 2;
+    }
+    cout << "Subnet Generator Bit: " << max_bit << endl;
+    cout << "Octet: " << octet << endl;
 }
 
 int main()
