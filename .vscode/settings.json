@@ -45,7 +45,8 @@
     "string": "cpp",
     "stdio.h": "c",
     "list": "c",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "bitset": "cpp"
   },
   "C_Cpp.errorSquiggles": "Disabled",
   "C_Cpp_Runner.cCompilerPath": "C:/msys64/mingw64/bin/gcc.exe",
