@@ -282,22 +282,22 @@ static void yy_fatal_error YY_PROTO(( yyconst char msg[] ));
 	*yy_cp = '\0'; \
 	yy_c_buf_p = yy_cp;
 
-#define YY_NUM_RULES 3
-#define YY_END_OF_BUFFER 4
+#define YY_NUM_RULES 5
+#define YY_END_OF_BUFFER 6
 static yyconst short int yy_accept[10] =
     {   0,
-        0,    0,    4,    2,    3,    2,    0,    1,    0
+        0,    0,    6,    4,    2,    3,    1,    1,    0
     } ;
 
 static yyconst int yy_ec[256] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    2,
+        1,    1,    1,    1,    1,    1,    1,    1,    2,    3,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    4,    4,    4,
+        4,    4,    4,    4,    4,    4,    4,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    3,
-        1,    4,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -323,29 +323,29 @@ static yyconst int yy_ec[256] =
 
 static yyconst int yy_meta[5] =
     {   0,
-        1,    1,    1,    1
+        1,    1,    1,    2
     } ;
 
 static yyconst short int yy_base[11] =
     {   0,
-        0,    0,    8,    9,    9,    3,    2,    9,    9,    4
+        0,    0,    6,    7,    7,    7,    0,    0,    7,    3
     } ;
 
 static yyconst short int yy_def[11] =
     {   0,
-        9,    1,    9,    9,    9,   10,   10,    9,    0,    9
+        9,    1,    9,    9,    9,    9,   10,   10,    0,    9
     } ;
 
-static yyconst short int yy_nxt[14] =
+static yyconst short int yy_nxt[12] =
     {   0,
-        4,    5,    6,    4,    7,    8,    8,    9,    3,    9,
-        9,    9,    9
+        4,    5,    6,    7,    8,    9,    3,    9,    9,    9,
+        9
     } ;
 
-static yyconst short int yy_chk[14] =
+static yyconst short int yy_chk[12] =
     {   0,
-        1,    1,    1,    1,   10,    7,    6,    3,    9,    9,
-        9,    9,    9
+        1,    1,    1,    1,   10,    3,    9,    9,    9,    9,
+        9
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -359,10 +359,15 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "htmlTags.l"
+#line 1 "calc.l"
 #define INITIAL 0
-#line 2 "htmlTags.l"
-#line 366 "lex.yy.c"
+#line 2 "calc.l"
+/* Definition section */
+#include<stdio.h>
+#include "y.tab.h"
+extern int yylval;
+/* Rule Section */
+#line 371 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -513,9 +518,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 4 "htmlTags.l"
+#line 9 "calc.l"
 
-#line 519 "lex.yy.c"
+#line 524 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -572,7 +577,7 @@ yy_match:
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 9 );
+		while ( yy_base[yy_current_state] != 7 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -600,20 +605,34 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 5 "htmlTags.l"
-{printf("%s\n", yytext); } 
+#line 10 "calc.l"
+{
+		yylval=atoi(yytext);
+		return NUMBER;
+
+	}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 6 "htmlTags.l"
-; 
+#line 15 "calc.l"
+;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 7 "htmlTags.l"
+#line 17 "calc.l"
+return 0;
+	YY_BREAK
+case 4:
+YY_RULE_SETUP
+#line 19 "calc.l"
+return yytext[0];
+	YY_BREAK
+case 5:
+YY_RULE_SETUP
+#line 21 "calc.l"
 ECHO;
 	YY_BREAK
-#line 617 "lex.yy.c"
+#line 636 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1499,16 +1518,10 @@ int main()
 	return 0;
 	}
 #endif
-#line 7 "htmlTags.l"
+#line 21 "calc.l"
 
 
-int yywrap(){}
-	
-int main(int argc, char*argv[])
+int yywrap()
 {
-	yyin = fopen("tags.txt","r");
-
-	yylex();
-
-	return 0;
+return 1;
 }
