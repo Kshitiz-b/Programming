@@ -1,26 +1,27 @@
+%option noyywrap
+
 %{
-/* Definition section */
-#include<stdio.h>
-#include "y.tab.h"
-extern int yylval;
+#include <stdio.h>
+
+#define YY_DECL int yylex()
+
+#include "calc.tab.h"
+
 %}
 
-/* Rule Section */
-%%
-[0-9]+ {
-		yylval=atoi(yytext);
-		return NUMBER;
-
-	}
-[\t] ;
-
-[\n] return 0;
-
-. return yytext[0];
-
 %%
 
-int yywrap()
-{
-return 1;
-}
+[ \t]	; // ignore all whitespace
+[0-9]+\.[0-9]+ 	{yylval.fval = atof(yytext); return T_FLOAT;}
+[0-9]+		{yylval.ival = atoi(yytext); return T_INT;}
+\n		{return T_NEWLINE;}
+"+"		{return T_PLUS;}
+"-"		{return T_MINUS;}
+"*"		{return T_MULTIPLY;}
+"/"		{return T_DIVIDE;}
+"("		{return T_LEFT;}
+")"		{return T_RIGHT;}
+"exit"		{return T_QUIT;}
+"quit"		{return T_QUIT;}
+
+%%

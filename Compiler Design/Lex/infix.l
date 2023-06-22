@@ -1,13 +1,14 @@
 %{
-#include "y.tab.h"
+#include "infix.tab.h"
 %}
 
 %%
 
-[0-9]+               { yylval = atoi(yytext); return NUMBER; }
-[+\-*/()^]           { return yytext[0]; }
-[ \t\n]              ; /* Ignore whitespace and newline characters */
-.                    { /* Ignore any other characters */ }
+[ \t\n]       ; /* Ignore whitespace and newlines */
+
+[0-9]+        { yylval = atoi(yytext); return NUMBER; }
+[+\-*/()]     { return yytext[0]; } /* Return operators and parentheses */
+.             { return yytext[0]; } /* Return any other characters as is */
 
 %%
 
