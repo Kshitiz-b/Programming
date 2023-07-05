@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Bruteforce",
+            "request": "launch",
+            "mainClass": "Bruteforce",
+            "projectName": "Programming_1d328f90"
+        },
+        {
+            "type": "java",
             "name": "binaryPalindrome",
             "request": "launch",
             "mainClass": "binaryPalindrome",
