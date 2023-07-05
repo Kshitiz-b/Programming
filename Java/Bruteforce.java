@@ -31,7 +31,6 @@ public class Bruteforce {
         int totalCharacters = charSet.length;
         int tries = 0;
 
-        // Generate all possible combinations
         for (int length = 1; length <= passwordLength; length++) {
             tries += Math.pow(totalCharacters, length);
             if (bruteForceRec(charSet, passwordToCrack, new char[length], 0, length - 1)) {
@@ -65,22 +64,18 @@ public class Bruteforce {
     private static String generateCharacterSet() {
         StringBuilder characters = new StringBuilder();
 
-        // Add lowercase letters
         for (char c = 'a'; c <= 'z'; c++) {
             characters.append(c);
         }
 
-        // Add uppercase letters
         for (char c = 'A'; c <= 'Z'; c++) {
             characters.append(c);
         }
 
-        // Add digits
         for (char c = '0'; c <= '9'; c++) {
             characters.append(c);
         }
 
-        // Add special characters
         characters.append("!@#$%^&*()_-+=<>?");
 
         return characters.toString();
