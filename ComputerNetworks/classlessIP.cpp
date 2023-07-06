@@ -52,24 +52,6 @@ void classless(string ip)
     long int total_hosts = pow(2, 32 - network);
     cout << "Total number of hosts in that network: " << total_hosts << endl;
 
-    int octet;
-    if (network >= 1 && network <= 8)
-    {
-        octet = 0;
-    }
-    else if (network > 8 && network <= 16)
-    {
-        octet = 1;
-    }
-    else if (network > 16 && network <= 24)
-    {
-        octet = 2;
-    }
-    else
-    {
-        octet = 3;
-    }
-
     string startip = ip_bin.substr(network, 32 - network);
     string endip = ip_bin.substr(network, 32 - network);
     for (int i = 0; i <= startip.length(); i++)
@@ -120,14 +102,6 @@ void classless(string ip)
         }
         j++;
     }
-
-    // int last_one = 8 - (network % 8);
-
-    // int max_bit = 128;
-    // for (int i = 1; i < last_one; i++)
-    // {
-    //     max_bit -= max_bit / 2;
-    // }
 
     cout << "Starting IP: ";
     for (int i = 0; i < 4; i++)
