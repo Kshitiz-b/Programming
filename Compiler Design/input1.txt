@@ -1,6 +1,5 @@
-X = 1; 
-Y = 2; 
-if (X>Y) 
-return 1; 
-else 
-return 0;
+a=20
+b=10
+c=a+10
+d=20-b
+e=c*d
