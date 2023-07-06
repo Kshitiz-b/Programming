@@ -164,7 +164,7 @@ int main()
     cout << "Enter Number of subnets: ";
     cin >> sub;
 
-    cout << "Kshitiz Bhargava - 21BCE2067\n"
+    cout << "Kshitiz Bhargava - 21BCE2067\n";
 
     string buffer = "";
     int i = 0;
