@@ -41,7 +41,6 @@ void classful(string ip, int sub, int first)
     {
         cout << "Invalid IP" << endl;
     }
-    ip += '\0';
     int A[4], j = 0, i = 0;
     string buffer = "";
     while (ip[i] != '\0')
@@ -59,7 +58,7 @@ void classful(string ip, int sub, int first)
         i++;
     }
 
-    A[4] = 0;
+    A[3] = 0;
     if (sub % 2 == 0)
     {
         for (int i = 0; i < sub; i++)
@@ -84,14 +83,14 @@ void classful(string ip, int sub, int first)
             else if (class_ip == 'C')
             {
                 total_hosts = pow(2, 8);
-                cout << A[0] << "." << A[1] << "." << A[2] << "." << A[4] << endl;
+                cout << A[0] << "." << A[1] << "." << A[2] << "." << A[3] << endl;
                 cout << "Total number of IP Addresses: " << 256 / sub << endl;
                 cout << "Total number of hosts that can be configured: " << total_hosts / sub - 2 << endl;
                 cout << "Range of IP Addresses:\n";
-                cout << "St IP: " << A[0] << "." << A[1] << "." << A[2] << "." << A[4] << endl;
-                cout << "End IP: " << A[0] << "." << A[1] << "." << A[2] << "." << A[4] + 256 / sub - 1 << endl;
-                cout << "Direct Broadcast Address: " << A[0] << "." << A[1] << "." << A[2] << "." << A[4] + 256 / sub - 1 << endl;
-                A[4] += 256 / sub;
+                cout << "St IP: " << A[0] << "." << A[1] << "." << A[2] << "." << A[3] << endl;
+                cout << "End IP: " << A[0] << "." << A[1] << "." << A[2] << "." << A[3] + 256 / sub - 1 << endl;
+                cout << "Direct Broadcast Address: " << A[0] << "." << A[1] << "." << A[2] << "." << A[3] + 256 / sub - 1 << endl;
+                A[3] += 256 / sub;
             }
             else
             {
@@ -128,14 +127,14 @@ void classful(string ip, int sub, int first)
             else if (class_ip == 'C')
             {
                 total_hosts = pow(2, 8);
-                cout << A[0] << "." << A[1] << "." << A[2] << "." << A[4] << endl;
+                cout << A[0] << "." << A[1] << "." << A[2] << "." << A[3] << endl;
                 cout << "Total number of IP Addresses: " << 256 / (sub + j) << endl;
                 cout << "Total number of hosts that can be configured: " << total_hosts / (sub + j) - 2 << endl;
                 cout << "Range of IP Addresses:\n";
-                cout << "St IP: " << A[0] << "." << A[1] << "." << A[2] << "." << A[4] << endl;
-                cout << "End IP: " << A[0] << "." << A[1] << "." << A[2] << "." << A[4] + 256 / (sub + j) - 1 << endl;
-                cout << "Direct Broadcast Address: " << A[0] << "." << A[1] << "." << A[2] << "." << A[4] + 256 / (sub + j) - 1 << endl;
-                A[4] += 256 / (sub + j);
+                cout << "St IP: " << A[0] << "." << A[1] << "." << A[2] << "." << A[3] << endl;
+                cout << "End IP: " << A[0] << "." << A[1] << "." << A[2] << "." << A[3] + 256 / (sub + j) - 1 << endl;
+                cout << "Direct Broadcast Address: " << A[0] << "." << A[1] << "." << A[2] << "." << A[3] + 256 / (sub + j) - 1 << endl;
+                A[3] += 256 / (sub + j);
                 j = 1;
             }
             else
