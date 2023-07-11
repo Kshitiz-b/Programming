@@ -92,7 +92,7 @@ void convertToQuadrupleAndMachineInstructions(string postfix)
 
             string result1 = "t" + to_string(t1++); // Use register R0, R1, R2, ...
             string result2 = "R" + to_string(t2++);
-            quadruple.push_back(op2 + " " + string(1, c) + " " + op1 + " " + result1);
+            quadruple.push_back(string(1, c) + " " + op2 + " " + op1 + " " + result1);
             machineInstructions.push_back("MOV A, " + op2);
             if (c == '+')
                 machineInstructions.push_back("ADD A, " + op1);
@@ -110,7 +110,7 @@ void convertToQuadrupleAndMachineInstructions(string postfix)
 
     // Print quadruple
     cout << "Quadruple:" << endl;
-    cout << "arg1 op arg2 result\n";
+    cout << "op arg1 arg2 result\n";
     for (string q : quadruple)
     {
         cout << q << endl;
