@@ -284,27 +284,27 @@ static void yy_fatal_error YY_PROTO(( yyconst char msg[] ));
 
 #define YY_NUM_RULES 3
 #define YY_END_OF_BUFFER 4
-static yyconst short int yy_accept[10] =
+static yyconst short int yy_accept[9] =
     {   0,
-        0,    0,    4,    2,    3,    2,    0,    1,    0
+        0,    0,    4,    3,    2,    1,    2,    0
     } ;
 
 static yyconst int yy_ec[256] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    2,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    2,    1,    1,    1,    1,    1,    1,    2,    1,
+        1,    1,    1,    1,    1,    1,    1,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    3,    3,    4,    3,    3,    3,
-        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
-        3,    3,    3,    5,    3,    3,    3,    3,    3,    3,
-        1,    1,    1,    1,    1,    1,    3,    3,    4,    3,
 
-        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
-        3,    3,    3,    3,    3,    5,    3,    3,    3,    3,
-        3,    3,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -321,33 +321,29 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst int yy_meta[6] =
+static yyconst int yy_meta[4] =
     {   0,
-        1,    1,    2,    2,    2
+        1,    1,    1
     } ;
 
-static yyconst short int yy_base[12] =
+static yyconst short int yy_base[10] =
     {   0,
-        0,    3,   11,   12,   12,    5,    1,    0,   12,    7,
-        1
+        3,    2,    4,    7,    0,    7,    0,    7,    0
     } ;
 
-static yyconst short int yy_def[12] =
+static yyconst short int yy_def[10] =
     {   0,
-       10,   10,    9,    9,    9,   11,   11,    7,    0,    9,
-        9
+        9,    9,    8,    8,    8,    8,    5,    0,    8
     } ;
 
-static yyconst short int yy_nxt[18] =
+static yyconst short int yy_nxt[11] =
     {   0,
-        9,    5,    7,    6,    5,    8,    6,    4,    4,    8,
-        9,    3,    9,    9,    9,    9,    9
+        4,    6,    7,    8,    5,    5,    3,    8,    8,    8
     } ;
 
-static yyconst short int yy_chk[18] =
+static yyconst short int yy_chk[11] =
     {   0,
-        0,    1,   11,    1,    2,    7,    2,   10,   10,    6,
-        3,    9,    9,    9,    9,    9,    9
+        9,    5,    5,    3,    2,    1,    8,    8,    8,    8
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -361,12 +357,12 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "lextest.l"
+#line 1 "cal.l"
 #define INITIAL 0
-#line 2 "lextest.l"
-    #include<stdio.h>
-
-#line 370 "lex.yy.c"
+#line 2 "cal.l"
+    #include <stdio.h>
+    int a, b, c;
+#line 366 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -517,9 +513,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 5 "lextest.l"
+#line 5 "cal.l"
 
-#line 523 "lex.yy.c"
+#line 519 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -570,13 +566,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 10 )
+				if ( yy_current_state >= 9 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 12 );
+		while ( yy_base[yy_current_state] != 7 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -604,20 +600,20 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 6 "lextest.l"
-{printf("%s", yytext);}
+#line 6 "cal.l"
+{a = atoi(yytext);}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 7 "lextest.l"
-;
+#line 7 "cal.l"
+{b = atoi(yytext); c = a+b;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 8 "lextest.l"
+#line 8 "cal.l"
 ECHO;
 	YY_BREAK
-#line 621 "lex.yy.c"
+#line 617 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -909,7 +905,7 @@ static yy_state_type yy_get_previous_state()
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 10 )
+			if ( yy_current_state >= 9 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -944,11 +940,11 @@ yy_state_type yy_current_state;
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 10 )
+		if ( yy_current_state >= 9 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 9);
+	yy_is_jam = (yy_current_state == 8);
 
 	return yy_is_jam ? 0 : yy_current_state;
 	}
@@ -1503,13 +1499,16 @@ int main()
 	return 0;
 	}
 #endif
-#line 8 "lextest.l"
+#line 8 "cal.l"
 
 int yywrap(){
     return 1;
 }
-int main(){
-    printf("enter the string: ");
+int main()
+{
+    printf("Enter a and b: ");
     yylex();
+    printf("The result is: %d", c);
+
     return 0;
 }
