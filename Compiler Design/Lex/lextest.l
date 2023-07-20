@@ -1,11 +1,10 @@
 %{
     #include<stdio.h>
-    int vowel_count=0;
-    int con_count;
+
 %}
 %%
-[aeiou] {vowel_count++;}
-[a-z] {con_count++;}
+[cC][a-zA-Z]*[tT] {printf("%s", yytext);}
+.
 %%
 int yywrap(){
     return 1;
@@ -13,7 +12,5 @@ int yywrap(){
 int main(){
     printf("enter the string: ");
     yylex();
-    printf("Vowel Count: %d\n", vowel_count);
-    printf("Consonant Count: %d", con_count);
     return 0;
 }
