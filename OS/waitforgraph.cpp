@@ -1,140 +1,142 @@
 #include <iostream>
 #include <vector>
-#include <mutex>
-#include <thread>
-
+#include <queue>
 using namespace std;
 
-// Number of philosophers (and forks)
-const int NUM_PHILOSOPHERS = 5;
-
-// Mutexes for forks
-vector<mutex> forks(NUM_PHILOSOPHERS);
-
-// Function to simulate philosopher's behavior
-void philosopher(int philosopherId)
+class DeadlockDetection
 {
-    // Index of the left and right forks
-    int leftFork = philosopherId;
-    int rightFork = (philosopherId + 1) % NUM_PHILOSOPHERS;
+private:
+    int numProcesses;
+    int numResources;
+    vector<vector<int>> allocation;
+    vector<vector<int>> request;
+    vector<bool> visited;
+    vector<bool> safeSequence;
 
-    while (true)
+public:
+    DeadlockDetection(int nProcesses, int nResources) : numProcesses(nProcesses), numResources(nResources),
+                                                        allocation(nProcesses, vector<int>(nResources)),
+                                                        request(nProcesses, vector<int>(nResources)),
+                                                        visited(nProcesses, false),
+                                                        safeSequence(nProcesses, false) {}
+    void setAllocationMatrix(const vector<vector<int>> &allocationMatrix)
     {
-        // Thinking
-        cout << "Philosopher " << philosopherId << " is thinking." << endl;
-
-        // Request left fork
-        forks[leftFork].lock();
-        cout << "Philosopher " << philosopherId << " picks up the left fork." << endl;
-
-        // Request right fork
-        forks[rightFork].lock();
-        cout << "Philosopher " << philosopherId << " picks up the right fork." << endl;
-
-        // Eating
-        cout << "Philosopher " << philosopherId << " is eating." << endl;
-
-        // Release forks
-        forks[rightFork].unlock();
-        cout << "Philosopher " << philosopherId << " releases the right fork." << endl;
-        forks[leftFork].unlock();
-        cout << "Philosopher " << philosopherId << " releases the left fork." << endl;
+        allocation = allocationMatrix;
     }
-}
-
-bool detectDeadlockUtil(int v, vector<bool> &visited, vector<bool> &inStack,
-                        vector<vector<int>> &waitGraph, vector<vector<int>> &resourceGraph)
-{
-    visited[v] = true;
-    inStack[v] = true;
-
-    // Check for deadlock cycle in the wait-for graph
-    for (int i = 0; i < NUM_PHILOSOPHERS; i++)
+    void setRequestMatrix(const vector<vector<int>> &requestMatrix)
     {
-        if (waitGraph[v][i] > 0)
+        request = requestMatrix;
+    }
+    void detectDeadlock()
+    {
+        vector<int> available = calculateAvailable();
+        vector<vector<int>> need = calculateNeed();
+        vector<int> work = available;
+        queue<int> safeQueue;
+        for (int i = 0; i < numProcesses; ++i)
+        {
+            if (!visited[i] && isLessThanOrEqual(need[i], work))
+            {
+                safeQueue.push(i);
+                visited[i] = true;
+                work = add(work, allocation[i]);
+                i = -1;
+            }
+        }
+        while (!safeQueue.empty())
+        {
+            int process = safeQueue.front();
+            safeQueue.pop();
+            safeSequence[process] = true;
+        }
+        cout << "Safe sequence: ";
+        for (int i = 0; i < numProcesses; ++i)
+        {
+            if (safeSequence[i])
+            {
+                cout << i << " ";
+            }
+        }
+        cout << endl;
+        bool deadlockDetected = false;
+        for (int i = 0; i < numProcesses; ++i)
         {
             if (!visited[i])
             {
-                if (detectDeadlockUtil(i, visited, inStack, waitGraph, resourceGraph))
-                    return true;
-            }
-            else if (inStack[i])
-            {
-                // Deadlock cycle found
-                return true;
+                cout << "Deadlock detected! Process " << i << " is involved." << endl;
+                deadlockDetected = true;
             }
         }
-    }
-
-    inStack[v] = false;
-
-    // Check for deadlock cycle in the resource graph
-    for (int i = 0; i < NUM_PHILOSOPHERS; i++)
-    {
-        if (resourceGraph[v][i] > 0)
+        if (!deadlockDetected)
         {
-            if (!visited[i])
-            {
-                if (detectDeadlockUtil(i, visited, inStack, waitGraph, resourceGraph))
-                    return true;
-            }
-            else if (inStack[i])
-            {
-                // Deadlock cycle found
-                return true;
-            }
+            cout << "No deadlock detected." << endl;
         }
     }
 
-    return false;
-}
-
-// Function to detect deadlock using wait-for graph and resource graph
-bool detectDeadlock()
-{
-    vector<bool> visited(NUM_PHILOSOPHERS, false);
-    vector<bool> inStack(NUM_PHILOSOPHERS, false);
-
-    // Wait-for graph representation
-    vector<vector<int>> waitGraph(NUM_PHILOSOPHERS, vector<int>(NUM_PHILOSOPHERS, 0));
-
-    // Resource graph representation
-    vector<vector<int>> resourceGraph(NUM_PHILOSOPHERS, vector<int>(NUM_PHILOSOPHERS, 0));
-
-    for (int i = 0; i < NUM_PHILOSOPHERS; i++)
+private:
+    vector<int> calculateAvailable()
     {
-        // Check if philosopher i is already visited
-        if (!visited[i])
+        vector<int> available(numResources, 0);
+        for (int j = 0; j < numResources; ++j)
         {
-            // Perform a depth-first search from philosopher i
-            if (detectDeadlockUtil(i, visited, inStack, waitGraph, resourceGraph))
-                return true;
+            for (int i = 0; i < numProcesses; ++i)
+            {
+                available[j] += allocation[i][j];
+            }
         }
+        return available;
     }
-
-    return false;
-}
+    vector<vector<int>> calculateNeed()
+    {
+        vector<vector<int>> need(numProcesses, vector<int>(numResources));
+        for (int i = 0; i < numProcesses; ++i)
+        {
+            for (int j = 0; j < numResources; ++j)
+            {
+                need[i][j] = request[i][j] - allocation[i][j];
+            }
+        }
+        return need;
+    }
+    bool isLessThanOrEqual(const vector<int> &a, const vector<int> &b)
+    {
+        for (int i = 0; i < a.size(); ++i)
+        {
+            if (a[i] > b[i])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    vector<int> add(const vector<int> &a, const vector<int> &b)
+    {
+        vector<int> result(a.size());
+        for (int i = 0; i < a.size(); ++i)
+        {
+            result[i] = a[i] + b[i];
+        }
+        return result;
+    }
+};
 
 int main()
 {
-    // Create threads for philosophers
-    vector<thread> threads;
-    for (int i = 0; i < NUM_PHILOSOPHERS; i++)
-    {
-        threads.push_back(thread(philosopher, i));
-    }
-
-    // Wait for threads to finish
-    for (auto &thread : threads)
-    {
-        thread.join();
-    }
-
-    // Detect deadlock
-    if (detectDeadlock())
-        cout << "Deadlock detected." << endl;
-    else
-        cout << "No deadlock detected." << endl;
-
+    DeadlockDetection dd(5, 3);
+    vector<vector<int>> allocationMatrix = {
+        {0, 1, 0},
+        {2, 0, 0},
+        {3, 0, 2},
+        {2, 1, 1},
+        {0, 0, 2}};
+    vector<vector<int>> requestMatrix = {
+        {0, 0, 0},
+        {2, 0, 2},
+        {0, 0, 0},
+        {1, 0, 0},
+        {0, 0, 2}};
+    dd.setAllocationMatrix(allocationMatrix);
+    dd.setRequestMatrix(requestMatrix);
+    dd.detectDeadlock();
     return 0;
 }
