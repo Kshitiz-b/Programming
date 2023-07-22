@@ -17,7 +17,7 @@ void philosopher(int philosopherId) {
     lock(forks[leftFork], forks[rightFork]);
 
     // Eating
-    cout << "Philosopher " << philosopherId << " is eating." << endl;
+    cout << endl << "Philosopher " << philosopherId << " is eating." << endl;
     // Simulating eating time
     this_thread::sleep_for(chrono::milliseconds(1000));
 
