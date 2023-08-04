@@ -23,10 +23,10 @@ while not game_over:
     tries += 1
 
     # Check if the guessed letter is one of the letters in the chosen word
-    for position in range(len(chosen_word)):
-        letter = chosen_word[position]
+    for i in range(len(chosen_word)):
+        letter = chosen_word[i]
         if letter == guessed_letter:
-            display[position] = guessed_letter
+            display[i] = guessed_letter
     
     if guessed_letter not in chosen_word:
         lives -= 1
