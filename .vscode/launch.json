@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Armstrong",
+            "request": "launch",
+            "mainClass": "Armstrong",
+            "projectName": "Programming_d9c0ac2d"
+        },
+        {
+            "type": "java",
             "name": "Bruteforce",
             "request": "launch",
             "mainClass": "Bruteforce",
