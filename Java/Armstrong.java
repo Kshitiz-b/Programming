@@ -12,9 +12,9 @@ public class Armstrong
 			origNum /= 10;	
 		}
 		if (result == n)
-			System.out.printf("%d is an Armstrong number", n);
+			System.out.printf("%d is an Armstrong number\n", n);
 		else
-			System.out.printf("%d is not an Armstrong number", n);
+			System.out.printf("%d is not an Armstrong number\n", n);
 	}
 	
 	public static void main(String[] args)
