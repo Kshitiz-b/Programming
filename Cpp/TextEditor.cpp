@@ -33,7 +33,7 @@ public:
     {
         if (!operations.empty())
         {
-            auto operation = operations.top();
+            operation = operations.top();
             operations.pop();
             if (operation.first == 1)
             {
