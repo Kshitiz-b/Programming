@@ -13,7 +13,7 @@ public class CrackingCaesar {
                 char ch = input.charAt(i);
                 if (Character.isLetter(ch)) {
                     char base = Character.isUpperCase(ch) ? 'A' : 'a';
-                    output += (char) ((ch - base - k + 26) % 26 + base); // Ensure positive result
+                    output += (char) ((ch - base - k + 26) % 26 + base); 
                 } else if (Character.isDigit(ch)) {
                     int base = 48;
                     output += (char) ((ch - base - k + 10) % 10 + base);
