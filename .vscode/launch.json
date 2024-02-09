@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "hillCipher",
+            "request": "launch",
+            "mainClass": "Cryptography.hillCipher",
+            "projectName": "Programming_d9c0ac2d"
+        },
+        {
+            "type": "java",
+            "name": "Vigenere",
+            "request": "launch",
+            "mainClass": "Cryptography.Vigenere",
+            "projectName": "Programming_d9c0ac2d"
+        },
+        {
+            "type": "java",
             "name": "Playfair",
             "request": "launch",
             "mainClass": "Cryptography.Playfair",

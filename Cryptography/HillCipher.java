@@ -158,7 +158,7 @@ class hillCipher {
             }
         }
 
-        System.out.print("Processed Text: " + processedText);
+        System.out.println("Processed Text: " + processedText);
     }
 
     public static void main(String[] args) {

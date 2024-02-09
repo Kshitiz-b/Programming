@@ -8,7 +8,7 @@ int main()// execution starts
 	result = number1+number2;
 	
 	
-	printf("The sum of %d and %d is: %d",number1, number2, result);
+	printf("The sum of %d and %d is: %d\n",number1, number2, result);
 	
 	return 0;
 	
