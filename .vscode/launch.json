@@ -3,6 +3,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RSA",
+            "request": "launch",
+            "mainClass": "Cryptography.RSA",
+            "projectName": "Programming_d9c0ac2d"
+        },
+        {
+            "type": "java",
+            "name": "AES",
+            "request": "launch",
+            "mainClass": "Cryptography.AES",
+            "projectName": "Programming_d9c0ac2d"
+        },
+        {
+            "type": "java",
+            "name": "DES",
+            "request": "launch",
+            "mainClass": "Cryptography.DES",
+            "projectName": "Programming_d9c0ac2d"
+        },
+        {
+            "type": "java",
             "name": "hillCipher",
             "request": "launch",
             "mainClass": "Cryptography.hillCipher",
