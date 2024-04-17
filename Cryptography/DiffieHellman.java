@@ -36,10 +36,10 @@ public class DiffieHellman {
         DiffieHellman bob = new DiffieHellman(p, g);
         alice.generateSharedKey(bob.getPublicKey());
         bob.generateSharedKey(alice.getPublicKey());
-        System.out.println("Alice's Shared Key: " + alice.getSharedKey().toString(16));
+        System.out.println("\nAlice's Shared Key: " + alice.getSharedKey().toString(16));
         System.out.println();
         System.out.println("Bob's Shared Key:   " + bob.getSharedKey().toString(16));
         System.out.println();
-        System.out.println("Shared keys are equal: " + alice.getSharedKey().equals(bob.getSharedKey()));
+        System.out.println("Shared keys are equal: " + alice.getSharedKey().equals(bob.getSharedKey()) + "\n");
     }
 }

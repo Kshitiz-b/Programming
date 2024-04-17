@@ -3,6 +3,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DiffieHellman",
+            "request": "launch",
+            "mainClass": "Cryptography.DiffieHellman",
+            "projectName": "Programming_d9c0ac2d"
+        },
+        {
+            "type": "java",
+            "name": "SHA",
+            "request": "launch",
+            "mainClass": "Cryptography.SHA",
+            "projectName": "Programming_d9c0ac2d"
+        },
+        {
+            "type": "java",
+            "name": "MD5Hash",
+            "request": "launch",
+            "mainClass": "Cryptography.MD5Hash",
+            "projectName": "Programming_d9c0ac2d"
+        },
+        {
+            "type": "java",
             "name": "RSA",
             "request": "launch",
             "mainClass": "Cryptography.RSA",
