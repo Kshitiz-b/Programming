@@ -8,10 +8,8 @@ public class DiffieHellman {
     private BigInteger publicKey;
     private BigInteger sharedKey;
     private BigInteger p; 
-    private BigInteger g;  
     public DiffieHellman(BigInteger p, BigInteger g) {
         this.p = p;
-        this.g = g;
         this.privateKey = new BigInteger(1024, new SecureRandom());
         this.publicKey = g.modPow(privateKey, p);
     }
