@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SSL",
+            "request": "launch",
+            "mainClass": "Cryptography.SSL",
+            "projectName": "Programming_d9c0ac2d"
+        },
+        {
+            "type": "java",
+            "name": "DS",
+            "request": "launch",
+            "mainClass": "Cryptography.DS",
+            "projectName": "Programming_d9c0ac2d"
+        },
+        {
+            "type": "java",
             "name": "SSLClient",
             "request": "launch",
             "mainClass": "Cryptography.SSLClient",
