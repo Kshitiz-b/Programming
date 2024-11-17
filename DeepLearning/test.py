@@ -1,8 +1,8 @@
 import tensorflow as tf 
-from tensorflow.keras.datasets import mnist 
-from tensorflow.keras.models import Sequential 
-from tensorflow.keras.layers import Dense, Flatten 
-from tensorflow.keras.utils import to_categorical 
+from keras.datasets import mnist 
+from keras.models import Sequential 
+from keras.layers import Dense, Flatten 
+from keras.utils import to_categorical 
 import matplotlib.pyplot as plt
 
 # Load the MNIST dataset
