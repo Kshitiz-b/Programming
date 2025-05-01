@@ -6476,6 +6476,7 @@ Model Sim/work/tb_k/verilog.psm
 .DS_Store
 .DS_Store
 .venv
+.vscode
 .idea
 .fleet
 .cache
